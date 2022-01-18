@@ -10,15 +10,8 @@
 <body>
 
 <div class="main-block">
-<h1>Bienvenidos al buscador de profesionales.</h1>
-<br/>
-<section>
-<form method="get" action="resultado">
-    <button type="submit">Buscar</button>
-</form>
+<h1>Bienvenidos al REST API de la historia Argentina.</h1>
 
-
-</section>
 
 </div>
 </body>
