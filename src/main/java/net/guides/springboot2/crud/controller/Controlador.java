@@ -23,7 +23,7 @@ public class Controlador {
 	public String bienvenida() {
 		
 		clientes = (ArrayList<Client>) clientRepository.findAll();
-		selected = (ArrayList<Client>) clientRepository.finfByLastname("Perez");
+		//selected = (ArrayList<Client>) clientRepository.finfByLastname("Perez");
 
 		return "bienvenida";
 	}
@@ -35,6 +35,6 @@ public class Controlador {
 	}
 	
 	public static ArrayList<Client> clientes;
-	public static ArrayList<Client> selected;
+	//public static ArrayList<Client> selected;
 
 }
