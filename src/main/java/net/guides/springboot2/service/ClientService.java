@@ -19,5 +19,9 @@ public class ClientService {
 	public ArrayList<Client> findAllByZone(String zone){
 		return (ArrayList<Client>) clientRepository.findAllByZone(zone);
 	}
+	
+	public ArrayList<Client> findAllByZoneAndByCity(String zone, String city){
+		return (ArrayList<Client>) clientRepository.findAllByZoneAndByCity(zone, city);
+	}
 
 }
