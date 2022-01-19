@@ -22,16 +22,12 @@
 			<form:input path="zone" />
 			<br>
 			<br>
-
-	</div>
-	<button type="submit" value="Enviar">Ingresar</button>
+	
+	<button type="submit" value="Enviar">Buscar</button>
 	</form:form>
 
 
 
-	<form method="get" action="resultado">
-		<button type="submit">Buscar</button>
-	</form>
 	</div>
 </body>
 </html>
