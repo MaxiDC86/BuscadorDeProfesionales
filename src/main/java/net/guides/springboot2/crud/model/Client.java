@@ -17,17 +17,23 @@ public class Client {
 	private String emailId;
 	private String telephone;
 	private String zone;
+	private String city;
+	private String area;
+	private String type;
 	
 	public Client() {
 		
 	}
 	
-	public Client(String firstName, String lastName, String emailId, String telephone, String zone) {
+	public Client(String firstName, String lastName, String emailId, String telephone, String zone, String city, String area, String type) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
 		this.telephone = telephone;
 		this.zone= zone;
+		this.city =city;
+		this.area = area;
+		this.type = type;
 	}
 	
 	@Id
@@ -77,6 +83,30 @@ public class Client {
 
 	public void setZone(String zone) {
 		this.zone = zone;
+	}
+	
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	@Override

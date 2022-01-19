@@ -50,6 +50,10 @@ public class ClientController {
 			@Valid @RequestBody Client employeeDetails) throws ResourceNotFoundException {
 		Client client = clientRepository.findById(clientId)
 				.orElseThrow(() -> new ResourceNotFoundException("Client not found for this id :: " + clientId));
+		
+		client.setType(employeeDetails.getType());
+		client.setArea(employeeDetails.getArea());
+		client.setCity(employeeDetails.getCity());
 		client.setZone(employeeDetails.getZone());
 		client.setTelephone(employeeDetails.getTelephone());
 		client.setEmailId(employeeDetails.getEmailId());
