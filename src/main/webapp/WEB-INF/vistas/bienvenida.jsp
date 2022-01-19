@@ -12,7 +12,9 @@
 <div class="main-block">
 <h1>Bienvenidos al REST API de la historia Argentina.</h1>
 
-
+<form method="get" action="resultado">
+    <button type="submit">Buscar</button>
+</form>
 </div>
 </body>
 </html>

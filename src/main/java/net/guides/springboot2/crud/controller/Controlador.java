@@ -19,6 +19,11 @@ public class Controlador {
 		return "bienvenida";
 	}
 	
+	@RequestMapping("/resultado")
+	public String resultado() {
+
+			return "resultado";
+	}
 
 
 }
