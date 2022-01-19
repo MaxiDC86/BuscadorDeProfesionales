@@ -28,7 +28,7 @@
 			</tr>
 			<tr>
 				<%
-				for (Client emp : Controlador.clientes) {
+				for (Client emp : Controlador.selected) {
 					out.println("<tr><td>" + emp.getLastName() + "</td><td>" + emp.getFirstName() + "</td><td>" + emp.getEmailId()
 					+ "</td><td>" + emp.getTelephone() + "</td></tr>");
 				}
