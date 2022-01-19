@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import net.guides.springboot2.crud.model.Client;
+import net.guides.springboot2.crud.model.Selection;
 import net.guides.springboot2.crud.repository.ClientRepository;
 
 @Controller
@@ -20,14 +21,30 @@ public class Controlador {
 	private ClientRepository clientRepository;
 
 	@RequestMapping
-	public String bienvenida() {
+	public String bienvenida(Model model) {
 
 		clientes = (ArrayList<Client>) clientRepository.findAll();
-		selected = (ArrayList<Client>) clientRepository.findAllByZone("norte");
+		
 		//selectedZoneAndCity = (ArrayList<Client>) clientRepository.findAllByZoneAndByCity("norte", "Villa Adelina");
+		
+		Selection selection = new Selection();
+
+		model.addAttribute("selection", selection);
 
 		return "bienvenida";
 	}
+	
+	//---PROCESANDO LA BUSQUEDA-----
+	
+	@RequestMapping("/procesaBusqueda")
+	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
+		
+		selected = (ArrayList<Client>) clientRepository.findAllByZone(selection.getZone());
+		
+		return "resultado";
+	}
+	
+	//----RESULTADO DE BUSQUEDA ------
 
 	@RequestMapping("/resultado")
 	public String resultado() {
