@@ -11,6 +11,6 @@ public interface ClientRepository extends JpaRepository<Client, Long>{
 	
 	List<Client> findAllByZone(String zone);
 	
-	List<Client> findAllByZoneAndByCity(String zone, String city);
+	// List<Client> findAllByZoneAndByCity(String zone, String city);
 
 }

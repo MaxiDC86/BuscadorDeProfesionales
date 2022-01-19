@@ -24,7 +24,7 @@ public class Controlador {
 
 		clientes = (ArrayList<Client>) clientRepository.findAll();
 		selected = (ArrayList<Client>) clientRepository.findAllByZone("norte");
-		selectedZoneAndCity = (ArrayList<Client>) clientRepository.findAllByZoneAndByCity("norte", "Villa Adelina");
+		//selectedZoneAndCity = (ArrayList<Client>) clientRepository.findAllByZoneAndByCity("norte", "Villa Adelina");
 
 		return "bienvenida";
 	}
@@ -37,6 +37,6 @@ public class Controlador {
 
 	public static ArrayList<Client> clientes;
 	public static ArrayList<Client> selected;
-	public static ArrayList<Client> selectedZoneAndCity;
+	//public static ArrayList<Client> selectedZoneAndCity;
 
 }
