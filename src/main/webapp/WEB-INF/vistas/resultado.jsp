@@ -16,16 +16,22 @@
 <body>
 	<div class="main-block">
 		<h1>Resultado de busqueda.</h1>
-
-
-		<br>
-		<ul>
-			<%
-			for (Client emp : Controlador.empleados) {
-					out.println(emp.getLastName() + ", " + emp.getFirstName() + " " + emp.getEmailId() + "<br>");
+		
+		<table style="width: 90%">
+			<tr>
+				<th>Apellido</th>
+				<th>Nombre</th>
+				<th>Email</th>
+			</tr>
+			<tr>
+				<%
+				for (Client emp : Controlador.empleados) {
+					out.println(
+					"<td>" + emp.getLastName() + "</td><td>" + emp.getFirstName() + "</td><td>" + emp.getEmailId() + "</td>");
 				}
-			%>
-		</ul>
+				%>
+			</tr>
+		</table>
 
 		<form method="get" action="/">
 			<button type="submit">HOME</button>
