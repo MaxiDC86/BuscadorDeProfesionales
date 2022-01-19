@@ -17,16 +17,18 @@
 		<h1>Bienvenidos al buscador de profesionales.</h1>
 
 		<form:form action="procesaBusqueda" modelAttribute="selection">
-			<label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-
-			<form:input path="zone" />
+			<br>Elija Zona:<form:select path="zone">
+				<form:option value="norte" label="NORTE" />
+				<form:option value="sur" label="SUR" />
+				<form:option value="oeste" label="OESTE" />
+				<form:option value="caba" label="CABA" />
+			</form:select>
 			<br>
 			<br>
-	
-	<button type="submit" value="Enviar">Buscar</button>
-	</form:form>
+			<br>
 
-
+			<button type="submit" value="Enviar">Buscar</button>
+		</form:form>
 
 	</div>
 </body>
