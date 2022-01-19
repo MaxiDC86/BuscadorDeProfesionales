@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import net.guides.springboot2.crud.model.Client;
 
 @Repository
-public interface EmployeeRepository extends JpaRepository<Client, Long>{
+public interface ClientRepository extends JpaRepository<Client, Long>{
 
 }

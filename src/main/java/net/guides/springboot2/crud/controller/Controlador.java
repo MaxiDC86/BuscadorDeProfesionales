@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import net.guides.springboot2.crud.model.Client;
-import net.guides.springboot2.crud.repository.EmployeeRepository;
+import net.guides.springboot2.crud.repository.ClientRepository;
 
 @Controller
 @RequestMapping
 public class Controlador {
 	
 	@Autowired
-	private EmployeeRepository employeeRepository;
+	private ClientRepository employeeRepository;
 
 	@RequestMapping
 	public String bienvenida() {
