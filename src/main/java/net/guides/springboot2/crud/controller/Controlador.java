@@ -1,6 +1,6 @@
 package net.guides.springboot2.crud.controller;
 
-import java.util.ArrayList;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
@@ -23,7 +23,7 @@ public class Controlador {
 	public String bienvenida() {
 		
 		clientes = (ArrayList<Client>) clientRepository.findAll();
-		//selected = (ArrayList<Client>) clientRepository.finfByLastname("Perez");
+		selected = (ArrayList<Client>) clientRepository.findAllByZone("norte");
 
 		return "bienvenida";
 	}
@@ -35,6 +35,6 @@ public class Controlador {
 	}
 	
 	public static ArrayList<Client> clientes;
-	//public static ArrayList<Client> selected;
+	public static ArrayList<Client> selected;
 
 }

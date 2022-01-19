@@ -10,7 +10,7 @@ import net.guides.springboot2.crud.model.Client;
 @Repository
 public interface ClientRepository extends JpaRepository<Client, Long>{
 	
-	//List<Client> finfByLastname(String lastname);
+	List<Client> findAllByZone(String lastname);
 
 }
 
