@@ -9,7 +9,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Menu principal Pacientes.</title>
+<title>Resultado de busqueda.</title>
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/recursos/imgs/foto.png">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/css/styles.css">
 </head>
@@ -22,12 +23,13 @@
 				<th>Apellido</th>
 				<th>Nombre</th>
 				<th>Email</th>
+				<th>Telefono</th>
 			</tr>
 			<tr>
 				<%
 				for (Client emp : Controlador.empleados) {
 					out.println(
-					"<tr><td>" + emp.getLastName() + "</td><td>" + emp.getFirstName() + "</td><td>" + emp.getEmailId() + "</td></tr>");
+					"<tr><td>" + emp.getLastName() + "</td><td>" + emp.getFirstName() + "</td><td>" + emp.getEmailId() + "</td><td>"+emp.getTelephone()+"</td></tr>");
 				}
 				%>
 			</tr>

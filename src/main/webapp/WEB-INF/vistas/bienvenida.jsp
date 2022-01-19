@@ -4,13 +4,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Welcome to a Spring app</title>
+<title>Bienvenidos a busqueda de profesionales.</title>
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/recursos/imgs/foto.png">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/recursos/css/styles.css">
 </head>
 <body>
 
 <div class="main-block">
-<h1>Bienvenidos buscador de profesionales.</h1>
+<h1>Bienvenidos al buscador de profesionales.</h1>
 
 <form method="get" action="resultado">
     <button type="submit">Buscar</button>
