@@ -23,7 +23,7 @@ import net.guides.springboot2.crud.repository.EmployeeRepository;
 
 @RestController
 @RequestMapping("/api/v1")
-public class EmployeeController {
+public class ClientController {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 

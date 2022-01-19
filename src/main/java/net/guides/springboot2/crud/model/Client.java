@@ -16,16 +16,18 @@ public class Client {
 	private String lastName;
 	private String emailId;
 	private String telephone;
+	private String zone;
 	
 	public Client() {
 		
 	}
 	
-	public Client(String firstName, String lastName, String emailId, String telephone) {
+	public Client(String firstName, String lastName, String emailId, String telephone, String zone) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
 		this.telephone = telephone;
+		this.zone= zone;
 	}
 	
 	@Id
@@ -67,6 +69,14 @@ public class Client {
 
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
+	}
+	
+	public String getZone() {
+		return zone;
+	}
+
+	public void setZone(String zone) {
+		this.zone = zone;
 	}
 
 	@Override
