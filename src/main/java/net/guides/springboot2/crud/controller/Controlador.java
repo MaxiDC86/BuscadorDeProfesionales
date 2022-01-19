@@ -17,12 +17,13 @@ import net.guides.springboot2.crud.repository.ClientRepository;
 public class Controlador {
 	
 	@Autowired
-	private ClientRepository employeeRepository;
+	private ClientRepository clientRepository;
 
 	@RequestMapping
 	public String bienvenida() {
 		
-		empleados = (ArrayList<Client>) employeeRepository.findAll();
+		clientes = (ArrayList<Client>) clientRepository.findAll();
+		selected = (ArrayList<Client>) clientRepository.finfByLastname("Perez");
 
 		return "bienvenida";
 	}
@@ -33,6 +34,7 @@ public class Controlador {
 		return "resultado";
 	}
 	
-	public static ArrayList<Client> empleados;
+	public static ArrayList<Client> clientes;
+	public static ArrayList<Client> selected;
 
 }

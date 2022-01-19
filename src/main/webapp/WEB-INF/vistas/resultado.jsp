@@ -10,14 +10,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Resultado de busqueda.</title>
-<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/recursos/imgs/foto.png">
+<link rel="icon" type="image/x-icon"
+	href="${pageContext.request.contextPath}/recursos/imgs/foto.png">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/css/styles.css">
 </head>
 <body>
 	<div class="main-block">
 		<h1>Resultado de busqueda.</h1>
-		
+
 		<table style="width: 90%">
 			<tr>
 				<th>Apellido</th>
@@ -27,14 +28,13 @@
 			</tr>
 			<tr>
 				<%
-				for (Client emp : Controlador.empleados) {
-					out.println(
-					"<tr><td>" + emp.getLastName() + "</td><td>" + emp.getFirstName() + "</td><td>" + emp.getEmailId() + "</td><td>"+emp.getTelephone()+"</td></tr>");
+				for (Client emp : Controlador.selected) {
+					out.println("<tr><td>" + emp.getLastName() + "</td><td>" + emp.getFirstName() + "</td><td>" + emp.getEmailId()
+					+ "</td><td>" + emp.getTelephone() + "</td></tr>");
 				}
 				%>
 			</tr>
 		</table>
-
 		<form method="get" action="/">
 			<button type="submit">HOME</button>
 		</form>
