@@ -18,7 +18,7 @@
 <body>
 	<div class="main-block">
 		<h1>Resultado de busqueda.</h1>
-
+<h2>Has elegido buscar en zona: <% out.print(Controlador.selectionShow);%> </h2>
 		<table style="width: 90%">
 			<tr>
 				<th>Apellido</th>
@@ -28,7 +28,7 @@
 			</tr>
 			<tr>
 				<%
-				for (Client emp : Controlador.selected) {
+				for (Client emp : Controlador.selectedZone) {
 					out.println("<tr><td>" + emp.getLastName() + "</td><td>" + emp.getFirstName() + "</td><td>" + emp.getEmailId()
 					+ "</td><td>" + emp.getTelephone() + "</td></tr>");
 				}

@@ -10,19 +10,23 @@ import net.guides.springboot2.crud.repository.ClientRepository;
 
 @Service
 public class ClientService {
-	
+
 	@Autowired
 	private ClientRepository clientRepository;
-	
-	//----CUSTOM QUERIES -----
-	
-	public ArrayList<Client> findAllByZone(String zone){
+
+	// ----CUSTOM QUERIES -----
+
+	public ArrayList<Client> findAllByZone(String zone) {
 		return (ArrayList<Client>) clientRepository.findAllByZone(zone);
 	}
-	
-	/*
-	public ArrayList<Client> findAllByZoneAndByCity(String zone, String city){
-		return (ArrayList<Client>) clientRepository.findAllByZoneAndByCity(zone, city);
+
+	public ArrayList<Client> findAllByCity(String city) {
+		return (ArrayList<Client>) clientRepository.findAllByCity(city);
 	}
-	*/
+
+	/*
+	 * public ArrayList<Client> findAllByZoneAndByCity(String zone, String city){
+	 * return (ArrayList<Client>) clientRepository.findAllByZoneAndByCity(zone,
+	 * city); }
+	 */
 }

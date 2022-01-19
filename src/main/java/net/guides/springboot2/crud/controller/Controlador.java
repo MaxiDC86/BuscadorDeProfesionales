@@ -23,9 +23,6 @@ public class Controlador {
 	@RequestMapping
 	public String bienvenida(Model model) {
 
-		clientes = (ArrayList<Client>) clientRepository.findAll();
-		
-		//selectedZoneAndCity = (ArrayList<Client>) clientRepository.findAllByZoneAndByCity("norte", "Villa Adelina");
 		
 		Selection selection = new Selection();
 
@@ -39,7 +36,14 @@ public class Controlador {
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
 		
-		selected = (ArrayList<Client>) clientRepository.findAllByZone(selection.getZone());
+		clientes = (ArrayList<Client>) clientRepository.findAll();
+		
+		//selectedZoneAndCity = (ArrayList<Client>) clientRepository.findAllByZoneAndByCity("norte", "Villa Adelina");
+		
+		selectedZone = (ArrayList<Client>) clientRepository.findAllByZone(selection.getZone());
+		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity(selection.getCity());
+		
+		selectionShow = selection.getZone();
 		
 		return "resultado";
 	}
@@ -53,7 +57,9 @@ public class Controlador {
 	}
 
 	public static ArrayList<Client> clientes;
-	public static ArrayList<Client> selected;
+	public static ArrayList<Client> selectedZone;
+	public static ArrayList<Client> selectedCity;
 	//public static ArrayList<Client> selectedZoneAndCity;
+	public static String selectionShow; 
 
 }

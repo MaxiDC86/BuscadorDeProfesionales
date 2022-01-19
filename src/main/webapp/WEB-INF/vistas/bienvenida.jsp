@@ -23,6 +23,12 @@
 				<form:option value="oeste" label="OESTE" />
 				<form:option value="caba" label="CABA" />
 			</form:select>
+			<br>Elija Localidad o Barrio:<form:select path="city">
+				<form:option value="Villa Adelina" label="Villa Adelina" />
+				<form:option value="Boulogne" label="Boulogne" />
+				<form:option value="Carapachay" label="Carapachay" />
+				<form:option value="Munro" label="Munro" />
+			</form:select>
 			<br>
 			<br>
 			<br>
