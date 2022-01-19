@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page import="java.util.*"%>
 <%@ page import="net.guides.springboot2.crud.controller.*"%>
+<%@ page import="net.guides.springboot2.crud.model.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -19,8 +20,10 @@
 
 		<br>
 		<ul>
-      <%
-      out.println(Controlador.empleados);
+      <%for(Employee emp: Controlador.empleados){
+    	  out.println(emp.getFirstName()+" "+emp.getEmailId());
+      }
+     
       
       %>
 		</ul>
