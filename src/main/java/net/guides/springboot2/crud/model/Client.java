@@ -15,15 +15,17 @@ public class Client {
 	private String firstName;
 	private String lastName;
 	private String emailId;
+	private String telephone;
 	
 	public Client() {
 		
 	}
 	
-	public Client(String firstName, String lastName, String emailId) {
+	public Client(String firstName, String lastName, String emailId, String telephone) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
+		this.telephone = telephone;
 	}
 	
 	@Id
@@ -57,6 +59,14 @@ public class Client {
 	}
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 
 	@Override
