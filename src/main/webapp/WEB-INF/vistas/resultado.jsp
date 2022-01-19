@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page import="java.util.*"%>
-<%@ page import="com.example.demo.*"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,12 +18,7 @@
 
 		<br>
 		<ul>
-			<%
-			for (Cliente cliente : Cliente.getListaClientes()) {
-				out.print(cliente.getApellido()+" , "+cliente.getNombre()+"<br>");
-				
-			}
-			%>
+      ${clientesRegistrados}
 		</ul>
 
 		<form method="get" action="/">
