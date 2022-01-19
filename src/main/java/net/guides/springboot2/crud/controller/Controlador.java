@@ -18,22 +18,21 @@ public class Controlador {
 	
 	@Autowired
 	private EmployeeRepository employeeRepository;
-	// --WELCOME PAGE -------------
 
 	@RequestMapping
-	public String bienvenida(Model model) {
-
-		ArrayList<Employee> clientesRegistrados = (ArrayList<Employee>) employeeRepository.findAll();
-
-		model.addAttribute("clientesRegistrados", clientesRegistrados);
+	public String bienvenida() {
+		
+		empleados = (ArrayList<Employee>) employeeRepository.findAll();
 
 		return "bienvenida";
 	}
 
 	@RequestMapping("/resultado")
-	public String resultado(@ModelAttribute("clientesRegistrados") ArrayList<Employee> clientesRegistrados) {
+	public String resultado() {
 
 		return "resultado";
 	}
+	
+	public static ArrayList<Employee> empleados;
 
 }

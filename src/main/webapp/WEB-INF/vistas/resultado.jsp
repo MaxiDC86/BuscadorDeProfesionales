@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page import="java.util.*"%>
+<%@ page import="net.guides.springboot2.crud.controller.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,10 @@
 
 		<br>
 		<ul>
-      ${clientesRegistrados}
+      <%
+      out.println(Controlador.empleados);
+      
+      %>
 		</ul>
 
 		<form method="get" action="/">
