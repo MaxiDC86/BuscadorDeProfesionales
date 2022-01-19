@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
 
 import net.guides.springboot2.crud.Application;
-import net.guides.springboot2.crud.model.Employee;
+import net.guides.springboot2.crud.model.Client;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -51,19 +51,19 @@ public class EmployeeControllerIntegrationTest {
 
 	@Test
 	public void testGetEmployeeById() {
-		Employee employee = restTemplate.getForObject(getRootUrl() + "/employees/1", Employee.class);
+		Client employee = restTemplate.getForObject(getRootUrl() + "/employees/1", Client.class);
 		System.out.println(employee.getFirstName());
 		assertNotNull(employee);
 	}
 
 	@Test
 	public void testCreateEmployee() {
-		Employee employee = new Employee();
+		Client employee = new Client();
 		employee.setEmailId("admin@gmail.com");
 		employee.setFirstName("admin");
 		employee.setLastName("admin");
 
-		ResponseEntity<Employee> postResponse = restTemplate.postForEntity(getRootUrl() + "/employees", employee, Employee.class);
+		ResponseEntity<Client> postResponse = restTemplate.postForEntity(getRootUrl() + "/employees", employee, Client.class);
 		assertNotNull(postResponse);
 		assertNotNull(postResponse.getBody());
 	}
@@ -71,26 +71,26 @@ public class EmployeeControllerIntegrationTest {
 	@Test
 	public void testUpdateEmployee() {
 		int id = 1;
-		Employee employee = restTemplate.getForObject(getRootUrl() + "/employees/" + id, Employee.class);
+		Client employee = restTemplate.getForObject(getRootUrl() + "/employees/" + id, Client.class);
 		employee.setFirstName("admin1");
 		employee.setLastName("admin2");
 
 		restTemplate.put(getRootUrl() + "/employees/" + id, employee);
 
-		Employee updatedEmployee = restTemplate.getForObject(getRootUrl() + "/employees/" + id, Employee.class);
+		Client updatedEmployee = restTemplate.getForObject(getRootUrl() + "/employees/" + id, Client.class);
 		assertNotNull(updatedEmployee);
 	}
 
 	@Test
 	public void testDeleteEmployee() {
 		int id = 2;
-		Employee employee = restTemplate.getForObject(getRootUrl() + "/employees/" + id, Employee.class);
+		Client employee = restTemplate.getForObject(getRootUrl() + "/employees/" + id, Client.class);
 		assertNotNull(employee);
 
 		restTemplate.delete(getRootUrl() + "/employees/" + id);
 
 		try {
-			employee = restTemplate.getForObject(getRootUrl() + "/employees/" + id, Employee.class);
+			employee = restTemplate.getForObject(getRootUrl() + "/employees/" + id, Client.class);
 		} catch (final HttpClientErrorException e) {
 			assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
 		}

@@ -21,9 +21,9 @@
 		<br>
 		<ul>
 			<%
-			for (Employee emp : Controlador.empleados) {
-				out.println(emp.getLastName() + ", " + emp.getFirstName() + " " + emp.getEmailId() + "<br>");
-			}
+			for (Client emp : Controlador.empleados) {
+					out.println(emp.getLastName() + ", " + emp.getFirstName() + " " + emp.getEmailId() + "<br>");
+				}
 			%>
 		</ul>
 
