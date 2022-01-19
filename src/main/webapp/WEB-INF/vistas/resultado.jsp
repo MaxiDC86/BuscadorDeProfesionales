@@ -20,12 +20,11 @@
 
 		<br>
 		<ul>
-      <%for(Employee emp: Controlador.empleados){
-    	  out.println(emp.getFirstName()+" "+emp.getEmailId());
-      }
-     
-      
-      %>
+			<%
+			for (Employee emp : Controlador.empleados) {
+				out.println(emp.getLastName() + ", " + emp.getFirstName() + " " + emp.getEmailId() + "<br>");
+			}
+			%>
 		</ul>
 
 		<form method="get" action="/">
