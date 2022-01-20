@@ -10,6 +10,8 @@
 	href="${pageContext.request.contextPath}/recursos/imgs/foto.png">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/css/styles.css">
+<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 
@@ -59,29 +61,32 @@
 				</div>
 			</div>
 			<div>
-			<button type="submit" value="Enviar">Buscar</button>
-			
+				<button type="submit" value="Enviar">Buscar</button>
+
 			</div>
 
 		</form>
 
 	</div>
-	
+
 	<script>
-	$("#location").change(function () {
-		  $("#zonaNorteMenu,#zonaSurMenu,#zonaOesteMenu").hide();
-		  $("#zonaNorteMenu select,#zonaSurMenu select,#zonaOesteMenu select").prop('selectedIndex', 0);
-		  
-		  if (this.value == "zonaNorteSelected") {
-		    $("#zonaNorteMenu").show();
-		  } 
-		  else if (this.value == "zonaSurSelected") {
-		    $("#zonaSurMenu").show();
-		  }
-		    else if (this.value == "zonaOesteSelected") {
-		    $("#zonaOesteMenu").show();
-		  }
-		});
-</script> 
+		$("#location")
+				.change(
+						function() {
+							$("#zonaNorteMenu,#zonaSurMenu,#zonaOesteMenu")
+									.hide();
+							$(
+									"#zonaNorteMenu select,#zonaSurMenu select,#zonaOesteMenu select")
+									.prop('selectedIndex', 0);
+
+							if (this.value == "zonaNorteSelected") {
+								$("#zonaNorteMenu").show();
+							} else if (this.value == "zonaSurSelected") {
+								$("#zonaSurMenu").show();
+							} else if (this.value == "zonaOesteSelected") {
+								$("#zonaOesteMenu").show();
+							}
+						});
+	</script>
 </body>
 </html>
