@@ -16,26 +16,72 @@
 	<div class="main-block">
 		<h1>Bienvenidos al buscador de profesionales.</h1>
 
-		<form:form action="procesaBusqueda" modelAttribute="selection">
-			<br>Elija Zona:<form:select path="zone">
-				<form:option value="norte" label="NORTE" />
-				<form:option value="sur" label="SUR" />
-				<form:option value="oeste" label="OESTE" />
-				<form:option value="caba" label="CABA" />
-			</form:select>
-			<br>Elija Localidad o Barrio:<form:select path="city">
-				<form:option value="Villa Adelina" label="Villa Adelina" />
-				<form:option value="Boulogne" label="Boulogne" />
-				<form:option value="Carapachay" label="Carapachay" />
-				<form:option value="Munro" label="Munro" />
-			</form:select>
-			<br>
-			<br>
-			<br>
+		<form id="selection" action="procesaBusqueda">
+			<div class="form-group">
+				<label for="cleaning-service" class="control-label">Elegir
+					Zona a buscar</label> <select class="form-control" id="location"
+					path="zone">
+					<option disabled selected value>-- select an option --</option>
+					<option value="zonaNorteSelected">Zona Norte</option>
+					<option value="zonaSurSelected">Zona Sur</option>
+					<option value="zonaOesteSelected">Zona Oeste</option>
+				</select>
+			</div>
+			<!--carpet cleaning-->
+			<div id="zonaNorteMenu" style="display: none;">
+				<div class="form-group">
+					<!--how many dining rooms-->
+					<label>Elegir Localidad</label> <select path="city">
+						<option>San Isidro</option>
+						<option>Vicente Lopez</option>
+					</select>
+				</div>
+			</div>
+			<!--upholstery cleaning-->
+			<div id="zonaSurMenu" style="display: none;">
+				<div class="form-group">
+					<!--how many dining room chairs-->
+					<label>Elegir Localidad</label> <select path="city">
+						<option>Avellaneda</option>
+						<option>Lomas de Zamora</option>
+					</select>
+				</div>
+			</div>
 
+			<!--Zona Oeste-->
+			<div id="zonaOesteMenu" style="display: none;">
+				<div class="form-group">
+					<!--how many dining room chairs-->
+					<label>Elegir Localidad</label> <select path="city">
+						<option>Castelar</option>
+						<option>Moron</option>
+					</select>
+				</div>
+			</div>
+			<div>
 			<button type="submit" value="Enviar">Buscar</button>
-		</form:form>
+			
+			</div>
+
+		</form>
 
 	</div>
+	
+	<script>
+	$("#location").change(function () {
+		  $("#zonaNorteMenu,#zonaSurMenu,#zonaOesteMenu").hide();
+		  $("#zonaNorteMenu select,#zonaSurMenu select,#zonaOesteMenu select").prop('selectedIndex', 0);
+		  
+		  if (this.value == "zonaNorteSelected") {
+		    $("#zonaNorteMenu").show();
+		  } 
+		  else if (this.value == "zonaSurSelected") {
+		    $("#zonaSurMenu").show();
+		  }
+		    else if (this.value == "zonaOesteSelected") {
+		    $("#zonaOesteMenu").show();
+		  }
+		});
+</script> 
 </body>
 </html>
