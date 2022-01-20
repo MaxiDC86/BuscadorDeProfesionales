@@ -18,15 +18,16 @@
 	<div class="main-block">
 		<h1>Bienvenidos al buscador de profesionales.</h1>
 
-		<form id="selection" action="procesaBusqueda">
+		
+		<form:form action="procesaBusqueda" modelAttribute="selection">  
 			<div class="form-group">
 				<label for="cleaning-service" class="control-label">Elegir
 					Zona a buscar</label> <select class="form-control" id="location"
 					path="zone">
 					<option disabled selected value>-- select an option --</option>
-					<option value="zonaNorteSelected">Zona Norte</option>
-					<option value="zonaSurSelected">Zona Sur</option>
-					<option value="zonaOesteSelected">Zona Oeste</option>
+					<option value="norte">Zona Norte</option>
+					<option value="sur">Zona Sur</option>
+					<option value="oeste">Zona Oeste</option>
 				</select>
 			</div>
 			<!--carpet cleaning-->
@@ -65,7 +66,7 @@
 
 			</div>
 
-		</form>
+		</form:form>
 
 	</div>
 
@@ -79,11 +80,11 @@
 									"#zonaNorteMenu select,#zonaSurMenu select,#zonaOesteMenu select")
 									.prop('selectedIndex', 0);
 
-							if (this.value == "zonaNorteSelected") {
+							if (this.value == "norte") {
 								$("#zonaNorteMenu").show();
-							} else if (this.value == "zonaSurSelected") {
+							} else if (this.value == "sur") {
 								$("#zonaSurMenu").show();
-							} else if (this.value == "zonaOesteSelected") {
+							} else if (this.value == "oeste") {
 								$("#zonaOesteMenu").show();
 							}
 						});
