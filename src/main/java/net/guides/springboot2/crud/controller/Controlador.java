@@ -40,11 +40,13 @@ public class Controlador {
 			selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndCity(selection.getZone(),
 					selection.getCity1());
 			selectionShowCity = selection.getCity1();
-		} else if (selection.getZone().equals("sur")) {
+		}
+		if (selection.getZone().equals("sur")) {
 			selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndCity(selection.getZone(),
 					selection.getCity2());
 			selectionShowCity = selection.getCity2();
-		} else if (selection.getZone().equals("oeste")) {
+		}
+		if (selection.getZone().equals("oeste")) {
 			selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndCity(selection.getZone(),
 					selection.getCity3());
 			selectionShowCity = selection.getCity3();
