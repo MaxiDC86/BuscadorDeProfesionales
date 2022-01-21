@@ -36,6 +36,7 @@
 					<label>Elegir Localidad</label> <form:select  path="city">
 						<option value="San Isidro">San Isidro</option>
 						<option value="Vicente Lopez">Vicente Lopez</option>
+						<option value="Villa Adelina">Villa Adelina</option>
 					</form:select>
 				</div>
 			</div>

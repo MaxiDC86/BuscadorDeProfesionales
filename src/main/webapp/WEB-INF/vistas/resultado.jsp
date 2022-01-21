@@ -18,7 +18,16 @@
 <body>
 	<div class="main-block">
 		<h1>Resultado de busqueda.</h1>
-<h2>Has elegido buscar en zona: <% out.print(Controlador.selectionShow);%> </h2>
+		<h2>
+			Has elegido buscar en zona:
+			<%
+		out.print(Controlador.selectionShowZone);
+		%>
+			y Has elegido la localiad:
+			<%
+		out.print(Controlador.selectionShowCity);
+		%>
+		</h2>
 		<table style="width: 90%">
 			<tr>
 				<th>Apellido</th>

@@ -44,7 +44,8 @@ public class Controlador {
 		selectedZone = (ArrayList<Client>) clientRepository.findAllByZone(selection.getZone());
 		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity(selection.getCity());
 
-		selectionShow = selection.getZone();
+		selectionShowZone = selection.getZone();
+		selectionShowCity = selection.getCity();
 
 		return "resultado";
 	}
@@ -61,6 +62,7 @@ public class Controlador {
 	public static ArrayList<Client> selectedZone;
 	public static ArrayList<Client> selectedCity;
 	public static ArrayList<Client> selectedZoneAndCity;
-	public static String selectionShow;
+	public static String selectionShowZone;
+	public static String selectionShowCity;
 
 }
