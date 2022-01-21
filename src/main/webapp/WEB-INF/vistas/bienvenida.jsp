@@ -4,14 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Required meta tags -->
 <meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Bienvenidos a busqueda de profesionales.</title>
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon"
 	href="${pageContext.request.contextPath}/recursos/imgs/favicon.png">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/css/styles.css">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -115,11 +118,12 @@
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color darken-3 pt-4">
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2022 Copyright:
-    <a href="https://www.mediascorreia.online/"> www.mediascorreia.online</a>
-  </div>
-  <!-- Copyright -->
+	<!-- Copyright -->
+	<div class="footer-copyright text-center py-3">
+		© 2022 Copyright: <a href="https://www.mediascorreia.online/">
+			www.mediascorreia.online</a>
+	</div>
+	<!-- Copyright -->
 
 </footer>
 </html>
