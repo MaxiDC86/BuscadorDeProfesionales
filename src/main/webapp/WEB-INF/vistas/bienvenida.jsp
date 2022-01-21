@@ -34,8 +34,8 @@
 				<div class="form-group">
 					<!--how many dining rooms-->
 					<label>Elegir Localidad</label> <form:select  path="city">
-						<option>San Isidro</option>
-						<option>Vicente Lopez</option>
+						<option value="San Isidro">San Isidro</option>
+						<option value="Vicente Lopez">Vicente Lopez</option>
 					</form:select>
 				</div>
 			</div>
@@ -44,8 +44,8 @@
 				<div class="form-group">
 					<!--how many dining room chairs-->
 					<label>Elegir Localidad</label> <form:select  path="city">
-						<option>Avellaneda</option>
-						<option>Lomas de Zamora</option>
+						<option value="Avellaneda">Avellaneda</option>
+						<option value="Lomas de Zamora">Lomas de Zamora</option>
 					</form:select>
 				</div>
 			</div>
@@ -55,8 +55,8 @@
 				<div class="form-group">
 					<!--how many dining room chairs-->
 					<label>Elegir Localidad</label> <form:select  path="city">
-						<option>Castelar</option>
-						<option>Moron</option>
+						<option value="Castelar">Castelar</option>
+						<option value="Moron">Moron</option>
 					</form:select>
 				</div>
 			</div>
