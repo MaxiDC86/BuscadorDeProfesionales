@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page import="net.guides.springboot2.crud.controller.*"%>
+<%@ page import="net.guides.springboot2.crud.model.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +31,16 @@
 
 		<form:form action="procesaBusqueda" modelAttribute="selection">
 			<div class="form-group">
-				<label for="cleaning-service" class="control-label">Elegir
+				<label class="control-label">Elegir profesional a buscar</label>
+				<form:select class="form-select form-select-lg mb-3" path="area">
+					<option disabled selected value>-- elegir --</option>
+					<%
+					for (Client emp : Controlador.distintAreas) {
+						out.println("<option value='" + emp.getArea() + "'>" + emp.getArea() + "</option>");
+					}
+					%>
+				</form:select>
+				<br> <label for="cleaning-service" class="control-label">Elegir
 					Zona a buscar</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
 					<option disabled selected value>-- select an option --</option>

@@ -34,6 +34,10 @@ public class Controlador {
 
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
+		
+		
+		//---- Se buscan todos los tipod de profesionales en la BBDD.
+		distintAreas = (ArrayList<Client>) clientRepository.findDistinctByArea();
 
 		if (selection.getZone().equals("norte")) {
 			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(selection.getZone(),
@@ -51,7 +55,9 @@ public class Controlador {
 			selectionShowCity = selection.getCity3();
 		}
 
-
+		selectionShowZone = selection.getZone();
+		selectionShowArea = selection.getArea();
+		
 		return "resultado";
 	}
 
@@ -64,6 +70,7 @@ public class Controlador {
 	}
 
 	public static ArrayList<Client> selectedZoneAndCityAndArea;
+	public static ArrayList<Client> distintAreas;
 	public static String selectionShowZone;
 	public static String selectionShowCity;
 	public static String selectionShowArea;
