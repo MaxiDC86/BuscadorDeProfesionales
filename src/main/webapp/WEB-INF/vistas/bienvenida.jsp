@@ -6,23 +6,29 @@
 <head>
 <meta charset="utf-8">
 <title>Bienvenidos a busqueda de profesionales.</title>
+<!-- Favicon -->
 <link rel="icon" type="image/x-icon"
-	href="${pageContext.request.contextPath}/recursos/imgs/foto.png">
+	href="${pageContext.request.contextPath}/recursos/imgs/favicon.png">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/css/styles.css">
-<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!--  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
 </head>
 <body>
 
 	<div class="main-block">
 		<h1>Bienvenidos al buscador de profesionales.</h1>
 
-		
-		<form:form action="procesaBusqueda" modelAttribute="selection">  
+
+		<form:form action="procesaBusqueda" modelAttribute="selection">
 			<div class="form-group">
 				<label for="cleaning-service" class="control-label">Elegir
-					Zona a buscar</label> <form:select path="zone">  
+					Zona a buscar</label>
+				<form:select class="form-select form-select-lg mb-3" path="zone">
 					<option disabled selected value>-- select an option --</option>
 					<option value="norte">Zona Norte</option>
 					<option value="sur">Zona Sur</option>
@@ -33,8 +39,9 @@
 			<div id="zonaNorteMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining rooms-->
-					<label>Elegir Localidad</label> <form:select  path="city1">
-					<option disabled selected value>-- select an option --</option>
+					<label>Elegir Localidad</label>
+					<form:select path="city1">
+						<option disabled selected value>-- select an option --</option>
 						<option value="San Isidro">San Isidro</option>
 						<option value="Vicente Lopez">Vicente Lopez</option>
 						<option value="Villa Adelina">Villa Adelina</option>
@@ -45,8 +52,9 @@
 			<div id="zonaSurMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining room chairs-->
-					<label>Elegir Localidad</label> <form:select  path="city2">
-					<option disabled selected value>-- select an option --</option>
+					<label>Elegir Localidad</label>
+					<form:select path="city2">
+						<option disabled selected value>-- select an option --</option>
 						<option value="Avellaneda">Avellaneda</option>
 						<option value="Lomas de Zamora">Lomas de Zamora</option>
 					</form:select>
@@ -57,8 +65,9 @@
 			<div id="zonaOesteMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining room chairs-->
-					<label>Elegir Localidad</label> <form:select  path="city3">
-					<option disabled selected value>-- select an option --</option>
+					<label>Elegir Localidad</label>
+					<form:select path="city3">
+						<option disabled selected value>-- select an option --</option>
 						<option value="Castelar">Castelar</option>
 						<option value="Moron">Moron</option>
 					</form:select>
@@ -92,5 +101,18 @@
 							}
 						});
 	</script>
+	<!-- JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
 </body>
 </html>

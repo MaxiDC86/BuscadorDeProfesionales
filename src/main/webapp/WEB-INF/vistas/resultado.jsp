@@ -11,7 +11,7 @@
 <meta charset="ISO-8859-1">
 <title>Resultado de busqueda.</title>
 <link rel="icon" type="image/x-icon"
-	href="${pageContext.request.contextPath}/recursos/imgs/foto.png">
+	href="${pageContext.request.contextPath}/recursos/imgs/favicon.png">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/css/styles.css">
 </head>
