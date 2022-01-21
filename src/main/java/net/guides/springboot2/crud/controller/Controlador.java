@@ -35,28 +35,22 @@ public class Controlador {
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
 
-		clientes = (ArrayList<Client>) clientRepository.findAll();
 		if (selection.getZone().equals("norte")) {
-			selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndCity(selection.getZone(),
-					selection.getCity1());
+			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(selection.getZone(),
+					selection.getCity1(), selection.getArea());
 			selectionShowCity = selection.getCity1();
 		}
 		if (selection.getZone().equals("sur")) {
-			selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndCity(selection.getZone(),
-					selection.getCity2());
+			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(selection.getZone(),
+					selection.getCity2(), selection.getArea());
 			selectionShowCity = selection.getCity2();
 		}
 		if (selection.getZone().equals("oeste")) {
-			selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndCity(selection.getZone(),
-					selection.getCity3());
+			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(selection.getZone(),
+					selection.getCity3(), selection.getArea());
 			selectionShowCity = selection.getCity3();
 		}
-		selectedZone = (ArrayList<Client>) clientRepository.findAllByZone(selection.getZone());
-		// selectedCity = (ArrayList<Client>)
-		// clientRepository.findAllByCity(selection.getCity());
 
-		selectionShowZone = selection.getZone();
-		// selectionShowCity = selection.getCity();
 
 		return "resultado";
 	}
@@ -69,11 +63,9 @@ public class Controlador {
 		return "resultado";
 	}
 
-	public static ArrayList<Client> clientes;
-	public static ArrayList<Client> selectedZone;
-	public static ArrayList<Client> selectedCity;
-	public static ArrayList<Client> selectedZoneAndCity;
+	public static ArrayList<Client> selectedZoneAndCityAndArea;
 	public static String selectionShowZone;
 	public static String selectionShowCity;
+	public static String selectionShowArea;
 
 }

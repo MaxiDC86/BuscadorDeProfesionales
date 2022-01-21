@@ -14,7 +14,7 @@
 	href="${pageContext.request.contextPath}/recursos/imgs/favicon.png">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/css/styles.css">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -25,16 +25,20 @@
 	<div class="main-block">
 		<h1>Resultado de busqueda.</h1>
 		<h3>
-			Has elegido buscar en zona:
+			Has elegido buscar:
+			<%
+		out.print(Controlador.selectionShowArea);
+		%>
+			en  la zona:
 			<%
 		out.print(Controlador.selectionShowZone);
 		%>
-			y Has elegido la localiad:
+			y la localiad:
 			<%
 		out.print(Controlador.selectionShowCity);
 		%>
 		</h3>
-		<table style="width:80% text-align:center">
+		<table style="width: 80% text-align:center">
 			<tr>
 				<th>Apellido</th>
 				<th>Nombre</th>
@@ -43,7 +47,7 @@
 			</tr>
 			<tr>
 				<%
-				for (Client emp : Controlador.selectedZoneAndCity) {
+				for (Client emp : Controlador.selectedZoneAndCityAndArea) {
 					out.println("<tr><td>" + emp.getLastName() + "</td><td>" + emp.getFirstName() + "</td><td>" + emp.getEmailId()
 					+ "</td><td>" + emp.getTelephone() + "</td></tr>");
 				}
@@ -73,11 +77,12 @@
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color darken-3 pt-4">
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2022 Copyright:
-    <a href="http://www.mediascorreia.online/"> www.mediascorreia.online</a>
-  </div>
-  <!-- Copyright -->
+	<!-- Copyright -->
+	<div class="footer-copyright text-center py-3">
+		© 2022 Copyright: <a href="http://www.mediascorreia.online/">
+			www.mediascorreia.online</a>
+	</div>
+	<!-- Copyright -->
 
 </footer>
 </html>

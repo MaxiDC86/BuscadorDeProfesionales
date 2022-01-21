@@ -4,6 +4,7 @@ public class Selection {
 
 	private String zone;
 	private String city;
+	private String area;
 
 	public Selection() {
 	}
@@ -11,6 +12,7 @@ public class Selection {
 	public Selection(String zone, String city) {
 		this.zone = zone;
 		this.city = city;
+		this.area = area;
 	}
 
 	public String getZone() {
@@ -42,5 +44,14 @@ public class Selection {
 	public void setCity3(String city) {
 		this.city = city;
 	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+	
 
 }

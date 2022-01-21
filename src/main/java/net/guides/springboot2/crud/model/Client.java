@@ -18,7 +18,7 @@ public class Client {
 	private String telephone;
 	private String zone;
 	private String city;
-	private String area;
+	private String area; //Kinesiologo, odontologo etc
 	private String type;
 	
 	public Client() {
