@@ -64,4 +64,15 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 		crossorigin="anonymous"></script>
 </body>
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color darken-3 pt-4">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2022 Copyright:
+    <a href="https://www.mediascorreia.online/"> www.mediascorreia.online</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
 </html>
