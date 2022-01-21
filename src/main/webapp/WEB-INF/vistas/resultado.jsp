@@ -24,7 +24,7 @@
 <body>
 	<div class="main-block">
 		<h1>Resultado de busqueda.</h1>
-		<h2>
+		<h3>
 			Has elegido buscar en zona:
 			<%
 		out.print(Controlador.selectionShowZone);
@@ -33,7 +33,7 @@
 			<%
 		out.print(Controlador.selectionShowCity);
 		%>
-		</h2>
+		</h3>
 		<table style="width:80% text-align:center">
 			<tr>
 				<th>Apellido</th>

@@ -127,7 +127,7 @@ input[type=password] {
 }
 
 button {
-	width: 100%;
+	width: 20%;
 	padding: 10px 0;
 	margin: 10px auto;
 	border-radius: 5px;
