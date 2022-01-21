@@ -70,7 +70,7 @@
 	</div>
 
 	<script>
-		$("#location")
+		$("#zone")
 				.change(
 						function() {
 							$("#zonaNorteMenu,#zonaSurMenu,#zonaOesteMenu")
