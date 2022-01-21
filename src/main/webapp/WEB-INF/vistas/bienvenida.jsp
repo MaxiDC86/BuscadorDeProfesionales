@@ -22,13 +22,12 @@
 		<form:form action="procesaBusqueda" modelAttribute="selection">  
 			<div class="form-group">
 				<label for="cleaning-service" class="control-label">Elegir
-					Zona a buscar</label> <select class="form-control" id="location"
-					path="zone">
+					Zona a buscar</label> <form:select path="zone">  
 					<option disabled selected value>-- select an option --</option>
 					<option value="norte">Zona Norte</option>
 					<option value="sur">Zona Sur</option>
 					<option value="oeste">Zona Oeste</option>
-				</select>
+				</form:select>
 			</div>
 			<!--carpet cleaning-->
 			<div id="zonaNorteMenu" style="display: none;">
