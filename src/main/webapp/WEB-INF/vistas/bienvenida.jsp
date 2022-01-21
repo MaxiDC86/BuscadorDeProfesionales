@@ -33,20 +33,20 @@
 			<div id="zonaNorteMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining rooms-->
-					<label>Elegir Localidad</label> <select path="city">
+					<label>Elegir Localidad</label> <form:select  path="city">
 						<option>San Isidro</option>
 						<option>Vicente Lopez</option>
-					</select>
+					</form:select>
 				</div>
 			</div>
 			<!--upholstery cleaning-->
 			<div id="zonaSurMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining room chairs-->
-					<label>Elegir Localidad</label> <select path="city">
+					<label>Elegir Localidad</label> <form:select  path="city">
 						<option>Avellaneda</option>
 						<option>Lomas de Zamora</option>
-					</select>
+					</form:select>
 				</div>
 			</div>
 
@@ -54,10 +54,10 @@
 			<div id="zonaOesteMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining room chairs-->
-					<label>Elegir Localidad</label> <select path="city">
+					<label>Elegir Localidad</label> <form:select  path="city">
 						<option>Castelar</option>
 						<option>Moron</option>
-					</select>
+					</form:select>
 				</div>
 			</div>
 			<div>
