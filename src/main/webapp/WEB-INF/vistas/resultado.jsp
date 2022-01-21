@@ -34,7 +34,7 @@
 		out.print(Controlador.selectionShowCity);
 		%>
 		</h2>
-		<table style="width: 90%">
+		<table style="width: 80% text-align:center">
 			<tr>
 				<th>Apellido</th>
 				<th>Nombre</th>
