@@ -24,9 +24,9 @@ public class ClientService {
 		return (ArrayList<Client>) clientRepository.findAllByCity(city);
 	}
 
-	/*
-	 * public ArrayList<Client> findAllByZoneAndByCity(String zone, String city){
-	 * return (ArrayList<Client>) clientRepository.findAllByZoneAndByCity(zone,
-	 * city); }
-	 */
+	
+	 public ArrayList<Client> findAllByZoneAndByCity(String zone, String city){
+	 return (ArrayList<Client>) clientRepository.findByZoneAndByCity(zone,
+	 city); }
+	 
 }

@@ -38,7 +38,7 @@ public class Controlador {
 		
 		clientes = (ArrayList<Client>) clientRepository.findAll();
 		
-		//selectedZoneAndCity = (ArrayList<Client>) clientRepository.findAllByZoneAndByCity("norte", "Villa Adelina");
+		selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndByCity(selection.getZone(),selection.getCity());
 		
 		selectedZone = (ArrayList<Client>) clientRepository.findAllByZone(selection.getZone());
 		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity(selection.getCity());
@@ -59,7 +59,7 @@ public class Controlador {
 	public static ArrayList<Client> clientes;
 	public static ArrayList<Client> selectedZone;
 	public static ArrayList<Client> selectedCity;
-	//public static ArrayList<Client> selectedZoneAndCity;
+	public static ArrayList<Client> selectedZoneAndCity;
 	public static String selectionShow; 
 
 }
