@@ -33,7 +33,7 @@ public class ClientService {
 		 return (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(zone,city,area);
 	 }
 	 
-	 public ArrayList<Client> findDistinctByArea(){
-		 return (ArrayList<Client>) clientRepository.findDistinctByArea();
+	 public ArrayList<Client> findDistinctArea(){
+		 return (ArrayList<Client>) clientRepository.findDistinctArea();
 	 }
 } 
