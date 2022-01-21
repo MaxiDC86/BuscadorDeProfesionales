@@ -23,32 +23,33 @@ public class Controlador {
 	@RequestMapping
 	public String bienvenida(Model model) {
 
-		
 		Selection selection = new Selection();
 
 		model.addAttribute("selection", selection);
 
 		return "bienvenida";
 	}
-	
-	//---PROCESANDO LA BUSQUEDA-----
-	
+
+	// ---PROCESANDO LA BUSQUEDA-----
+
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
-		
+
 		clientes = (ArrayList<Client>) clientRepository.findAll();
-		
-		selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndByCity(selection.getZone(),selection.getCity());
-		
+
+		selectedZoneAndCity = (ArrayList<Client>) clientRepository
+				.findByZoneAndByCityAllIgnoreCase(selection.getZone(),
+				selection.getCity());
+
 		selectedZone = (ArrayList<Client>) clientRepository.findAllByZone(selection.getZone());
 		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity(selection.getCity());
-		
+
 		selectionShow = selection.getZone();
-		
+
 		return "resultado";
 	}
-	
-	//----RESULTADO DE BUSQUEDA ------
+
+	// ----RESULTADO DE BUSQUEDA ------
 
 	@RequestMapping("/resultado")
 	public String resultado() {
@@ -60,6 +61,6 @@ public class Controlador {
 	public static ArrayList<Client> selectedZone;
 	public static ArrayList<Client> selectedCity;
 	public static ArrayList<Client> selectedZoneAndCity;
-	public static String selectionShow; 
+	public static String selectionShow;
 
 }
