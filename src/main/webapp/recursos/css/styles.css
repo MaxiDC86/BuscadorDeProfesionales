@@ -11,7 +11,7 @@ body, div, h1, form, input, p {
 	outline: none;
 	font-family: Roboto, Arial, sans-serif;
 	font-size: 16px;
-	color: #b30000;
+	color: black;
 }
 
 h1 {
@@ -148,6 +148,8 @@ table, th, td {
 }
 table{
 	table-layout: fixed;
+	display:flex;
+	justify-content:center;
 }
 
 footer {
