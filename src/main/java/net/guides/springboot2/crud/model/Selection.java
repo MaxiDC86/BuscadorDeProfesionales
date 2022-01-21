@@ -21,11 +21,25 @@ public class Selection {
 		this.zone = zone;
 	}
 
-	public String getCity() {
+	public String getCity1() {
 		return city;
 	}
 
-	public void setCity(String city) {
+	public void setCity1(String city) {
+		this.city = city;
+	}
+	public String getCity2() {
+		return city;
+	}
+	
+	public void setCity2(String city) {
+		this.city = city;
+	}
+	public String getCity3() {
+		return city;
+	}
+	
+	public void setCity3(String city) {
 		this.city = city;
 	}
 

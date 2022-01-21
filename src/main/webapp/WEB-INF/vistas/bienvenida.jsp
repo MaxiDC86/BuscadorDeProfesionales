@@ -33,7 +33,7 @@
 			<div id="zonaNorteMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining rooms-->
-					<label>Elegir Localidad</label> <form:select  path="city">
+					<label>Elegir Localidad</label> <form:select  path="city1">
 						<option value="San Isidro">San Isidro</option>
 						<option value="Vicente Lopez">Vicente Lopez</option>
 						<option value="Villa Adelina">Villa Adelina</option>
@@ -44,7 +44,7 @@
 			<div id="zonaSurMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining room chairs-->
-					<label>Elegir Localidad</label> <form:select  path="city">
+					<label>Elegir Localidad</label> <form:select  path="city2">
 						<option value="Avellaneda">Avellaneda</option>
 						<option value="Lomas de Zamora">Lomas de Zamora</option>
 					</form:select>
@@ -55,7 +55,7 @@
 			<div id="zonaOesteMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining room chairs-->
-					<label>Elegir Localidad</label> <form:select  path="city">
+					<label>Elegir Localidad</label> <form:select  path="city3">
 						<option value="Castelar">Castelar</option>
 						<option value="Moron">Moron</option>
 					</form:select>

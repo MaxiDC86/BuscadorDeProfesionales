@@ -36,16 +36,25 @@ public class Controlador {
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
 
 		clientes = (ArrayList<Client>) clientRepository.findAll();
-
-		selectedZoneAndCity = (ArrayList<Client>) clientRepository
-				.findByZoneAndCity(selection.getZone(),
-				selection.getCity());
-
+		if (selection.getZone().equals("norte")) {
+			selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndCity(selection.getZone(),
+					selection.getCity1());
+			selectionShowCity = selection.getCity1();
+		} else if (selection.getZone().equals("sur")) {
+			selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndCity(selection.getZone(),
+					selection.getCity2());
+			selectionShowCity = selection.getCity2();
+		} else if (selection.getZone().equals("oeste")) {
+			selectedZoneAndCity = (ArrayList<Client>) clientRepository.findByZoneAndCity(selection.getZone(),
+					selection.getCity3());
+			selectionShowCity = selection.getCity3();
+		}
 		selectedZone = (ArrayList<Client>) clientRepository.findAllByZone(selection.getZone());
-		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity(selection.getCity());
+		// selectedCity = (ArrayList<Client>)
+		// clientRepository.findAllByCity(selection.getCity());
 
 		selectionShowZone = selection.getZone();
-		selectionShowCity = selection.getCity();
+		// selectionShowCity = selection.getCity();
 
 		return "resultado";
 	}
