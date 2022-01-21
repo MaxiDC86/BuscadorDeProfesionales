@@ -38,7 +38,7 @@ public class Controlador {
 		clientes = (ArrayList<Client>) clientRepository.findAll();
 
 		selectedZoneAndCity = (ArrayList<Client>) clientRepository
-				.findByZoneAndByCityAllIgnoreCase(selection.getZone(),
+				.findByZoneAndCity(selection.getZone(),
 				selection.getCity());
 
 		selectedZone = (ArrayList<Client>) clientRepository.findAllByZone(selection.getZone());
