@@ -14,6 +14,12 @@
 	href="${pageContext.request.contextPath}/recursos/imgs/favicon.png">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/css/styles.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
 </head>
 <body>
 	<div class="main-block">
@@ -69,10 +75,9 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2022 Copyright:
-    <a href="https://www.mediascorreia.online/"> www.mediascorreia.online</a>
+    <a href="http://www.mediascorreia.online/"> www.mediascorreia.online</a>
   </div>
   <!-- Copyright -->
 
 </footer>
-
 </html>

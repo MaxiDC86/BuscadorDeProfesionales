@@ -120,7 +120,7 @@
 
 	<!-- Copyright -->
 	<div class="footer-copyright text-center py-3">
-		© 2022 Copyright: <a href="https://www.mediascorreia.online/">
+		© 2022 Copyright: <a href="http://www.mediascorreia.online/">
 			www.mediascorreia.online</a>
 	</div>
 	<!-- Copyright -->
