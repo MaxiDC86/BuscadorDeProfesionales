@@ -32,6 +32,10 @@
 		<form:form action="procesaBusqueda" modelAttribute="selection">
 			<div class="form-group">
 				<label class="control-label">Elegir profesional a buscar</label>
+				<form:select class="form-select form-select-lg mb-3" path="area">
+					<option value="Kinesiologo">Kinesiologo</option>
+					<option value="Odontologo">Kinesiologo</option>
+				</form:select>
 
 				<br> <label for="cleaning-service" class="control-label">Elegir
 					Zona a buscar</label>

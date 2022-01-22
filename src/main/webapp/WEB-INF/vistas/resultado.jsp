@@ -54,6 +54,7 @@
 				%>
 			</tr>
 		</table>
+		<br><br>
 		<form method="get" action="/">
 			<button type="submit">HOME</button>
 		</form>
