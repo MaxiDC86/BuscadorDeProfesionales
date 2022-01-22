@@ -32,8 +32,8 @@ public class ClientService {
 	 public ArrayList<Client> findByZoneAndCityAndArea(String zone, String city, String area){
 		 return (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(zone,city,area);
 	 }
-	 /*
-	 public ArrayList<Client> findDistinctByArea(){
-		 return (ArrayList<Client>) clientRepository.findDistinctByArea();
-	 }*/
+	 
+	 public ArrayList<Client> findAllDistinctByArea(){
+		 return (ArrayList<Client>) clientRepository.findAllDistinctByArea();
+	 
 } 
