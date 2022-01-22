@@ -26,12 +26,14 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<div class="topnav" id="myTopnav">
-		<a href="#home" class="active">Home</a> <a href="#news">News</a> <a
-			href="#contact">Contact</a> <a href="#about">About</a> <a
-			href="javascript:void(0);" class="icon" onclick="myFunction()"> <i
-			class="fa fa-bars"></i>
-		</a>
+	<div class="top-home">
+		<div class="topnav" id="myTopnav">
+			<a href="#home" class="active">Home</a> <a href="#news">News</a> <a
+				href="#contact">Contact</a> <a href="#about">About</a> <a
+				href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 	</div>
 	<div class="main-block">
 		<h1>Resultado de busqueda.</h1>
@@ -65,8 +67,7 @@
 				%>
 			</tr>
 		</table>
-		<br>
-		<br>
+		<br> <br>
 		<form method="get" action="/">
 			<button type="submit">HOME</button>
 		</form>
