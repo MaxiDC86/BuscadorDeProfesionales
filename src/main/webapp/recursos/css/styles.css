@@ -14,10 +14,7 @@ body, div, h1, form, input, p {
 	font-size: 16px;
 	color: black;
 }
-header{
-	position:relative;
-	display:block;
-}
+
 
 h1 {
 	padding: 10px 0;

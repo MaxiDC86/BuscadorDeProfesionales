@@ -30,7 +30,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<header class="clearfix">
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -51,7 +51,7 @@
     </div>
   </div>
 </nav>
-</header>
+
 
 	<div class="main-block">
 		<h1>Bienvenidos al buscador de profesionales.</h1>
