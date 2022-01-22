@@ -42,7 +42,7 @@
 				<br> <label for="cleaning-service" class="control-label">Elegir
 					Zona a buscar</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
-					<option disabled selected value>-- select an option --</option>
+					<option disabled selected value>-- seleccionar una opción --</option>
 					<option value="norte">Zona Norte</option>
 					<option value="sur">Zona Sur</option>
 					<option value="oeste">Zona Oeste</option>

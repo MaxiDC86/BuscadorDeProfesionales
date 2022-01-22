@@ -29,10 +29,12 @@
 			<%
 		out.print(Controlador.selectionShowArea);
 		%>
+		<br>
 			en  la zona:
 			<%
 		out.print(Controlador.selectionShowZone);
 		%>
+		<br>
 			y la localiad:
 			<%
 		out.print(Controlador.selectionShowCity);
