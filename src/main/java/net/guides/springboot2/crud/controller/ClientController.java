@@ -28,12 +28,12 @@ public class ClientController {
 	@Autowired
 	private ClientRepository clientRepository;
 
-	@GetMapping("/employees")
+	@GetMapping("/clients")
 	public List<Client> getAllEmployees() {
 		return clientRepository.findAll();
 	}
 
-	@GetMapping("/employees/{id}")
+	@GetMapping("/clientss/{id}")
 	public ResponseEntity<Client> getEmployeeById(@PathVariable(value = "id") Long clientId)
 			throws ResourceNotFoundException {
 		Client client = clientRepository.findById(clientId)
@@ -41,30 +41,30 @@ public class ClientController {
 		return ResponseEntity.ok().body(client);
 	}
 
-	@PostMapping("/employees")
+	@PostMapping("/clients")
 	public Client createEmployee(@Valid @RequestBody Client client) {
 		return clientRepository.save(client);
 	}
 
-	@PutMapping("/employees/{id}")
+	@PutMapping("/clients/{id}")
 	public ResponseEntity<Client> updateEmployee(@PathVariable(value = "id") Long clientId,
-			@Valid @RequestBody Client employeeDetails) throws ResourceNotFoundException {
+			@Valid @RequestBody Client clientDetails) throws ResourceNotFoundException {
 		Client client = clientRepository.findById(clientId)
 				.orElseThrow(() -> new ResourceNotFoundException("Client not found for this id :: " + clientId));
 		
-		client.setType(employeeDetails.getType());
-		client.setArea(employeeDetails.getArea());
-		client.setCity(employeeDetails.getCity());
-		client.setZone(employeeDetails.getZone());
-		client.setTelephone(employeeDetails.getTelephone());
-		client.setEmailId(employeeDetails.getEmailId());
-		client.setLastName(employeeDetails.getLastName());
-		client.setFirstName(employeeDetails.getFirstName());
+		client.setType(clientDetails.getType());
+		client.setArea(clientDetails.getArea());
+		client.setCity(clientDetails.getCity());
+		client.setZone(clientDetails.getZone());
+		client.setTelephone(clientDetails.getTelephone());
+		client.setEmailId(clientDetails.getEmailId());
+		client.setLastName(clientDetails.getLastName());
+		client.setFirstName(clientDetails.getFirstName());
 		final Client updatedEmployee = clientRepository.save(client);
 		return ResponseEntity.ok(updatedEmployee);
 	}
 
-	@DeleteMapping("/employees/{id}")
+	@DeleteMapping("/clients/{id}")
 	public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Long clientId)
 			throws ResourceNotFoundException {
 		Client client = clientRepository.findById(clientId)
