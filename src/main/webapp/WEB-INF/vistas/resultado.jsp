@@ -28,7 +28,7 @@
 <body>
 	<div class="main-block">
 		<h1>Resultado de busqueda.</h1>
-		<h3>
+		<h6>
 			Has elegido buscar:
 			<%
 		out.print(Controlador.selectionShowArea);
@@ -43,7 +43,7 @@
 			<%
 		out.print(Controlador.selectionShowCity);
 		%>
-		</h3>
+		</h6>
 		<table style="width: 80% text-align:center">
 			<tr>
 				<th>Apellido</th>
