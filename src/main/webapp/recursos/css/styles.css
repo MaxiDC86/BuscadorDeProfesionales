@@ -153,7 +153,7 @@ table, th, td {
 }
 
 td, th {
-	padding: 10px;
+	padding: 10px !important;
 }
 
 table {
