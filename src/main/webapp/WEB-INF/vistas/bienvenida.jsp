@@ -17,11 +17,11 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/css/styles.css">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<!-- Bootstrap CSS -->
+<!-- Bootstrap CSS 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">
+	crossorigin="anonymous">-->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script
@@ -30,33 +30,27 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">SALUD CERCA</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Nosotros</a></li>
-      </ul>
-
-    </div>
-  </div>
-</nav>
-
-
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">SALUD CERCA</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Contacto</a></li>
+					<li><a href="#">Nosotros</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<div class="main-block">
 		<h1>Bienvenidos al buscador de profesionales.</h1>
-
-
 		<form:form action="procesaBusqueda" modelAttribute="selection">
 			<div class="form-group">
 				<label class="control-label">Profesional </label>
@@ -66,7 +60,6 @@
 					<option value="Clinico">Clinico</option>
 					<option value="Psicologia">Psicólogía</option>
 				</form:select>
-
 				<br> <label for="cleaning-service" class="control-label">Elegir
 					Zona</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
@@ -102,7 +95,6 @@
 					</form:select>
 				</div>
 			</div>
-
 			<!--Zona Oeste-->
 			<div id="zonaOesteMenu" style="display: none;">
 				<div class="form-group">
@@ -117,13 +109,9 @@
 			</div>
 			<div>
 				<button type="submit" value="Enviar">Buscar</button>
-
 			</div>
-
 		</form:form>
-
 	</div>
-
 	<!-- JavaScript -->
 	<script>
 		$("#zone")
@@ -142,7 +130,8 @@
 								$("#zonaOesteMenu").show();
 							}
 						});
-	</script><!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	</script>
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
