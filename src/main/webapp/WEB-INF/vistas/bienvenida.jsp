@@ -24,13 +24,27 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<div class="topnav" id="myTopnav">
-		<a href="#home" class="active">Home</a> <a href="#news">News</a> <a
-			href="#contact">Contact</a> <a href="#about">About</a> <a
-			href="javascript:void(0);" class="icon" onclick="myFunction()"> <i
-			class="fa fa-bars"></i>
-		</a>
-	</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
 
 	<div class="main-block">
 		<h1>Bienvenidos al buscador de profesionales.</h1>
@@ -121,16 +135,6 @@
 								$("#zonaOesteMenu").show();
 							}
 						});
-	</script>
-	<script>
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-				x.className = "topnav";
-			}
-		}
 	</script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script
