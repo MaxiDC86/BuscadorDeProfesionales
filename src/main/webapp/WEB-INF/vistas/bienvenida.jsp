@@ -31,7 +31,7 @@
 
 		<form:form action="procesaBusqueda" modelAttribute="selection">
 			<div class="form-group">
-				<label class="control-label">Elegir profesional a buscar</label>
+				<label class="control-label">Profesional </label>
 				<form:select class="form-select form-select-lg mb-3" path="area">
 					<option value="Kinesiologia">Kinesiología</option>
 					<option value="Odontologia">Odontología</option>
@@ -40,7 +40,7 @@
 				</form:select>
 
 				<br> <label for="cleaning-service" class="control-label">Elegir
-					Zona a buscar</label>
+					Zona</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
 					<option disabled selected value>-- seleccionar una opción --</option>
 					<option value="norte">Zona Norte</option>
@@ -52,7 +52,7 @@
 			<div id="zonaNorteMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining rooms-->
-					<label>Elegir Localidad</label>
+					<label>Localidad</label>
 					<form:select class="form-select form-select-lg mb-3" path="city1">
 						<option disabled selected value>-- select an option --</option>
 						<option value="San Isidro">San Isidro</option>
@@ -65,7 +65,7 @@
 			<div id="zonaSurMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining room chairs-->
-					<label>Elegir Localidad</label>
+					<label>Localidad</label>
 					<form:select class="form-select form-select-lg mb-3" path="city2">
 						<option disabled selected value>-- select an option --</option>
 						<option value="Avellaneda">Avellaneda</option>
@@ -78,7 +78,7 @@
 			<div id="zonaOesteMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining room chairs-->
-					<label>Elegir Localidad</label>
+					<label>Localidad</label>
 					<form:select class="form-select form-select-lg mb-3" path="city3">
 						<option disabled selected value>-- select an option --</option>
 						<option value="Castelar">Castelar</option>
