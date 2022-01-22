@@ -35,5 +35,5 @@ public class ClientService {
 	 
 	 public ArrayList<Client> findAllDistinctByArea(){
 		 return (ArrayList<Client>) clientRepository.findAllDistinctByArea();
-	 
+	 }
 } 
