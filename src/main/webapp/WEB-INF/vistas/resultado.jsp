@@ -40,7 +40,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a href="http://salud-cerca.site">Home</a></li>
 					<li><a href="#">Contacto</a></li>
 					<li><a href="#">Nosotros</a></li>
 				</ul>
@@ -81,7 +81,7 @@
 		</table>
 		<br> <br>
 		<form method="get" action="/">
-			<button type="submit">HOME</button>
+			<button type="submit">Volver a buscar</button>
 		</form>
 
 	</div>

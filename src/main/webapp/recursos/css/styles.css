@@ -3,7 +3,7 @@ html, body {
 	justify-content: center;
 	height: 100%;
 	background-color: #096ca3;
-	display:block;
+	display: block;
 }
 
 body, div, h1, form, input, p {
@@ -15,14 +15,14 @@ body, div, h1, form, input, p {
 	color: black;
 }
 
-
 h1 {
 	padding: 10px 0;
 	font-size: 32px;
 	font-weight: 300;
 	text-align: center;
 }
-h6{
+
+h6 {
 	padding: 10px 0;
 	text-align: center;
 }
@@ -35,8 +35,6 @@ hr {
 	color: #a9a9a9;
 	opacity: 0.3;
 }
-
-
 
 .main-block {
 	max-width: 340px;
@@ -151,23 +149,27 @@ button:hover {
 }
 
 table, th, td {
-  border:2px solid black;
-  
+	border: 2px solid black;
 }
-table{
+
+td, th {
+	padding: 10px;
+}
+
+table {
 	table-layout: fixed;
-	display:flex;
-	justify-content:center;
+	display: flex;
+	justify-content: center;
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #1d1655;
-  color: white;
-  text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #1d1655;
+	color: white;
+	text-align: center;
 }
 
 @media only screen and (min-width: 0) {
@@ -179,7 +181,6 @@ footer {
 	}
 	.main-block {
 		max-width: 95%;
-		
 	}
 	h1 {
 		font-size: 60px;
@@ -198,7 +199,6 @@ footer {
 	}
 	.main-block {
 		max-width: 95%;
-		
 	}
 	h1 {
 		font-size: 70px;
@@ -230,7 +230,6 @@ footer {
 	}
 	.main-block {
 		max-width: 95%;
-		
 	}
 }
 
@@ -240,17 +239,14 @@ footer {
 		flex-direction: column;
 		width: 100%;
 		height: auto;
-		
 	}
 	.main-block {
 		max-width: 95%;
-		
 	}
 	h1 {
 		font-size: 50px;
 	}
 	h3 {
-
 		font-size: 25px;
 	}
 	button {
