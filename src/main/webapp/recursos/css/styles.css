@@ -3,6 +3,7 @@ html, body {
 	justify-content: center;
 	height: 100%;
 	background-color: #096ca3;
+	display:block;
 }
 
 body, div, h1, form, input, p {
