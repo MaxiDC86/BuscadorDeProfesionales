@@ -26,6 +26,13 @@
 	crossorigin="anonymous">
 </head>
 <body>
+	<div class="topnav" id="myTopnav">
+		<a href="#home" class="active">Home</a> <a href="#news">News</a> <a
+			href="#contact">Contact</a> <a href="#about">About</a> <a
+			href="javascript:void(0);" class="icon" onclick="myFunction()"> <i
+			class="fa fa-bars"></i>
+		</a>
+	</div>
 	<div class="main-block">
 		<h1>Resultado de busqueda.</h1>
 		<h6>
@@ -33,16 +40,14 @@
 			<%
 		out.print(Controlador.selectionShowArea);
 		%>
-		<br>
-			en  la zona:
+			<br> en la zona:
 			<%
-		out.print(Controlador.selectionShowZone);
-		%>
-		<br>
-			y la localiad:
+			out.print(Controlador.selectionShowZone);
+			%>
+			<br> y la localidad:
 			<%
-		out.print(Controlador.selectionShowCity);
-		%>
+			out.print(Controlador.selectionShowCity);
+			%>
 		</h6>
 		<table style="width: 80% text-align:center">
 			<tr>
@@ -60,7 +65,8 @@
 				%>
 			</tr>
 		</table>
-		<br><br>
+		<br>
+		<br>
 		<form method="get" action="/">
 			<button type="submit">HOME</button>
 		</form>
@@ -68,6 +74,16 @@
 	</div>
 	</script>
 	<!-- JavaScript -->
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

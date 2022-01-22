@@ -24,6 +24,13 @@
 	crossorigin="anonymous">
 </head>
 <body>
+	<div class="topnav" id="myTopnav">
+		<a href="#home" class="active">Home</a> <a href="#news">News</a> <a
+			href="#contact">Contact</a> <a href="#about">About</a> <a
+			href="javascript:void(0);" class="icon" onclick="myFunction()"> <i
+			class="fa fa-bars"></i>
+		</a>
+	</div>
 
 	<div class="main-block">
 		<h1>Bienvenidos al buscador de profesionales.</h1>
@@ -42,7 +49,8 @@
 				<br> <label for="cleaning-service" class="control-label">Elegir
 					Zona</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
-					<option disabled selected value>-- seleccionar una opción --</option>
+					<option disabled selected value>-- seleccionar una opción
+						--</option>
 					<option value="norte">Zona Norte</option>
 					<option value="sur">Zona Sur</option>
 					<option value="oeste">Zona Oeste</option>
@@ -105,7 +113,6 @@
 							$(
 									"#zonaNorteMenu select,#zonaSurMenu select,#zonaOesteMenu select")
 									.prop('selectedIndex', 0);
-
 							if (this.value == "norte") {
 								$("#zonaNorteMenu").show();
 							} else if (this.value == "sur") {
@@ -114,6 +121,16 @@
 								$("#zonaOesteMenu").show();
 							}
 						});
+	</script>
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
 	</script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script
