@@ -32,14 +32,7 @@
 		<form:form action="procesaBusqueda" modelAttribute="selection">
 			<div class="form-group">
 				<label class="control-label">Elegir profesional a buscar</label>
-				<form:select class="form-select form-select-lg mb-3" path="area">
-					<option disabled selected value>-- elegir --</option>
-					<%
-					for (Client emp : Controlador.distintAreas) {
-						out.println("<option value='" + emp.getArea() + "'>" + emp.getArea() + "</option>");
-					}
-					%>
-				</form:select>
+
 				<br> <label for="cleaning-service" class="control-label">Elegir
 					Zona a buscar</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
