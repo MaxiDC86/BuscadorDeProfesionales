@@ -37,7 +37,7 @@ public class Controlador {
 		
 		
 		//---- Se buscan todos los tipod de profesionales en la BBDD.
-		distintAreas = (ArrayList<Client>) clientRepository.findAllDistinctArea();
+		distintAreas = (ArrayList<Client>) clientRepository.findDistinctByArea();
 
 		if (selection.getZone().equals("norte")) {
 			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(selection.getZone(),
