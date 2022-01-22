@@ -34,30 +34,29 @@ public class Controlador {
 
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
-		
-		
-		//---- Se buscan todos los tipod de profesionales en la BBDD.
-		//distintAreas = (ArrayList<Client>) clientRepository.findAllDistinctByArea();
+
+		// ---- Se buscan todos los tipod de profesionales en la BBDD.
+		// distintAreas = (ArrayList<Client>) clientRepository.findAllDistinctByArea();
 
 		if (selection.getZone().equals("norte")) {
-			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(selection.getZone(),
-					selection.getCity1(), selection.getArea());
+			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
+					.findByZoneAndCityAndArea(selection.getZone(), selection.getCity1(), selection.getArea());
 			selectionShowCity = selection.getCity1();
 		}
 		if (selection.getZone().equals("sur")) {
-			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(selection.getZone(),
-					selection.getCity2(), selection.getArea());
+			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
+					.findByZoneAndCityAndArea(selection.getZone(), selection.getCity2(), selection.getArea());
 			selectionShowCity = selection.getCity2();
 		}
 		if (selection.getZone().equals("oeste")) {
-			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(selection.getZone(),
-					selection.getCity3(), selection.getArea());
+			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
+					.findByZoneAndCityAndArea(selection.getZone(), selection.getCity3(), selection.getArea());
 			selectionShowCity = selection.getCity3();
 		}
 
 		selectionShowZone = selection.getZone();
 		selectionShowArea = selection.getArea();
-		
+
 		return "resultado";
 	}
 

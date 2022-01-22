@@ -33,8 +33,10 @@
 			<div class="form-group">
 				<label class="control-label">Elegir profesional a buscar</label>
 				<form:select class="form-select form-select-lg mb-3" path="area">
-					<option value="Kinesiologo">Kinesiologo</option>
-					<option value="Odontologo">Kinesiologo</option>
+					<option value="Kinesiologia">Kinesiología</option>
+					<option value="Odontologia">Odontología</option>
+					<option value="Clinico">Clinico</option>
+					<option value="Psicologia">Psicólogía</option>
 				</form:select>
 
 				<br> <label for="cleaning-service" class="control-label">Elegir
