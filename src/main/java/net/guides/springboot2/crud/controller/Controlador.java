@@ -60,12 +60,14 @@ public class Controlador {
 		return "resultado";
 	}
 
-	// ----RESULTADO DE BUSQUEDA ------
+	// ----CONTACTO------
 
-	@RequestMapping("/resultado")
-	public String resultado() {
-
-		return "resultado";
+	@RequestMapping("/contacto")
+	public String contacto() {
+		
+		SendMail.send();
+		
+		return "bienvenida";
 	}
 
 	public static ArrayList<Client> selectedZoneAndCityAndArea;
