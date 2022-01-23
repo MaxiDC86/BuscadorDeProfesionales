@@ -62,12 +62,12 @@ public class Controlador {
 
 	// ----CONTACTO------
 
-	@RequestMapping("/contacto")
+	@RequestMapping("/contactoFormulario")
 	public String contacto() {
 		
 		SendMail.send();
 		
-		return "bienvenida";
+		return "contactoFormulario";
 	}
 
 	public static ArrayList<Client> selectedZoneAndCityAndArea;
