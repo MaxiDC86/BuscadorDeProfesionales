@@ -17,9 +17,9 @@ public class SendMail {
 	   Port for SSL: 465
 	 */
 	public static void send() {
-		final String fromEmail = "${EMAIL}"; //requires valid gmail id
-		final String password = "${EMAIL_PASSWORD}"; // correct password for gmail id
-		final String toEmail = "${EMAIL}"; // can be any email id 
+		final String fromEmail = "maxisambo@gmail.com"; //requires valid gmail id
+		final String password = "OnlyGmail4278#1607"; // correct password for gmail id
+		final String toEmail = "maxisambo@gmail.com"; // can be any email id 
 		
 		System.out.println("SSLEmail Start");
 		Properties props = new Properties();
