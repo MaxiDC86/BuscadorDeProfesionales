@@ -67,7 +67,7 @@ public class Controlador {
 		
 		//SendMail.send();
 		
-		return "bienvenida";
+		return "contactoformulario";
 	}
 
 	public static ArrayList<Client> selectedZoneAndCityAndArea;

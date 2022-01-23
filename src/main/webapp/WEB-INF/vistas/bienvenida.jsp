@@ -39,7 +39,7 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="http://salud-cerca.site/contactoformulario">Contacto</a></li>
+					<li><a href="/contactoformulario">Contacto</a></li>
 					<li><a href="#">Nosotros</a></li>
 				</ul>
 			</div>
