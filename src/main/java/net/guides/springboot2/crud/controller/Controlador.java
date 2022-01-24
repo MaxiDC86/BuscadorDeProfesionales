@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import net.guides.springboot2.crud.model.Client;
+import net.guides.springboot2.crud.model.Formulario;
 import net.guides.springboot2.crud.model.Selection;
 import net.guides.springboot2.crud.repository.ClientRepository;
 
@@ -63,11 +64,20 @@ public class Controlador {
 	// ----CONTACTO------
 
 	@RequestMapping("/contactoformulario")
-	public String contactoformulario(Model model) {
-		
+	public String contactoFormulario(Model model) {
+
+		Formulario contactoFormulario = new Formulario();
+
+		model.addAttribute("contactoFormulario", contactoFormulario);
+
+		return "contactoFormulario";
+	}
+
+	@RequestMapping("/enviarContactoFormulario")
+	public String enviarContactoFormulario(@ModelAttribute("contactoFormulario") Selection contactoFormulario) {
+
 		SendMail.send();
-		
-		return "contactoformulario";
+		return "contactoFormularioEnviado";
 	}
 
 	public static ArrayList<Client> selectedZoneAndCityAndArea;
