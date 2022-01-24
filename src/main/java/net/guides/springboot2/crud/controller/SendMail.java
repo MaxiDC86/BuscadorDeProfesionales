@@ -17,13 +17,13 @@ public class SendMail {
 	   Port for SSL: 465
 	 */
 	public static void send() {
-		final String fromEmail = "salud-cerca@yandex.com"; //requires valid gmail id
-		final String password = "salud-cerca4278"; // correct password for gmail id
-		final String toEmail = "salud-cerca@yandex.com"; // can be any email id 
+		final String fromEmail = "salud-cerca@outlook.com"; //requires valid gmail id
+		final String password = "salud-4278"; // correct password for gmail id
+		final String toEmail = "salud-cerca@outlook.com"; // can be any email id 
 		
 		System.out.println("SSLEmail Start");
 		Properties props = new Properties();
-		props.put("mail.smtp.host", "smtp.yandex.com"); //SMTP Host
+		props.put("mail.smtp.host", "smtp-mail.outlook.com"); //SMTP Host
 		props.put("mail.smtp.socketFactory.port", "465"); //SSL Port
 		props.put("mail.smtp.socketFactory.class",
 				"javax.net.ssl.SSLSocketFactory"); //SSL Factory Class
