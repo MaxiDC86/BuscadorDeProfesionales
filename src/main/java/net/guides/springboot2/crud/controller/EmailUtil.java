@@ -36,7 +36,7 @@ public class EmailUtil {
 	      msg.addHeader("format", "flowed");
 	      msg.addHeader("Content-Transfer-Encoding", "8bit");
 
-	      msg.setFrom(new InternetAddress("salud-cerca@outlook.com", "NoReply-JD"));
+	      msg.setFrom(new InternetAddress("salud-cerca@outlook.com", "Contacto SALUD_CERCA"));
 
 	      msg.setReplyTo(InternetAddress.parse("salud-cerca@outlook.com", false));
 

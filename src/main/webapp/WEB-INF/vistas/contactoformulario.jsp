@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Resultado de busqueda.</title>
+<title>Contacto</title>
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon"
 	href="${pageContext.request.contextPath}/recursos/imgs/favicon.png">
@@ -42,6 +43,41 @@
 			</div>
 		</div>
 	</nav>
+	<div class="container contact-form">
+		<div class="contact-image">
+			<img src="https://image.ibb.co/kUagtU/rocket_contact.png"
+				alt="rocket_contact" />
+		</div>
+		<form:form action="contactoEnviar" modelAttribute="contactoFormulario">
+			<h3>Envianos un mensaje!</h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<input type="text" name="txtName" class="form-control"
+							placeholder="Your Name *" value="" />
+					</div>
+					<div class="form-group">
+						<input type="text" name="txtEmail" class="form-control"
+							placeholder="Your Email *" value="" />
+					</div>
+					<div class="form-group">
+						<input type="text" name="txtPhone" class="form-control"
+							placeholder="Your Phone Number *" value="" />
+					</div>
+					<div class="form-group">
+						<input type="submit" name="btnSubmit" class="btnContact"
+							value="Send Message" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<textarea name="txtMsg" class="form-control"
+							placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+					</div>
+				</div>
+			</div>
+		</form:form>
+	</div>
 
 	</script>
 	<!-- JavaScript -->

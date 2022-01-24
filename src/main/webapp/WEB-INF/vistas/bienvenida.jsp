@@ -66,7 +66,7 @@
 					<option value="oeste">Zona Oeste</option>
 				</form:select>
 			</div>
-			<!--carpet cleaning-->
+			<!--zonaNorteMenu-->
 			<div id="zonaNorteMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining rooms-->
@@ -79,7 +79,7 @@
 					</form:select>
 				</div>
 			</div>
-			<!--upholstery cleaning-->
+			<!--zonaSurMenu-->
 			<div id="zonaSurMenu" style="display: none;">
 				<div class="form-group">
 					<!--how many dining room chairs-->

@@ -63,7 +63,7 @@ public class Controlador {
 	// ----CONTACTO------
 
 	@RequestMapping("/contactoformulario")
-	public String contactoformulario() {
+	public String contactoformulario(Model model) {
 		
 		SendMail.send();
 		
