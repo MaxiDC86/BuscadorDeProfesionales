@@ -43,40 +43,55 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container contact-form">
-		<div class="contact-image">
-			<img src="https://image.ibb.co/kUagtU/rocket_contact.png"
-				alt="rocket_contact" />
-		</div>
-		<form:form action="contactoEnviar" modelAttribute="contactoFormulario">
-			<h3>Envianos un mensaje!</h3>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="form-group">
-						<input type="text" name="txtName" class="form-control"
-							placeholder="Your Name *" value="" />
-					</div>
-					<div class="form-group">
-						<input type="text" name="txtEmail" class="form-control"
-							placeholder="Your Email *" value="" />
-					</div>
-					<div class="form-group">
-						<input type="text" name="txtPhone" class="form-control"
-							placeholder="Your Phone Number *" value="" />
-					</div>
-					<div class="form-group">
-						<input type="submit" name="btnSubmit" class="btnContact"
-							value="Send Message" />
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<textarea name="txtMsg" class="form-control"
-							placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
-					</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="well well-sm">
+					<form:form class="form-horizontal" action="contactoEnviar"
+						modelAttribute="contactoFormulario">
+						<fieldset>
+							<legend class="text-center">Contactanos!</legend>
+
+							<!-- Name input-->
+							<div class="form-group">
+								<label class="col-md-3 control-label" for="name">Nombre</label>
+								<div class="col-md-9">
+									<input id="name" name="name" type="text"
+										placeholder="Your name" class="form-control">
+								</div>
+							</div>
+
+							<!-- Email input-->
+							<div class="form-group">
+								<label class="col-md-3 control-label" for="email">Tú
+									E-mail</label>
+								<div class="col-md-9">
+									<input id="email" name="email" type="text"
+										placeholder="Your email" class="form-control">
+								</div>
+							</div>
+
+							<!-- Message body -->
+							<div class="form-group">
+								<label class="col-md-3 control-label" for="message">Tú
+									mensage</label>
+								<div class="col-md-9">
+									<textarea class="form-control" id="message" name="message"
+										placeholder="Please enter your message here..." rows="5"></textarea>
+								</div>
+							</div>
+
+							<!-- Form actions -->
+							<div class="form-group">
+								<div class="col-md-12 text-right">
+									<button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+								</div>
+							</div>
+						</fieldset>
+					</form:form>
 				</div>
 			</div>
-		</form:form>
+		</div>
 	</div>
 
 	</script>
