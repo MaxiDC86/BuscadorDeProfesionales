@@ -74,9 +74,9 @@ public class Controlador {
 	}
 
 	@RequestMapping("/enviarContactoFormulario")
-	public String enviarContactoFormulario(@ModelAttribute("contactoFormulario") Selection contactoFormulario) {
+	public String enviarContactoFormulario(@ModelAttribute("contactoFormulario") Formulario contactoFormulario) {
 
-		SendMail.send();
+		SendMail.send(contactoFormulario);
 		return "contactoFormularioEnviado";
 	}
 

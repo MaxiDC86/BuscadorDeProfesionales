@@ -8,6 +8,8 @@ import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 
+import net.guides.springboot2.crud.model.Formulario;
+
 public class SendMail {
 
 	/**
@@ -16,7 +18,7 @@ public class SendMail {
 	   Use Authentication: Yes
 	   Port for SSL: 587
 	 */
-	public static void send() {
+	public static void send(Formulario contactoFormulario) {
 		final String fromEmail = "salud-cerca@outlook.com"; //requires valid gmail id
 		final String password = "salud-4278"; // correct password for gmail id
 		final String toEmail = "salud-cerca@outlook.com"; // can be any email id 
@@ -40,7 +42,7 @@ public class SendMail {
 		
 		Session session = Session.getDefaultInstance(props, auth);
 		System.out.println("Session created");
-	        EmailUtil.sendEmail(session, toEmail,"SSLEmail Testing Subject", "SSLEmail Testing Body");
+	        EmailUtil.sendEmail(session, toEmail,"SSLEmail Testing Subject", contactoFormulario.getMessage());
 
 
 	}
