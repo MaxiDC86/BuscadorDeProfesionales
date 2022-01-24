@@ -14,7 +14,7 @@ public class SendMail {
 	   Outgoing Mail (SMTP) Server
 	   requires TLS or SSL: smtp.yandex.com (use authentication)
 	   Use Authentication: Yes
-	   Port for SSL: 465
+	   Port for SSL: 587
 	 */
 	public static void send() {
 		final String fromEmail = "salud-cerca@outlook.com"; //requires valid gmail id
@@ -29,6 +29,7 @@ public class SendMail {
 				"javax.net.ssl.SSLSocketFactory"); //SSL Factory Class
 		props.put("mail.smtp.auth", "true"); //Enabling SMTP Authentication
 		props.put("mail.smtp.port", "587"); //SMTP Port
+		props.put("mail.smtp.starttls.enable", "true");
 		
 		Authenticator auth = new Authenticator() {
 			//override the getPasswordAuthentication method
