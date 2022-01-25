@@ -76,8 +76,8 @@
 								<label class="col-md-3 control-label" for="message">Tú
 									mensage</label>
 								<div class="col-md-9">
-									<textarea class="form-control" id="message" path="message"
-										placeholder="Please enter your message here..." rows="5"></textarea>
+									<form:textarea class="form-control" path="message"
+										placeholder="Please enter your message here..." rows="5"></form:textarea>
 								</div>
 							</div>
 
