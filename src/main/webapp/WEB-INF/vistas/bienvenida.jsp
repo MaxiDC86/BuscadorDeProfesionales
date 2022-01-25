@@ -64,7 +64,7 @@
 							path="special1">
 							<option disabled selected value>-- select an option --</option>
 							<option value="Estimulacion temprana">Estimulacion
-								temprana</option>
+								Temprana</option>
 							<option value="Psicomotricidad">Psicomotricidad</option>
 							<option value="Neurodesarrollo">Neurodesarrollo</option>
 						</form:select>

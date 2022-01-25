@@ -39,7 +39,7 @@ public class Controlador {
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
 
-		selectedAreaAndTypeAndZoneAndCity = (ArrayList<Client>) clientRepository.findByAreaAndTypeAndZoneAndCity(
+		selectedAreaAndTypeAndZoneAndCity = (ArrayList<Client>) clientRepository.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(
 				selection.getArea(), selection.getSpecial1(), selection.getZone(), selection.getCity1());
 		selectionShowCity = selection.getCity1();
 
