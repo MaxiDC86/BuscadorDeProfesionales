@@ -5,7 +5,6 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -30,7 +29,6 @@ public class Controlador {
 	}
 
 	// ---PROCESANDO LA BUSQUEDA-----
-
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
 		if (selection.getZone().equals("norte")) {
@@ -53,7 +51,7 @@ public class Controlador {
 		return "resultado";
 	}
 
-	// ----CONTACTO------
+	// ---------CONTACTO----------------------
 	@RequestMapping("/contactoformulario")
 	public String contactoFormulario(Model model) {
 		Formulario contactoFormulario = new Formulario();
@@ -67,7 +65,7 @@ public class Controlador {
 		return "contactoFormularioEnviado";
 	}
 
-	// ----NOSOTROS-----------------
+	// ----------NOSOTROS-----------------
 	@RequestMapping("/nosotros")
 	public String nosotros() {
 		return "nosotros";

@@ -49,15 +49,36 @@
 		<h1>Bienvenidos al buscador de profesionales.</h1>
 		<form:form action="procesaBusqueda" modelAttribute="selection">
 			<div class="form-group">
+			<!--AREA------------------------------------------------------------------>
 				<label class="control-label">Profesional </label>
 				<form:select class="form-select form-select-lg mb-3" path="area">
 					<option value="Kinesiologia">Kinesiología</option>
 					<option value="Odontologia">Odontología</option>
-					<option value="Clinico">Clinico</option>
-					<option value="Psicologia">Psicólogía</option>
 				</form:select>
-				<br> <label for="cleaning-service" class="control-label">Elegir
-					Zona</label>
+				<!--Especialidad------------------------------------------------------------------>
+				<div id="specialMenu1" style="display: none;">
+					<div class="form-group">
+						<label>Especialidad</label>
+						<form:select class="form-select form-select-lg mb-3" path="special1">
+							<option disabled selected value>-- select an option --</option>
+							<option value="Estimulacion temprana">Estimulacion temprana</option>
+							<option value="Psicomotricidad">Psicomotricidad</option>
+							<option value="neurodesarrollo">neurodesarrollo</option>
+						</form:select>
+					</div>
+				<div id="specialMenu2" style="display: none;">
+					<div class="form-group">
+						<label>Especialidad</label>
+						<form:select class="form-select form-select-lg mb-3" path="special2">
+							<option disabled selected value>-- select an option --</option>
+							<option value="General">General</option>
+							<option value="Ortodoncista">Ortodoncista</option>
+							<option value="Odontopediatra">Odontopediatra</option>
+						</form:select>
+					</div>
+				</div>
+				<!-- ZONA------------------------------------------------------------------>
+				<br> <label class="control-label">Elegir Zona</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
 					<option disabled selected value>-- seleccionar una opción
 						--</option>
@@ -125,6 +146,21 @@
 							} else if (this.value == "oeste") {
 								$("#zonaOesteMenu").show();
 							}
+						});
+	</script>
+	<script>
+		$("#area")
+				.change(
+						function() {
+							$("#specialMenu1,#specialMenu2)
+									.hide();
+							$(
+									"#specialMenu1 select,#specialMenu2 select")
+									.prop('selectedIndex', 0);
+							if (this.value == "Kinesiologia") {
+								$("#specialMenu1").show();
+							} else if (this.value == "Odontologia") {
+								$("#specialMenu2").show();
 						});
 	</script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
