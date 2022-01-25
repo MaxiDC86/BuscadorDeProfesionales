@@ -42,7 +42,7 @@ public class SendMail {
 		
 		Session session = Session.getDefaultInstance(props, auth);
 		System.out.println("Session created");
-	        EmailUtil.sendEmail(session, toEmail,"SSLEmail Testing Subject", contactoFormulario.getMessage());
+	        EmailUtil.sendEmail(session, toEmail,"SSLEmail Testing Subject", contactoFormulario.getEmail());
 
 
 	}

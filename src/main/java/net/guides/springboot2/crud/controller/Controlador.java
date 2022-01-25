@@ -76,7 +76,7 @@ public class Controlador {
 	@RequestMapping("/enviarContactoFormulario")
 	public String enviarContactoFormulario(@ModelAttribute("contactoFormulario") Formulario contactoFormulario) {
 		
-		contactoFormulario.setMessage("Holaaaaa!");
+
 		SendMail.send(contactoFormulario);
 		return "contactoFormularioEnviado";
 	}

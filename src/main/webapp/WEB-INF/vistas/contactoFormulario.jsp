@@ -54,9 +54,9 @@
 
 							<!-- Name input-->
 							<div class="form-group">
-								<label class="col-md-3 control-label" for="name">Nombre</label>
+								<label class="col-md-3 control-label" >Nombre</label>
 								<div class="col-md-9">
-									<form:input id="name" path="name" type="text"
+									<form:input path="name" type="text"
 										placeholder="Your name" class="form-control"></form:input>
 								</div>
 							</div>
@@ -66,7 +66,7 @@
 								<label class="col-md-3 control-label" for="email">Tú
 									E-mail</label>
 								<div class="col-md-9">
-									<form:input id="email" path="email" type="text"
+									<form:input  path="email" type="text"
 										placeholder="Your email" class="form-control"></form:input>
 								</div>
 							</div>
