@@ -137,11 +137,8 @@
 		$("#zone")
 				.change(
 						function() {
-							$("#zonaNorteMenu,#zonaSurMenu,#zonaOesteMenu")
-									.hide();
-							$(
-									"#zonaNorteMenu select,#zonaSurMenu select,#zonaOesteMenu select")
-									.prop('selectedIndex', 0);
+							$("#zonaNorteMenu,#zonaSurMenu,#zonaOesteMenu").hide();
+							$("#zonaNorteMenu select,#zonaSurMenu select,#zonaOesteMenu select").prop('selectedIndex', 0);
 							if (this.value == "norte") {
 								$("#zonaNorteMenu").show();
 							} else if (this.value == "sur") {
@@ -150,19 +147,17 @@
 								$("#zonaOesteMenu").show();
 							}
 						});
+		</script><script>
 		$("#area")
 				.change(
 						function() {
-							$("#specialMenu1,#specialMenu2")
-									.hide();
-							$(
-									"#specialMenu1 select,#specialMenu2 select")
-									.prop('selectedIndex', 0);
+							$("#specialMenu1,#specialMenu2").hide();
+							$("#specialMenu1 select,#specialMenu2 select").prop('selectedIndex', 0);
 							if (this.value == "Kinesiologia") {
 								$("#specialMenu1").show();
 							} else if (this.value == "Odontologia") {
 								$("#specialMenu2").show();
-						});
+						    });
 	</script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script
