@@ -48,17 +48,17 @@ public class Controlador {
 
 			if (selection.getZone().equals("norte")) {
 				selected = (ArrayList<Client>) clientRepository
-						.findByZoneAndCityAndArea(selection.getZone(), selection.getCity1(), selection.getArea());
+						.findByZoneAndCityAndAreaAllIgnoreCase(selection.getZone(), selection.getCity1(), selection.getArea());
 				selectionShowCity = selection.getCity1();
 			}
 			if (selection.getZone().equals("sur")) {
 				selected = (ArrayList<Client>) clientRepository
-						.findByZoneAndCityAndArea(selection.getZone(), selection.getCity2(), selection.getArea());
+						.findByZoneAndCityAndAreaAllIgnoreCase(selection.getZone(), selection.getCity2(), selection.getArea());
 				selectionShowCity = selection.getCity2();
 			}
 			if (selection.getZone().equals("oeste")) {
 				selected = (ArrayList<Client>) clientRepository
-						.findByZoneAndCityAndArea(selection.getZone(), selection.getCity3(), selection.getArea());
+						.findByZoneAndCityAndAreaAllIgnoreCase(selection.getZone(), selection.getCity3(), selection.getArea());
 				selectionShowCity = selection.getCity3();
 			}
 

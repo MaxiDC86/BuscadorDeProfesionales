@@ -13,7 +13,7 @@ public interface ClientRepository extends JpaRepository<Client, Long>{
 	List<Client> findAllByCity(String city);
 	List<Client> findByZoneAndCity(String zone, String city);
 	
-	List<Client> findByZoneAndCityAndArea(String zone, String city, String area);
+	List<Client> findByZoneAndCityAndAreaAllIgnoreCase(String zone, String city, String area);
 	
 	List<Client> findByAreaAndTypeAndZoneAndCityAllIgnoreCase(String area, String type, String zone, String city);
 	

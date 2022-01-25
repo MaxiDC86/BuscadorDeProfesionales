@@ -29,8 +29,8 @@ public class ClientService {
 	 return (ArrayList<Client>) clientRepository.findByZoneAndCity(zone,
 	 city); }
 	 
-	 public ArrayList<Client> findByZoneAndCityAndArea(String zone, String city, String area){
-		 return (ArrayList<Client>) clientRepository.findByZoneAndCityAndArea(zone,city,area);
+	 public ArrayList<Client> findByZoneAndCityAndAreaAllIgnoreCase(String zone, String city, String area){
+		 return (ArrayList<Client>) clientRepository.findByZoneAndCityAndAreaAllIgnoreCase(zone,city,area);
 	 }
 	 
 
