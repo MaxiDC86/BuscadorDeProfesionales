@@ -17,7 +17,7 @@ import net.guides.springboot2.crud.repository.ClientRepository;
 @RequestMapping
 public class Controlador {
 	public static ArrayList<Client> selectedZoneAndCityAndArea;
-	public static ArrayList<Client> selectedAreaAndTypeAndZoneAndCity;
+	public static ArrayList<Client> selected;
 	public static ArrayList<Client> distintAreas;
 	public static String selectionShowZone;
 	public static String selectionShowCity;
@@ -41,23 +41,23 @@ public class Controlador {
 
 		if (selection.getSpecial1() != null) {
 
-			selectedAreaAndTypeAndZoneAndCity = (ArrayList<Client>) clientRepository
+			selected = (ArrayList<Client>) clientRepository
 					.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(selection.getArea(), selection.getSpecial1(),
 							selection.getZone(), selection.getCity1());
 		} else {
 
 			if (selection.getZone().equals("norte")) {
-				selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
+				selected = (ArrayList<Client>) clientRepository
 						.findByZoneAndCityAndArea(selection.getZone(), selection.getCity1(), selection.getArea());
 				selectionShowCity = selection.getCity1();
 			}
 			if (selection.getZone().equals("sur")) {
-				selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
+				selected = (ArrayList<Client>) clientRepository
 						.findByZoneAndCityAndArea(selection.getZone(), selection.getCity2(), selection.getArea());
 				selectionShowCity = selection.getCity2();
 			}
 			if (selection.getZone().equals("oeste")) {
-				selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
+				selected = (ArrayList<Client>) clientRepository
 						.findByZoneAndCityAndArea(selection.getZone(), selection.getCity3(), selection.getArea());
 				selectionShowCity = selection.getCity3();
 			}
