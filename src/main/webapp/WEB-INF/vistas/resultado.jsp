@@ -69,6 +69,7 @@
 				<th>Nombre</th>
 				<th>Email</th>
 				<th>Telefono</th>
+				<th>Especialidad</th>
 			</tr>
 			<tr>
 				<%
