@@ -134,23 +134,27 @@
 	</div>
 	<!-- JavaScript -->
 	<script>
-		$("#area")
-				.change(
-						function() {
-							$("#specialMenu1,#specialMenu2").hide();
-							$("#specialMenu1 select,#specialMenu2 select").prop('selectedIndex', 0);
-							if (this.value == "Kinesiologia") {
-								$("#specialMenu1").show();
-							} else if (this.value == "Odontologia") {
-								$("#specialMenu2").show();
-						    });
+		$("#area").change(
+				function() {
+					$("#specialMenu1,#specialMenu2").hide();
+					$("#specialMenu1 select,#specialMenu2 select").prop(
+							'selectedIndex', 0);
+					if (this.value == "Kinesiologia") {
+						$("#specialMenu1").show();
+					} else if (this.value == "Odontologia") {
+						$("#specialMenu2").show();
+					}
+				});
 	</script>
 	<script>
 		$("#zone")
 				.change(
 						function() {
-							$("#zonaNorteMenu,#zonaSurMenu,#zonaOesteMenu").hide();
-							$("#zonaNorteMenu select,#zonaSurMenu select,#zonaOesteMenu select").prop('selectedIndex', 0);
+							$("#zonaNorteMenu,#zonaSurMenu,#zonaOesteMenu")
+									.hide();
+							$(
+									"#zonaNorteMenu select,#zonaSurMenu select,#zonaOesteMenu select")
+									.prop('selectedIndex', 0);
 							if (this.value == "norte") {
 								$("#zonaNorteMenu").show();
 							} else if (this.value == "sur") {
@@ -159,7 +163,7 @@
 								$("#zonaOesteMenu").show();
 							}
 						});
-		</script>
+	</script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
