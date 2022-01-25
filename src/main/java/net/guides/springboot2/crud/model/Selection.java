@@ -25,7 +25,14 @@ public class Selection {
 		this.zone = zone;
 	}
 
-	public String getCity() {
+	public String getCity1() {
+		return city;
+	}
+	public String getCity2() {
+		return city;
+	}
+
+	public String getCity3() {
 		return city;
 	}
 
@@ -49,7 +56,10 @@ public class Selection {
 		this.area = area;
 	}
 
-	public String getSpecial() {
+	public String getSpecial1() {
+		return special;
+	}
+	public String getSpecial2() {
 		return special;
 	}
 

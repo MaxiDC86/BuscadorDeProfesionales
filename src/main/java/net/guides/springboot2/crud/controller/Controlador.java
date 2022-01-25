@@ -40,7 +40,7 @@ public class Controlador {
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
 
 		selectedAreaAndTypeAndZoneAndCity = (ArrayList<Client>) clientRepository.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(
-				selection.getArea(), selection.getSpecial(), selection.getZone(), selection.getCity());
+				selection.getArea(), selection.getSpecial1(), selection.getZone(), selection.getCity1());
 
 		/*
 		 * if (selection.getZone().equals("norte")) { selectedZoneAndCityAndArea =
@@ -56,10 +56,10 @@ public class Controlador {
 		 * .findByZoneAndCityAndArea(selection.getZone(), selection.getCity3(),
 		 * selection.getArea()); selectionShowCity = selection.getCity3(); }
 		 */
-		selectionShowCity = selection.getCity();
+		selectionShowCity = selection.getCity1();
 		selectionShowZone = selection.getZone();
 		selectionShowArea = selection.getArea();
-		selectionShowType = (selection.getSpecial()==null)?"Todos":selection.getSpecial();
+		selectionShowType = (selection.getSpecial1()==null)?"Todos":selection.getSpecial1();
 		return "resultado";
 	}
 
