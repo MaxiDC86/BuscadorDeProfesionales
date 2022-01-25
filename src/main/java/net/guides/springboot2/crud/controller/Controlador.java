@@ -20,14 +20,12 @@ public class Controlador {
 
 	@Autowired
 	private ClientRepository clientRepository;
-
+	
+	//------WELCOME PAGE---------------
 	@RequestMapping
 	public String bienvenida(Model model) {
-
 		Selection selection = new Selection();
-
 		model.addAttribute("selection", selection);
-
 		return "bienvenida";
 	}
 
@@ -35,10 +33,6 @@ public class Controlador {
 
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
-
-		// ---- Se buscan todos los tipod de profesionales en la BBDD.
-		// distintAreas = (ArrayList<Client>) clientRepository.findAllDistinctByArea();
-
 		if (selection.getZone().equals("norte")) {
 			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
 					.findByZoneAndCityAndArea(selection.getZone(), selection.getCity1(), selection.getArea());
@@ -54,31 +48,29 @@ public class Controlador {
 					.findByZoneAndCityAndArea(selection.getZone(), selection.getCity3(), selection.getArea());
 			selectionShowCity = selection.getCity3();
 		}
-
 		selectionShowZone = selection.getZone();
 		selectionShowArea = selection.getArea();
-
 		return "resultado";
 	}
 
 	// ----CONTACTO------
-
 	@RequestMapping("/contactoformulario")
 	public String contactoFormulario(Model model) {
-
 		Formulario contactoFormulario = new Formulario();
-
 		model.addAttribute("contactoFormulario", contactoFormulario);
-
 		return "contactoFormulario";
 	}
 
 	@RequestMapping("/enviarContactoFormulario")
 	public String enviarContactoFormulario(@ModelAttribute("contactoFormulario") Formulario contactoFormulario) {
-		
-
 		SendMail.send(contactoFormulario);
 		return "contactoFormularioEnviado";
+	}
+
+	// ----NOSOTROS-----------------
+	@RequestMapping("/nosotros")
+	public String nosotros() {
+		return "nosotros";
 	}
 
 	public static ArrayList<Client> selectedZoneAndCityAndArea;

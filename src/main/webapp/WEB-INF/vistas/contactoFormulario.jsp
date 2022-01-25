@@ -51,7 +51,6 @@
 						modelAttribute="contactoFormulario">
 						<fieldset>
 							<legend class="text-center">Contactanos!</legend>
-
 							<!-- Name input-->
 							<div class="form-group">
 								<label class="col-md-3 control-label" >Nombre</label>
@@ -60,7 +59,6 @@
 										placeholder="Your name" class="form-control"></form:input>
 								</div>
 							</div>
-
 							<!-- Email input-->
 							<div class="form-group">
 								<label class="col-md-3 control-label" for="email">Tú
@@ -70,7 +68,6 @@
 										placeholder="Your email" class="form-control"></form:input>
 								</div>
 							</div>
-
 							<!-- Message body -->
 							<div class="form-group">
 								<label class="col-md-3 control-label" for="message">Tú
