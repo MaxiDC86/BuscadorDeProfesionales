@@ -39,27 +39,34 @@ public class Controlador {
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
 
-		selectedAreaAndTypeAndZoneAndCity = (ArrayList<Client>) clientRepository.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(
-				selection.getArea(), selection.getSpecial1(), selection.getZone(), selection.getCity1());
+		if (selection.getSpecial1() != null) {
 
-		/*
-		 * if (selection.getZone().equals("norte")) { selectedZoneAndCityAndArea =
-		 * (ArrayList<Client>) clientRepository
-		 * .findByZoneAndCityAndArea(selection.getZone(), selection.getCity1(),
-		 * selection.getArea()); selectionShowCity = selection.getCity1(); } if
-		 * (selection.getZone().equals("sur")) { selectedZoneAndCityAndArea =
-		 * (ArrayList<Client>) clientRepository
-		 * .findByZoneAndCityAndArea(selection.getZone(), selection.getCity2(),
-		 * selection.getArea()); selectionShowCity = selection.getCity2(); } if
-		 * (selection.getZone().equals("oeste")) { selectedZoneAndCityAndArea =
-		 * (ArrayList<Client>) clientRepository
-		 * .findByZoneAndCityAndArea(selection.getZone(), selection.getCity3(),
-		 * selection.getArea()); selectionShowCity = selection.getCity3(); }
-		 */
-		selectionShowCity = selection.getCity1();
+			selectedAreaAndTypeAndZoneAndCity = (ArrayList<Client>) clientRepository
+					.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(selection.getArea(), selection.getSpecial1(),
+							selection.getZone(), selection.getCity1());
+		} else {
+
+			if (selection.getZone().equals("norte")) {
+				selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
+						.findByZoneAndCityAndArea(selection.getZone(), selection.getCity1(), selection.getArea());
+				selectionShowCity = selection.getCity1();
+			}
+			if (selection.getZone().equals("sur")) {
+				selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
+						.findByZoneAndCityAndArea(selection.getZone(), selection.getCity2(), selection.getArea());
+				selectionShowCity = selection.getCity2();
+			}
+			if (selection.getZone().equals("oeste")) {
+				selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
+						.findByZoneAndCityAndArea(selection.getZone(), selection.getCity3(), selection.getArea());
+				selectionShowCity = selection.getCity3();
+			}
+
+		}
 		selectionShowZone = selection.getZone();
+		selectionShowCity = (selection.getCity1()== null) ? "Todos" :selection.getCity1() ;
 		selectionShowArea = selection.getArea();
-		selectionShowType = (selection.getSpecial1()==null)?"Todos":selection.getSpecial1();
+		selectionShowType = (selection.getSpecial1() == null) ? "Todos" : selection.getSpecial1();
 		return "resultado";
 	}
 

@@ -62,7 +62,7 @@
 						<label>Especialidad</label>
 						<form:select class="form-select form-select-lg mb-3"
 							path="special1">
-							<option disabled selected value>-- select an option --</option>
+							<option disabled selected value>--TODOS--</option>
 							<option value="Estimulacion temprana">Estimulacion
 								Temprana</option>
 							<option value="Psicomotricidad">Psicomotricidad</option>
@@ -75,7 +75,7 @@
 						<label>Especialidad</label>
 						<form:select class="form-select form-select-lg mb-3"
 							path="special2">
-							<option disabled selected value>-- select an option --</option>
+							<option disabled selected value>--TODOS--</option>
 							<option value="General">General</option>
 							<option value="Ortodoncista">Ortodoncista</option>
 							<option value="Odontopediatra">Odontopediatra</option>
@@ -96,7 +96,7 @@
 						<!--how many dining rooms-->
 						<label>Localidad</label>
 						<form:select class="form-select form-select-lg mb-3" path="city1">
-							<option disabled selected value>-- select an option --</option>
+							<option disabled selected value>--TODOS--</option>
 							<option value="San Isidro">San Isidro</option>
 							<option value="Vicente Lopez">Vicente Lopez</option>
 							<option value="Villa Adelina">Villa Adelina</option>
@@ -109,7 +109,7 @@
 						<!--how many dining room chairs-->
 						<label>Localidad</label>
 						<form:select class="form-select form-select-lg mb-3" path="city2">
-							<option disabled selected value>-- select an option --</option>
+							<option disabled selected value>--TODOS--</option>
 							<option value="Avellaneda">Avellaneda</option>
 							<option value="Lomas de Zamora">Lomas de Zamora</option>
 						</form:select>

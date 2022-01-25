@@ -52,7 +52,7 @@
 		<h6>
 			Has elegido buscar:
 			<%
-		out.print(Controlador.selectionShowArea + " , " + Controlador.selectionShowType);
+		out.print(Controlador.selectionShowArea + " , especialidad: " + Controlador.selectionShowType);
 		%>
 			<br> en la zona:
 			<%
