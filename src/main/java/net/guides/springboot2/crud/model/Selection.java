@@ -25,7 +25,7 @@ public class Selection {
 		this.zone = zone;
 	}
 
-	public String getCity1() {
+	public String getCity() {
 		return city;
 	}
 
@@ -33,16 +33,8 @@ public class Selection {
 		this.city = city;
 	}
 
-	public String getCity2() {
-		return city;
-	}
-
 	public void setCity2(String city) {
 		this.city = city;
-	}
-
-	public String getCity3() {
-		return city;
 	}
 
 	public void setCity3(String city) {
@@ -57,15 +49,12 @@ public class Selection {
 		this.area = area;
 	}
 
-	public String getSpecial1() {
+	public String getSpecial() {
 		return special;
 	}
 
 	public void setSpecial1(String special) {
 		this.special = special;
-	}
-	public String getSpecial2() {
-		return special;
 	}
 	
 	public void setSpecial2(String special) {
