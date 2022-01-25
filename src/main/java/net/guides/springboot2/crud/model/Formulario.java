@@ -2,7 +2,9 @@ package net.guides.springboot2.crud.model;
 
 public class Formulario {
 	
-	private String name, email,message;
+	private String name;
+	private String email;
+	private String message;
 
 	public Formulario(String name, String email, String message) {
 		this.name = name;

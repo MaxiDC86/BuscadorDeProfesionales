@@ -38,7 +38,7 @@ public class SendMail {
 		Session session = Session.getDefaultInstance(props, auth);
 		System.out.println("Session created");
 		EmailUtil.sendEmail(session, toEmail, " Email:" + contactoFormulario.getEmail(),
-				"Nombre:" + contactoFormulario.getName() + contactoFormulario.getMessage());
+				"Nombre:" + contactoFormulario.getName() + "    Mensaje:"+contactoFormulario.getMessage());
 
 	}
 
