@@ -49,9 +49,10 @@
 		<h1>Bienvenidos al buscador de profesionales.</h1>
 		<form:form action="procesaBusqueda" modelAttribute="selection">
 			<div class="form-group">
-			<!--AREA------------------------------------------------------------------>
+				<!--AREA------------------------------------------------------------------>
 				<label class="control-label">Profesional </label>
 				<form:select class="form-select form-select-lg mb-3" path="area">
+					<option disabled selected value>-- selecionar --</option>
 					<option value="Kinesiologia">Kinesiología</option>
 					<option value="Odontologia">Odontología</option>
 				</form:select>
@@ -59,24 +60,28 @@
 				<div id="specialMenu1" style="display: none;">
 					<div class="form-group">
 						<label>Especialidad</label>
-						<form:select class="form-select form-select-lg mb-3" path="special1">
+						<form:select class="form-select form-select-lg mb-3"
+							path="special1">
 							<option disabled selected value>-- select an option --</option>
-							<option value="Estimulacion temprana">Estimulacion temprana</option>
+							<option value="Estimulacion temprana">Estimulacion
+								temprana</option>
 							<option value="Psicomotricidad">Psicomotricidad</option>
 							<option value="neurodesarrollo">neurodesarrollo</option>
 						</form:select>
 					</div>
-				<div id="specialMenu2" style="display: none;">
-					<div class="form-group">
-						<label>Especialidad</label>
-						<form:select class="form-select form-select-lg mb-3" path="special2">
-							<option disabled selected value>-- select an option --</option>
-							<option value="General">General</option>
-							<option value="Ortodoncista">Ortodoncista</option>
-							<option value="Odontopediatra">Odontopediatra</option>
-						</form:select>
-					</div>
 				</div>
+				<div id="specialMenu2" style="display: none;">
+						<div class="form-group">
+							<label>Especialidad</label>
+							<form:select class="form-select form-select-lg mb-3"
+								path="special2">
+								<option disabled selected value>-- select an option --</option>
+								<option value="General">General</option>
+								<option value="Ortodoncista">Ortodoncista</option>
+								<option value="Odontopediatra">Odontopediatra</option>
+							</form:select>
+						</div>
+					</div>
 				<!-- ZONA------------------------------------------------------------------>
 				<br> <label class="control-label">Elegir Zona</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
@@ -86,47 +91,46 @@
 					<option value="sur">Zona Sur</option>
 					<option value="oeste">Zona Oeste</option>
 				</form:select>
-			</div>
-			<!--zonaNorteMenu-->
-			<div id="zonaNorteMenu" style="display: none;">
-				<div class="form-group">
-					<!--how many dining rooms-->
-					<label>Localidad</label>
-					<form:select class="form-select form-select-lg mb-3" path="city1">
-						<option disabled selected value>-- select an option --</option>
-						<option value="San Isidro">San Isidro</option>
-						<option value="Vicente Lopez">Vicente Lopez</option>
-						<option value="Villa Adelina">Villa Adelina</option>
-					</form:select>
+				<!--zonaNorteMenu-->
+				<div id="zonaNorteMenu" style="display: none;">
+					<div class="form-group">
+						<!--how many dining rooms-->
+						<label>Localidad</label>
+						<form:select class="form-select form-select-lg mb-3" path="city1">
+							<option disabled selected value>-- select an option --</option>
+							<option value="San Isidro">San Isidro</option>
+							<option value="Vicente Lopez">Vicente Lopez</option>
+							<option value="Villa Adelina">Villa Adelina</option>
+						</form:select>
+					</div>
 				</div>
-			</div>
-			<!--zonaSurMenu-->
-			<div id="zonaSurMenu" style="display: none;">
-				<div class="form-group">
-					<!--how many dining room chairs-->
-					<label>Localidad</label>
-					<form:select class="form-select form-select-lg mb-3" path="city2">
-						<option disabled selected value>-- select an option --</option>
-						<option value="Avellaneda">Avellaneda</option>
-						<option value="Lomas de Zamora">Lomas de Zamora</option>
-					</form:select>
+				<!--zonaSurMenu-->
+				<div id="zonaSurMenu" style="display: none;">
+					<div class="form-group">
+						<!--how many dining room chairs-->
+						<label>Localidad</label>
+						<form:select class="form-select form-select-lg mb-3" path="city2">
+							<option disabled selected value>-- select an option --</option>
+							<option value="Avellaneda">Avellaneda</option>
+							<option value="Lomas de Zamora">Lomas de Zamora</option>
+						</form:select>
+					</div>
 				</div>
-			</div>
-			<!--Zona Oeste-->
-			<div id="zonaOesteMenu" style="display: none;">
-				<div class="form-group">
-					<!--how many dining room chairs-->
-					<label>Localidad</label>
-					<form:select class="form-select form-select-lg mb-3" path="city3">
-						<option disabled selected value>-- select an option --</option>
-						<option value="Castelar">Castelar</option>
-						<option value="Moron">Moron</option>
-					</form:select>
+				<!--Zona Oeste-->
+				<div id="zonaOesteMenu" style="display: none;">
+					<div class="form-group">
+						<!--how many dining room chairs-->
+						<label>Localidad</label>
+						<form:select class="form-select form-select-lg mb-3" path="city3">
+							<option disabled selected value>-- select an option --</option>
+							<option value="Castelar">Castelar</option>
+							<option value="Moron">Moron</option>
+						</form:select>
+					</div>
 				</div>
-			</div>
-			<div>
-				<button type="submit" value="Enviar">Buscar</button>
-			</div>
+				<div>
+					<button type="submit" value="Enviar">Buscar</button>
+				</div>
 		</form:form>
 	</div>
 	<!-- JavaScript -->
