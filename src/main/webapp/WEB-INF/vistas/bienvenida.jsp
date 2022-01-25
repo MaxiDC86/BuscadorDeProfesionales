@@ -71,22 +71,21 @@
 					</div>
 				</div>
 				<div id="specialMenu2" style="display: none;">
-						<div class="form-group">
-							<label>Especialidad</label>
-							<form:select class="form-select form-select-lg mb-3"
-								path="special2">
-								<option disabled selected value>-- select an option --</option>
-								<option value="General">General</option>
-								<option value="Ortodoncista">Ortodoncista</option>
-								<option value="Odontopediatra">Odontopediatra</option>
-							</form:select>
-						</div>
+					<div class="form-group">
+						<label>Especialidad</label>
+						<form:select class="form-select form-select-lg mb-3"
+							path="special2">
+							<option disabled selected value>-- select an option --</option>
+							<option value="General">General</option>
+							<option value="Ortodoncista">Ortodoncista</option>
+							<option value="Odontopediatra">Odontopediatra</option>
+						</form:select>
 					</div>
+				</div>
 				<!-- ZONA------------------------------------------------------------------>
 				<br> <label class="control-label">Elegir Zona</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
-					<option disabled selected value>-- seleccionar una opción
-						--</option>
+					<option disabled selected value>-- seleccionar --</option>
 					<option value="norte">Zona Norte</option>
 					<option value="sur">Zona Sur</option>
 					<option value="oeste">Zona Oeste</option>
@@ -151,12 +150,10 @@
 								$("#zonaOesteMenu").show();
 							}
 						});
-	</script>
-	<script>
 		$("#area")
 				.change(
 						function() {
-							$("#specialMenu1,#specialMenu2)
+							$("#specialMenu1,#specialMenu2")
 									.hide();
 							$(
 									"#specialMenu1 select,#specialMenu2 select")
