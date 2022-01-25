@@ -22,6 +22,7 @@ public class Controlador {
 	public static String selectionShowZone;
 	public static String selectionShowCity;
 	public static String selectionShowArea;
+	public static String selectionShowType;
 
 	@Autowired
 	private ClientRepository clientRepository;
@@ -58,6 +59,7 @@ public class Controlador {
 		 */
 		selectionShowZone = selection.getZone();
 		selectionShowArea = selection.getArea();
+		selectionShowType = selection.getSpecial1();
 		return "resultado";
 	}
 
