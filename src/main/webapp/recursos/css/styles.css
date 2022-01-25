@@ -142,6 +142,7 @@ button {
 	font-size: 14px;
 	font-weight: 600;
 	color: #fff;
+	width: auto;
 }
 
 button:hover {

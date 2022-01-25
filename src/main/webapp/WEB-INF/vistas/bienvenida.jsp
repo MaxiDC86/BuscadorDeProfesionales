@@ -66,7 +66,7 @@
 							<option value="Estimulacion temprana">Estimulacion
 								temprana</option>
 							<option value="Psicomotricidad">Psicomotricidad</option>
-							<option value="neurodesarrollo">neurodesarrollo</option>
+							<option value="Neurodesarrollo">Neurodesarrollo</option>
 						</form:select>
 					</div>
 				</div>

@@ -16,11 +16,17 @@ import net.guides.springboot2.crud.repository.ClientRepository;
 @Controller
 @RequestMapping
 public class Controlador {
+	public static ArrayList<Client> selectedZoneAndCityAndArea;
+	public static ArrayList<Client> selectedAreaAndTypeAndZoneAndCity;
+	public static ArrayList<Client> distintAreas;
+	public static String selectionShowZone;
+	public static String selectionShowCity;
+	public static String selectionShowArea;
 
 	@Autowired
 	private ClientRepository clientRepository;
-	
-	//------WELCOME PAGE---------------
+
+	// ------WELCOME PAGE---------------
 	@RequestMapping
 	public String bienvenida(Model model) {
 		Selection selection = new Selection();
@@ -31,21 +37,25 @@ public class Controlador {
 	// ---PROCESANDO LA BUSQUEDA-----
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
-		if (selection.getZone().equals("norte")) {
-			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
-					.findByZoneAndCityAndArea(selection.getZone(), selection.getCity1(), selection.getArea());
-			selectionShowCity = selection.getCity1();
-		}
-		if (selection.getZone().equals("sur")) {
-			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
-					.findByZoneAndCityAndArea(selection.getZone(), selection.getCity2(), selection.getArea());
-			selectionShowCity = selection.getCity2();
-		}
-		if (selection.getZone().equals("oeste")) {
-			selectedZoneAndCityAndArea = (ArrayList<Client>) clientRepository
-					.findByZoneAndCityAndArea(selection.getZone(), selection.getCity3(), selection.getArea());
-			selectionShowCity = selection.getCity3();
-		}
+
+		selectedAreaAndTypeAndZoneAndCity = (ArrayList<Client>) clientRepository.findByAreaAndTypeAndZoneAndCity(
+				selection.getArea(), selection.getSpecial1(), selection.getZone(), selection.getCity1());
+		selectionShowCity = selection.getCity1();
+
+		/*
+		 * if (selection.getZone().equals("norte")) { selectedZoneAndCityAndArea =
+		 * (ArrayList<Client>) clientRepository
+		 * .findByZoneAndCityAndArea(selection.getZone(), selection.getCity1(),
+		 * selection.getArea()); selectionShowCity = selection.getCity1(); } if
+		 * (selection.getZone().equals("sur")) { selectedZoneAndCityAndArea =
+		 * (ArrayList<Client>) clientRepository
+		 * .findByZoneAndCityAndArea(selection.getZone(), selection.getCity2(),
+		 * selection.getArea()); selectionShowCity = selection.getCity2(); } if
+		 * (selection.getZone().equals("oeste")) { selectedZoneAndCityAndArea =
+		 * (ArrayList<Client>) clientRepository
+		 * .findByZoneAndCityAndArea(selection.getZone(), selection.getCity3(),
+		 * selection.getArea()); selectionShowCity = selection.getCity3(); }
+		 */
 		selectionShowZone = selection.getZone();
 		selectionShowArea = selection.getArea();
 		return "resultado";
@@ -70,11 +80,5 @@ public class Controlador {
 	public String nosotros() {
 		return "nosotros";
 	}
-
-	public static ArrayList<Client> selectedZoneAndCityAndArea;
-	public static ArrayList<Client> distintAreas;
-	public static String selectionShowZone;
-	public static String selectionShowCity;
-	public static String selectionShowArea;
 
 }
