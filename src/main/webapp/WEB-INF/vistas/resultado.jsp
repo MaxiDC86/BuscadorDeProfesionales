@@ -63,6 +63,7 @@
 			out.print(Controlador.selectionShowCity);
 			%>
 		</h6>
+		<div class="container">
 		<table style="width: 80% text-align:center">
 			<tr>
 				<th>Apellido</th>
@@ -81,6 +82,7 @@
 				%>
 			</tr>
 		</table>
+		</div>
 		<br> <br>
 		<form method="get" action="/">
 			<button type="submit">Volver a buscar</button>
