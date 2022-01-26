@@ -5,7 +5,7 @@
 Spring Boot, PostgreSQL, JPA, Hibernate RESTful CRUD API Tutorial - https://youtu.be/eWbGV3LLwVQ
 
 
-	```
+	```bash
 {
         "firstName": "Jonatan",
         "lastName": "Varela",
