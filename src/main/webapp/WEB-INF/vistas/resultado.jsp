@@ -69,7 +69,8 @@
 				<th>Nombre</th>
 				<th>Email</th>
 				<th>Telefono</th>
-				<th>Telefono</th>
+				<th>Especialidad</th>
+				<th>Tipo de atención</th>
 			</tr>
 			<tr>
 				<%

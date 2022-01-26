@@ -58,7 +58,7 @@
 				</form:select>
 				<!--Especialidad------------------------------------------------------------------>
 				<div id="specialMenu1" style="display: none;">
-					<div class="form-group">
+					<div class="form-group"><br>
 						<label>Especialidad</label>
 						<form:select class="form-select form-select-lg mb-3"
 							path="special1">
@@ -71,7 +71,7 @@
 					</div>
 				</div>
 				<div id="specialMenu2" style="display: none;">
-					<div class="form-group">
+					<div class="form-group"><br>
 						<label>Especialidad</label>
 						<form:select class="form-select form-select-lg mb-3"
 							path="special2">
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<!-- ZONA------------------------------------------------------------------>
-				<label class="control-label">Elegir Zona</label>
+				<br> <label class="control-label">Elegir Zona</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
 					<option disabled selected value>-- seleccionar --</option>
 					<option value="norte">Zona Norte</option>
@@ -92,7 +92,7 @@
 				</form:select>
 				<!--zonaNorteMenu-->
 				<div id="zonaNorteMenu" style="display: none;">
-					<div class="form-group">
+					<div class="form-group"><br>
 						<!--how many dining rooms-->
 						<label>Localidad</label>
 						<form:select class="form-select form-select-lg mb-3" path="city1">
@@ -105,7 +105,7 @@
 				</div>
 				<!--zonaSurMenu-->
 				<div id="zonaSurMenu" style="display: none;">
-					<div class="form-group">
+					<div class="form-group"><br>
 						<!--how many dining room chairs-->
 						<label>Localidad</label>
 						<form:select class="form-select form-select-lg mb-3" path="city2">
@@ -117,7 +117,7 @@
 				</div>
 				<!--Zona Oeste-->
 				<div id="zonaOesteMenu" style="display: none;">
-					<div class="form-group">
+					<div class="form-group"><br>
 						<!--how many dining room chairs-->
 						<label>Localidad</label>
 						<form:select class="form-select form-select-lg mb-3" path="city3">
