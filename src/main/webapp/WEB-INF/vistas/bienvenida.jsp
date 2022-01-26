@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<!-- ZONA------------------------------------------------------------------>
-				<br> <label class="control-label">Elegir Zona</label>
+				<label class="control-label">Elegir Zona</label>
 				<form:select class="form-select form-select-lg mb-3" path="zone">
 					<option disabled selected value>-- seleccionar --</option>
 					<option value="norte">Zona Norte</option>
