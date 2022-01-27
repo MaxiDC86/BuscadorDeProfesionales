@@ -26,6 +26,10 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- Google Ads  -->
+<script async
+	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4530209817571456"
+	crossorigin="anonymous"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -63,23 +67,23 @@
 			out.print(Controlador.selectionShowCity);
 			%>
 		</h6>
-	
-			<div class="cards">
-				<%
-				for (Client emp : Controlador.selected) {
-					out.println("<div class='card border-dark bg-info mb-3' style='max-width: 25rem;'>");
-					out.println("<div class='card-header'>" + emp.getType() + "</div>");
-					out.println("<div class='card-body'>");
-					out.println("<h5 class='card-title'>" + emp.getFirstName() + " , " + emp.getLastName() + " </h5>");
-					out.println("</div>");
-					out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getTelephone() + "<br>   email: "
-					+ emp.getEmailId() + "</div>");
-					out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
-					out.println("<a href=''#' class='btn btn-primary'>Detalles</a>");
-					out.println("<div class='card-footer bg-transparent border-success'>Footer</div></div>");
-				}
-				%>
-			</div>
+
+		<div class="cards">
+			<%
+			for (Client emp : Controlador.selected) {
+				out.println("<div class='card border-dark bg-info mb-3' style='max-width: 25rem;'>");
+				out.println("<div class='card-header'>" + emp.getType() + "</div>");
+				out.println("<div class='card-body'>");
+				out.println("<h5 class='card-title'>" + emp.getFirstName() + " , " + emp.getLastName() + " </h5>");
+				out.println("</div>");
+				out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getTelephone()
+				+ "<br>   email: " + emp.getEmailId() + "</div>");
+				out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
+				out.println("<a href=''#' class='btn btn-primary'>Detalles</a>");
+				out.println("<div class='card-footer bg-transparent border-success'>Footer</div></div>");
+			}
+			%>
+		</div>
 
 		<br> <br>
 		<form method="get" action="/">
