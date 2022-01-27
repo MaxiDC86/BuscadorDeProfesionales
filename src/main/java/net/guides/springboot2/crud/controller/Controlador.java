@@ -69,7 +69,7 @@ public class Controlador {
 		selectionShowArea = selection.getArea();
 		selectionShowType = (selection.getSpecial1() == null) ? "Todos" : selection.getSpecial1();
 		
-		int client_id = 0;
+		long client_id = 0;
 		model.addAttribute("client_id", client_id);
 		
 		return "resultado";
@@ -77,9 +77,9 @@ public class Controlador {
 
 	// ----------DETALLES DE BUSQUEDA-----------------
 	@RequestMapping("/details")
-	public String details() {
+	public String details(@ModelAttribute("client_id") long client_id) {
 		
-     clientDetails  = clientRepository.findById(2);
+     clientDetails  = clientRepository.findById(client_id);
 		
 		return "details";
 	}

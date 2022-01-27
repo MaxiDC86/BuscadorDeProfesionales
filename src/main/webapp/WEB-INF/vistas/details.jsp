@@ -55,6 +55,8 @@
 		<h1>Detalles de busqueda.</h1>
 		<%
 		out.println(Controlador.clientDetails.getFirstName());
+		out.println(Controlador.clientDetails.getLastName());
+		out.println(Controlador.clientDetails.getEmailId());
 		%>
 		<br> <br>
 		<form method="get" action="/">
