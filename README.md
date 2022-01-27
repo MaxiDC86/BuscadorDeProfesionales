@@ -1,11 +1,15 @@
 
-# Buscador de profesionales realacionados con la salud.springboot-postgresql-hibernate-jpa-crud
-##springboot-postgresql-hibernate-jpa-crud
+# Buscador de profesionales realacionados con la salud.
+## Tecnologías utilizadas:
+- springboot
+- postgresql
+- hibernate
+- jpa
+- crud.
 
-Spring Boot, PostgreSQL, JPA, Hibernate RESTful CRUD API Tutorial - https://youtu.be/eWbGV3LLwVQ
+## Para poder ingresar nuevos clientes a la base de datos se necesita enviar un json con los siguientes campos:
 
-
-	```bash
+```
 {
         "firstName": "Jonatan",
         "lastName": "Varela",
@@ -18,3 +22,4 @@ Spring Boot, PostgreSQL, JPA, Hibernate RESTful CRUD API Tutorial - https://yout
         "attention":"personalizada y particular"
 }
 ```
+Spring Boot, PostgreSQL, JPA, Hibernate RESTful CRUD API Tutorial - https://youtu.be/eWbGV3LLwVQ
