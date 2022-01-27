@@ -9,12 +9,12 @@ public class ClientDetails {
 	}
 
 	public Long getId() {
-		//return Long.parseLong(Id);
-		return (long) 3;
+		return Long.parseLong(Id);
+		//return (long) 3;
 	}
 
 	public void setId(String id) {
-		Id = id;
+		this.Id = id;
 	}
 
 	
