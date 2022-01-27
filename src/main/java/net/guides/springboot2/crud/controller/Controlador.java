@@ -24,7 +24,8 @@ public class Controlador {
 	public static String selectionShowCity;
 	public static String selectionShowArea;
 	public static String selectionShowType;
-	public static Optional<Client> clientDetails;
+	public static Client clientDetails;
+
 
 	@Autowired
 	private ClientRepository clientRepository;
@@ -80,11 +81,8 @@ public class Controlador {
 	@RequestMapping("/details")
 	public String details(@ModelAttribute("client_id") ClientDetails client_id) {
 		
-     clientDetails  = clientRepository.findById(client_id.getId());
+     clientDetails  = clientRepository.findById(client_id.getId()).get();
      
-     Client client_details = new Client();
-     
-     client_details = clientDetails.get();
 		
 		return "details";
 	}
