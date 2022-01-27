@@ -23,6 +23,7 @@ public class Controlador {
 	public static String selectionShowCity;
 	public static String selectionShowArea;
 	public static String selectionShowType;
+	public static Client clientDetails;
 
 	@Autowired
 	private ClientRepository clientRepository;
@@ -37,7 +38,7 @@ public class Controlador {
 
 	// ---PROCESANDO LA BUSQUEDA-----
 	@RequestMapping("/procesaBusqueda")
-	public String procesaBusqueda(@ModelAttribute("selection") Selection selection) {
+	public String procesaBusqueda(@ModelAttribute("selection") Selection selection,Model model) {
 
 		if (selection.getSpecial1() != null) {
 
@@ -67,12 +68,19 @@ public class Controlador {
 		selectionShowCity = (selection.getCity1()== null) ? "Todos" :selection.getCity1() ;
 		selectionShowArea = selection.getArea();
 		selectionShowType = (selection.getSpecial1() == null) ? "Todos" : selection.getSpecial1();
+		
+		int client_id = 0;
+		model.addAttribute("client_id", client_id);
+		
 		return "resultado";
 	}
 
 	// ----------DETALLES DE BUSQUEDA-----------------
 	@RequestMapping("/details")
 	public String details() {
+		
+     clientDetails  = clientRepository.findById(2);
+		
 		return "details";
 	}
 	

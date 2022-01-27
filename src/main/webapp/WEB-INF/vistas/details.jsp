@@ -52,39 +52,10 @@
 		</div>
 	</nav>
 	<div class="main-block">
-		<h1>Resultado de busqueda.</h1>
-		<h6>
-			Has elegido buscar:
-			<%
-		out.print(Controlador.selectionShowArea + " , especialidad: " + Controlador.selectionShowType);
+		<h1>Detalles de busqueda.</h1>
+		<%
+		out.println(Controlador.clientDetails.getFirstName());
 		%>
-			<br> en la zona:
-			<%
-			out.print(Controlador.selectionShowZone);
-			%>
-			<br> y la localidad:
-			<%
-			out.print(Controlador.selectionShowCity);
-			%>
-		</h6>
-
-		<div class="cards">
-			<%
-			for (Client emp : Controlador.selected) {
-				out.println("<div class='card border-dark bg-info mb-3' style='max-width: 25rem;'>");
-				out.println("<div class='card-header'>" + emp.getType() + "</div>");
-				out.println("<div class='card-body'>");
-				out.println("<h5 class='card-title'>" + emp.getFirstName() + " , " + emp.getLastName() + " </h5>");
-				out.println("</div>");
-				out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getTelephone()
-				+ "<br>   email: " + emp.getEmailId() + "</div>");
-				out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
-				out.println("<a href=''#' class='btn btn-primary'>Detalles</a>");
-				out.println("<div class='card-footer bg-transparent border-success'>Footer</div></div>");
-			}
-			%>
-		</div>
-
 		<br> <br>
 		<form method="get" action="/">
 			<button type="submit">Volver a buscar</button>

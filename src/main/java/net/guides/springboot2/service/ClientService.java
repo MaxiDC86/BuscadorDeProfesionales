@@ -16,6 +16,10 @@ public class ClientService {
 
 	// ----CUSTOM QUERIES -----
 
+	public Client findById(long id) {
+		return clientRepository.findById(id);
+	}
+
 	public ArrayList<Client> findAllByZone(String zone) {
 		return (ArrayList<Client>) clientRepository.findAllByZone(zone);
 	}
@@ -24,17 +28,17 @@ public class ClientService {
 		return (ArrayList<Client>) clientRepository.findAllByCity(city);
 	}
 
-	
-	 public ArrayList<Client> findByZoneAndCity(String zone, String city){
-	 return (ArrayList<Client>) clientRepository.findByZoneAndCity(zone,
-	 city); }
-	 
-	 public ArrayList<Client> findByZoneAndCityAndAreaAllIgnoreCase(String zone, String city, String area){
-		 return (ArrayList<Client>) clientRepository.findByZoneAndCityAndAreaAllIgnoreCase(zone,city,area);
-	 }
-	 
+	public ArrayList<Client> findByZoneAndCity(String zone, String city) {
+		return (ArrayList<Client>) clientRepository.findByZoneAndCity(zone, city);
+	}
 
-	 public ArrayList<Client> findByAreaAndTypeAndZoneAndCityAllIgnoreCase(String area, String type, String zone, String city){
-		 return (ArrayList<Client>) clientRepository.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(area, type, zone, city);
-	 }
-} 
+	public ArrayList<Client> findByZoneAndCityAndAreaAllIgnoreCase(String zone, String city, String area) {
+		return (ArrayList<Client>) clientRepository.findByZoneAndCityAndAreaAllIgnoreCase(zone, city, area);
+	}
+
+	public ArrayList<Client> findByAreaAndTypeAndZoneAndCityAllIgnoreCase(String area, String type, String zone,
+			String city) {
+		return (ArrayList<Client>) clientRepository.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(area, type, zone,
+				city);
+	}
+}
