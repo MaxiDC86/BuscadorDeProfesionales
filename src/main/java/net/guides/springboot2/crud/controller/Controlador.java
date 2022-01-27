@@ -81,6 +81,8 @@ public class Controlador {
 	@RequestMapping("/details")
 	public String details(@ModelAttribute("client_id") ClientDetails client_id) {
 		
+	
+		
      clientDetails  = clientRepository.findById(client_id.getId()).get();
      
 		
