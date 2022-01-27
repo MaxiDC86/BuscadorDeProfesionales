@@ -64,24 +64,19 @@
 			%>
 		</h6>
 		<div class="container">
-		<table style="width: 80% text-align:center">
-			<tr>
-				<th>Apellido</th>
-				<th>Nombre</th>
-				<th>Email</th>
-				<th>Telefono</th>
-				<th>Especialidad</th>
-				<th>Tipo de atención</th>
-			</tr>
-			<tr>
-				<%
-				for (Client emp : Controlador.selected) {
-					out.println("<tr><td>" + emp.getLastName() + "</td><td>" + emp.getFirstName() + "</td><td>" + emp.getEmailId()
-					+ "</td><td>" + emp.getTelephone() + "</td><td>" + emp.getType() + "</td><td>" + emp.getAttention() + "</td></tr>");
-				}
-				%>
-			</tr>
-		</table>
+			<%
+			for (Client emp : Controlador.selected) {
+				out.println("<div class='card bg-light mb-3' style='max-width: 18rem;'>");
+				out.println("<div class='card-header'>" + emp.getType() + "</div>");
+				out.println("<div class='card-body'>");
+				out.println("<h5 class='card-title'>" + emp.getFirstName() + " , " + emp.getLastName() + " </h5>");
+				out.println("</div>");
+				out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getEmailId() + "   email: "
+				+ emp.getEmailId() + "</div>");
+				out.println("<p class='card-text'>" + emp.getAttention() + "</p></div>");
+				out.println("<div class='card-footer bg-transparent border-success'>Footer</div>");
+			}
+			%>
 		</div>
 		<br> <br>
 		<form method="get" action="/">
