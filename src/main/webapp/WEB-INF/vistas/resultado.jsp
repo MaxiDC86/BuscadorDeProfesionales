@@ -66,7 +66,7 @@
 		<div class="container">
 			<%
 			for (Client emp : Controlador.selected) {
-				out.println("<div class='card bg-light mb-3' style='max-width: 18rem;'>");
+				out.println("<div class='card bg-info mb-3' style='max-width: 18rem;'>");
 				out.println("<div class='card-header'>" + emp.getType() + "</div>");
 				out.println("<div class='card-body'>");
 				out.println("<h5 class='card-title'>" + emp.getFirstName() + " , " + emp.getLastName() + " </h5>");
@@ -74,7 +74,8 @@
 				out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getEmailId() + "   email: "
 				+ emp.getEmailId() + "</div>");
 				out.println("<p class='card-text'>" + emp.getAttention() + "</p></div>");
-				out.println("<div class='card-footer bg-transparent border-success'>Footer</div>");
+				out.println("<a href=''#' class='btn btn-primary'>Detalles</a>");
+				out.println("<div class='card-footer bg-transparent border-success'>Footer</div></div>");
 			}
 			%>
 		</div>
