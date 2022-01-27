@@ -67,7 +67,7 @@
 			<div class="cards">
 				<%
 				for (Client emp : Controlador.selected) {
-					out.println("<div class='card bg-info mb-3' style='max-width: 20rem;'>");
+					out.println("<div class='card border-dark bg-info mb-3' style='max-width: 20rem;'>");
 					out.println("<div class='card-header'>" + emp.getType() + "</div>");
 					out.println("<div class='card-body'>");
 					out.println("<h5 class='card-title'>" + emp.getFirstName() + " , " + emp.getLastName() + " </h5>");

@@ -153,7 +153,9 @@ button:hover {
    flex-wrap: wrap;
    justify-content: space-between;
 }
-
+.card {
+    flex: 0 1 24%;
+}
 table, th, td {
 	border: 2px solid black;
 }
