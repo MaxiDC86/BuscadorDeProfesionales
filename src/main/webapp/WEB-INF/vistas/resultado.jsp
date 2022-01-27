@@ -64,7 +64,7 @@
 			%>
 		</h6>
 		<div class="container">
-			<div class="card-deck">
+			<div class="cards">
 				<%
 				for (Client emp : Controlador.selected) {
 					out.println("<div class='card bg-info mb-3' style='max-width: 20rem;'>");
