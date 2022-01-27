@@ -67,12 +67,12 @@
 			<div class="cards">
 				<%
 				for (Client emp : Controlador.selected) {
-					out.println("<div class='card border-dark bg-info mb-3' style='max-width: 20rem;'>");
+					out.println("<div class='card border-dark bg-info mb-3' style='max-width: 25rem;'>");
 					out.println("<div class='card-header'>" + emp.getType() + "</div>");
 					out.println("<div class='card-body'>");
 					out.println("<h5 class='card-title'>" + emp.getFirstName() + " , " + emp.getLastName() + " </h5>");
 					out.println("</div>");
-					out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getTelephone() + "   email: "
+					out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getTelephone() + "<br>   email: "
 					+ emp.getEmailId() + "</div>");
 					out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
 					out.println("<a href=''#' class='btn btn-primary'>Detalles</a>");

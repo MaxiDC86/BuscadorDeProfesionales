@@ -232,7 +232,7 @@ footer {
 		height: auto;
 	}
 	.main-block {
-		max-width: 95%;
+		max-width: 85%;
 		min-height: 70%;
 	}
 }
@@ -245,7 +245,7 @@ footer {
 		height: auto;
 	}
 	.main-block {
-		max-width: 95%;
+		max-width: 80%;
 	}
 }
 
@@ -257,7 +257,7 @@ footer {
 		height: auto;
 	}
 	.main-block {
-		max-width: 95%;
+		max-width: 60%;
 	}
 	h1 {
 		font-size: 50px;
