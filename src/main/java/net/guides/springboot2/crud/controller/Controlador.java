@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import net.guides.springboot2.crud.model.Client;
+import net.guides.springboot2.crud.model.ClientDetails;
 import net.guides.springboot2.crud.model.Formulario;
 import net.guides.springboot2.crud.model.Selection;
 import net.guides.springboot2.crud.repository.ClientRepository;
@@ -23,7 +24,7 @@ public class Controlador {
 	public static String selectionShowCity;
 	public static String selectionShowArea;
 	public static String selectionShowType;
-	public static Client clientDetails;
+	public static Optional<Client> clientDetails;
 
 	@Autowired
 	private ClientRepository clientRepository;
@@ -69,7 +70,7 @@ public class Controlador {
 		selectionShowArea = selection.getArea();
 		selectionShowType = (selection.getSpecial1() == null) ? "Todos" : selection.getSpecial1();
 		
-		Client client_id = new Client();
+		ClientDetails client_id = new ClientDetails();
 		model.addAttribute("client_id", client_id);
 		
 		return "resultado";
@@ -77,7 +78,7 @@ public class Controlador {
 
 	// ----------DETALLES DE BUSQUEDA-----------------
 	@RequestMapping("/details")
-	public String details(@ModelAttribute("client_id") Client client_id) {
+	public String details(@ModelAttribute("client_id") ClientDetails client_id) {
 		
      clientDetails  = clientRepository.findById(client_id.getId());
 		
