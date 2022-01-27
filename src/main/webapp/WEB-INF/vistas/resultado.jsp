@@ -72,7 +72,7 @@
 					out.println("<div class='card-body'>");
 					out.println("<h5 class='card-title'>" + emp.getFirstName() + " , " + emp.getLastName() + " </h5>");
 					out.println("</div>");
-					out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getEmailId() + "   email: "
+					out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getTelephone() + "   email: "
 					+ emp.getEmailId() + "</div>");
 					out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
 					out.println("<a href=''#' class='btn btn-primary'>Detalles</a>");
