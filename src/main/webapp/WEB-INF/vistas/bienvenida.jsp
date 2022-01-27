@@ -24,6 +24,10 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- Google Ads  -->
+<script async
+	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4530209817571456"
+	crossorigin="anonymous"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -58,8 +62,8 @@
 				</form:select>
 				<!--Especialidad------------------------------------------------------------------>
 				<div id="specialMenu1" style="display: none;">
-					<div class="form-group"><br>
-						<label>Especialidad</label>
+					<div class="form-group">
+						<br> <label>Especialidad</label>
 						<form:select class="form-select form-select-lg mb-3"
 							path="special1">
 							<option disabled selected value>--TODOS--</option>
@@ -71,8 +75,8 @@
 					</div>
 				</div>
 				<div id="specialMenu2" style="display: none;">
-					<div class="form-group"><br>
-						<label>Especialidad</label>
+					<div class="form-group">
+						<br> <label>Especialidad</label>
 						<form:select class="form-select form-select-lg mb-3"
 							path="special2">
 							<option disabled selected value>--TODOS--</option>
@@ -92,7 +96,8 @@
 				</form:select>
 				<!--zonaNorteMenu-->
 				<div id="zonaNorteMenu" style="display: none;">
-					<div class="form-group"><br>
+					<div class="form-group">
+						<br>
 						<!--how many dining rooms-->
 						<label>Localidad</label>
 						<form:select class="form-select form-select-lg mb-3" path="city1">
@@ -105,7 +110,8 @@
 				</div>
 				<!--zonaSurMenu-->
 				<div id="zonaSurMenu" style="display: none;">
-					<div class="form-group"><br>
+					<div class="form-group">
+						<br>
 						<!--how many dining room chairs-->
 						<label>Localidad</label>
 						<form:select class="form-select form-select-lg mb-3" path="city2">
@@ -117,7 +123,8 @@
 				</div>
 				<!--Zona Oeste-->
 				<div id="zonaOesteMenu" style="display: none;">
-					<div class="form-group"><br>
+					<div class="form-group">
+						<br>
 						<!--how many dining room chairs-->
 						<label>Localidad</label>
 						<form:select class="form-select form-select-lg mb-3" path="city3">
