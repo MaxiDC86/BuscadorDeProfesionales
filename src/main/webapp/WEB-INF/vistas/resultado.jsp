@@ -81,7 +81,7 @@
 				out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
 				out.println("<div class='card-footer bg-transparent border-success'>Footer</div>");
 				out.println("<form action='details'id='client_id'>");
-				out.println("<div><button type='submit' value="+emp.getId() +">Detalles</button></div>");				
+				out.println("<div><button type='submit' id='Id' value="+emp.getId() +">Detalles</button></div>");				
 				out.println("</form></div>");
 			}
 			%>
