@@ -70,6 +70,12 @@ public class Controlador {
 		return "resultado";
 	}
 
+	// ----------DETALLES DE BUSQUEDA-----------------
+	@RequestMapping("/details")
+	public String details() {
+		return "details";
+	}
+	
 	// ---------CONTACTO----------------------
 	@RequestMapping("/contactoformulario")
 	public String contactoFormulario(Model model) {

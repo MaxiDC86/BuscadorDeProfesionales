@@ -79,10 +79,8 @@
 				out.println("<div class='card-footer bg-transparent border-success'>" + "cel: " + emp.getTelephone()
 				+ "<br>   email: " + emp.getEmailId() + "</div>");
 				out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
-				out.println("<div class='card-footer bg-transparent border-success'>Footer</div>");
-				out.println("<form action='details' id='details'>");
-				out.println("<div><button type='submit' value='Enviar'>Detalles</button></div>");				
-				out.println("</form></div>");
+				out.println("<a href=''#' class='btn btn-primary'>Detalles</a>");
+				out.println("<div class='card-footer bg-transparent border-success'>Footer</div></div>");
 			}
 			%>
 		</div>
