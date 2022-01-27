@@ -81,6 +81,10 @@ public class Controlador {
 	public String details(@ModelAttribute("client_id") ClientDetails client_id) {
 		
      clientDetails  = clientRepository.findById(client_id.getId());
+     
+     Client client_details = new Client();
+     
+     client_details = clientDetails.get();
 		
 		return "details";
 	}

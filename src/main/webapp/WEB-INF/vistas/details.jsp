@@ -54,9 +54,9 @@
 	<div class="main-block">
 		<h1>Detalles de busqueda.</h1>
 		<%
-		out.println(Controlador.clientDetails.getFirstName());
-		out.println(Controlador.clientDetails.getLastName());
-		out.println(Controlador.clientDetails.getEmailId());
+		out.println(Controlador.client_details.getFirstName());
+		out.println(Controlador.client_details.getLastName());
+		out.println(Controlador.client_details.getEmailId());
 		%>
 		<br> <br>
 		<form method="get" action="/">
