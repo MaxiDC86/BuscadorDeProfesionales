@@ -80,9 +80,9 @@
 				+ "<br>   email: " + emp.getEmailId() + "</div>");
 				out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
 				out.println("<div class='card-footer bg-transparent border-success'>Footer</div>");
-				out.println("<form:form action='details' method='post' modelAttribute='client_id'>");
-				out.println("<div><form:button path='id' value=" + emp.getId() + " type='submit'>Detalles</form:button></div>");
-				out.println("</form:form></div>");
+				out.println("<form action='details' method='post' id='client_id'>");
+				out.println("<div><button id='id' value=" + emp.getId() + " type='submit'>Detalles</button></div>");
+				out.println("</form></div>");
 			}
 			%>
 
