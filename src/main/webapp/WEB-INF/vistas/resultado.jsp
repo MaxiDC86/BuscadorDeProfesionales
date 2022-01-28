@@ -97,6 +97,16 @@
 				<button type="submit" value="Enviar">Daleeeee</button>
 			</div>
 		</form:form>
+		<form id="client_id" action="details">
+			<select id="id" name="id">
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</select>
+			<div>
+				<button type="submit" value="Enviar">Daleeeee</button>
+			</div>
+		</form>
 
 		<br> <br>
 		<form method="get" action="/">
