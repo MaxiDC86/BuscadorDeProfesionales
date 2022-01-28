@@ -82,7 +82,7 @@
 				out.println("<div class='card-footer bg-transparent border-success'>Footer</div>");
 
 				out.println("<form id='client_id' action='details' >");
-				out.println("<div><input id='id' name='id' value='"+emp.getId()+"></div>");
+				out.println("<div><input id='id' name='id' value='"+emp.getId()+"'></div>");
 				out.println("<div>  <button type='submit' value='Enviar'>Daleeeee</button></div>");
 				out.println("</form></div>");
 			}
