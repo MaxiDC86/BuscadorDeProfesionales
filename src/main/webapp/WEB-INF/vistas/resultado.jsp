@@ -69,6 +69,7 @@
 		</h6>
 
 		<div class="cards">
+			<form:form action="details" modelAttribute="client_id">
 			<%
 			for (Client emp : Controlador.selected) {
 				out.println("<div class='card border-dark bg-info mb-3' style='max-width: 25rem;'>");
@@ -80,21 +81,14 @@
 				+ "<br>   email: " + emp.getEmailId() + "</div>");
 				out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
 				out.println("<div class='card-footer bg-transparent border-success'>Footer</div>");
-				out.println("<form action='details' method='post' id='client_id'>");
+
 				out.println("<div><button id='id' value=" + emp.getId() + " type='submit'>Detalles</button></div>");
-				out.println("</form></div>");
+				out.println("</div>");
 			}
 			%>
-
+			</form:form>
 		</div>
-		<form:form action="details" modelAttribute="client_id">
-			<form:select path="id">
-				<option value="3">3</option>
-			</form:select>
-			<div>
-				<button type="submit" value="Enviar">Daleeeee</button>
-			</div>
-		</form:form>
+		
 
 		<br> <br>
 		<form method="get" action="/">
