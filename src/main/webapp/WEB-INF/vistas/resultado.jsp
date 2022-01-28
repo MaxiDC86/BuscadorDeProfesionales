@@ -80,36 +80,15 @@
 				+ "<br>   email: " + emp.getEmailId() + "</div>");
 				out.println("<p class='card-text'>" + emp.getAttention() + "</p>");
 				out.println("<div class='card-footer bg-transparent border-success'>Footer</div>");
-				
-				
+
 				out.println("<form id='client_id' action='details' >");
-				out.println("<div><select id='id' name='id'><option value='1'>1</option></select></div>");
+				out.println("<div><select id='id' name='id'><option value='"+emp.getId()+"'>1</option></select></div>");
 				out.println("<div>  <button type='submit' value='Enviar'>Daleeeee</button></div>");
 				out.println("</form></div>");
 			}
 			%>
 
 		</div>
-		<form:form action="details" modelAttribute="client_id">
-			<form:select path="id">
-				<option value="3">3</option>
-				<option value="2">2</option>
-				<option value="1">1</option>
-			</form:select>
-			<div>
-				<button type="submit" value="Enviar">Daleeeee</button>
-			</div>
-		</form:form>
-		<form id="client_id" action="details">
-			<select id="id" name="id">
-				<option value="3">3</option>
-				<option value="2">2</option>
-				<option value="1">1</option>
-			</select>
-			<div>
-				<button type="submit" value="Enviar">Daleeeee</button>
-			</div>
-		</form>
 
 		<br> <br>
 		<form method="get" action="/">
