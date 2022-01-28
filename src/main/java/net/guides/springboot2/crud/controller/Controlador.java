@@ -83,7 +83,7 @@ public class Controlador {
 		
 	
 		
-     clientDetails  = clientRepository.findById(client_id.getId()).get();
+     clientDetails  = clientRepository.findById(client_id.getLongId()).get();
      
 		
 		return "details";
