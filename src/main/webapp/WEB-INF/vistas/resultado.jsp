@@ -87,8 +87,10 @@
 			%>
 			
 		</div>		
-		<form:form action='details' method='post' modelAttribute='client_id'>
-		<form:button path='id' value="4" type='submit'>Detalles</form:button>
+		<form:form action="details" modelAttribute="client_id">
+		<form:select path="id">		
+		<option value="3">3</option>
+		</form:select>
 		</form:form>
 
 		<br> <br>
