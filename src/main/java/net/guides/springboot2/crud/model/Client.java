@@ -19,8 +19,9 @@ public class Client {
 	private String zone;
 	private String city;
 	private String area; // Kinesiologo, odontologo etc
-	private String type;
+	private String type; // especialidad
 	private String attention; // personalizada y particular
+	private int views = 0; // visitas registradas
 
 	public Client() {
 
@@ -123,6 +124,14 @@ public class Client {
 
 	public void setAttention(String attention) {
 		this.attention = attention;
+	}
+
+	public int getViews() {
+		return views;
+	}
+
+	public void setViews() {
+		this.views = this.views +1;
 	}
 
 	@Override

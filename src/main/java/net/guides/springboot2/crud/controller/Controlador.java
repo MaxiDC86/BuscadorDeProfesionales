@@ -81,10 +81,8 @@ public class Controlador {
 	@RequestMapping("/details")
 	public String details(@ModelAttribute("client_id") ClientDetails client_id) {
 		
-	
-		
      clientDetails  = clientRepository.findById(client_id.getLongId()).get();
-     
+     clientDetails.setViews(); //Se suma una visita al cliente.
 		
 		return "details";
 	}
