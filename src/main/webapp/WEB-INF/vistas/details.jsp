@@ -60,7 +60,7 @@
 		out.println("<br>");
 		out.println("Email: <br>"+Controlador.clientDetails.getEmailId());
 		out.println("<br>");
-		out.println("Visitas: <br>"+Controlador.clientDetails.getViews());
+
 		%>
 		<br> <br>
 		<form method="get" action="/">

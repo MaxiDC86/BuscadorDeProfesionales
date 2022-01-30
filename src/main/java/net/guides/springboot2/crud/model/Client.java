@@ -21,14 +21,14 @@ public class Client {
 	private String area; // Kinesiologo, odontologo etc
 	private String type; // especialidad
 	private String attention; // personalizada y particular
-	private int views = 0; // visitas registradas
+	//private int views = 0; // visitas registradas
 
 	public Client() {
 
 	}
 
 	public Client(String firstName, String lastName, String emailId, String telephone, String zone, String city,
-			String area, String type, String attention, int views) {
+			String area, String type, String attention) {
 		
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -39,7 +39,7 @@ public class Client {
 		this.area = area;
 		this.type = type;
 		this.attention = attention;
-		this.views=views;
+		//this.views=views;
 	}
 
 	@Id
@@ -127,13 +127,13 @@ public class Client {
 		this.attention = attention;
 	}
 
-	public int getViews() {
+	/*public int getViews() {
 		return views;
 	}
 
 	public void setViews(int views) {
 		this.views = this.views +views;
-	}
+	}*/
 
 	@Override
 	public String toString() {
