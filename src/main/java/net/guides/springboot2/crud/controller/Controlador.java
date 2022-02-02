@@ -88,6 +88,7 @@ public class Controlador {
      else {
     	 clientDetails.setViews(0);
      }
+     clientRepository.save(clientDetails);
 		return "details";
 	}
 	
