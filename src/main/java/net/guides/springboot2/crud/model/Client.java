@@ -21,6 +21,7 @@ public class Client {
 	private String area; // Kinesiologo, odontologo etc
 	private String type; // especialidad
 	private String attention; // personalizada y particular
+	@Column(name = "views", columnDefinition="integer default 0", nullable = false)
 	private Integer views; // visitas registradas
 
 	public Client() {
@@ -39,6 +40,7 @@ public class Client {
 		this.area = area;
 		this.type = type;
 		this.attention = attention;
+		
 		this.views = views;
 
 	}
@@ -128,7 +130,7 @@ public class Client {
 		this.attention = attention;
 	}
 
-	@Column(name = "views", columnDefinition="INTEGER", nullable = false)
+
 	public Integer getViews() {
 		return views;
 	}
