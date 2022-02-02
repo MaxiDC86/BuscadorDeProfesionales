@@ -82,7 +82,7 @@ public class Controlador {
 	public String details(@ModelAttribute("client_id") ClientDetails client_id) {
 		
      clientDetails  = clientRepository.findById(client_id.getLongId()).get();
-     //clientDetails.setViews(1); //Se suma una visita al cliente.
+     clientDetails.setViews(clientDetails.getViews()+1); //Se suma una visita al cliente.
 		
 		return "details";
 	}
