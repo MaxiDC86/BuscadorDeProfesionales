@@ -82,8 +82,13 @@ public class Controlador {
 	public String details(@ModelAttribute("client_id") ClientDetails client_id) {
 		
      clientDetails  = clientRepository.findById(client_id.getLongId()).get();
-     clientDetails.setViews(clientDetails.getViews()+1); //Se suma una visita al cliente.
-		
+     
+     if(clientDetails.getViews()!=null) {
+    	 clientDetails.setViews(clientDetails.getViews()+1); //Se suma una visita al cliente.
+     }
+     else {
+    	 clientDetails.setViews(0);
+     }
 		return "details";
 	}
 	
