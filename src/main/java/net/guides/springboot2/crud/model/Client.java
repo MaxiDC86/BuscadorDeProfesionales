@@ -21,14 +21,14 @@ public class Client {
 	private String area; // Kinesiologo, odontologo etc
 	private String type; // especialidad
 	private String attention; // personalizada y particular
-	private long views = 0; // visitas registradas
+	private Integer views = 0; // visitas registradas
 
 	public Client() {
 
 	}
 
 	public Client(String firstName, String lastName, String emailId, String telephone, String zone, String city,
-			String area, String type, String attention, long views) {
+			String area, String type, String attention, Integer views) {
 		
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -129,11 +129,11 @@ public class Client {
 		this.attention = attention;
 	}
 
-	public long getViews() {
+	public Integer getViews() {
 		return views;
 	}
 	
-	public void setViews(long views) {
+	public void setViews(Integer views) {
 		this.views = views;
 	}
 
