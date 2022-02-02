@@ -21,7 +21,7 @@ public class Client {
 	private String area; // Kinesiologo, odontologo etc
 	private String type; // especialidad
 	private String attention; // personalizada y particular
-	private Integer views = 0; // visitas registradas
+	private Integer views; // visitas registradas
 
 	public Client() {
 
@@ -29,7 +29,7 @@ public class Client {
 
 	public Client(String firstName, String lastName, String emailId, String telephone, String zone, String city,
 			String area, String type, String attention, Integer views) {
-		
+
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
@@ -42,7 +42,6 @@ public class Client {
 		this.views = views;
 
 	}
-
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -129,10 +128,11 @@ public class Client {
 		this.attention = attention;
 	}
 
+	@Column(name = "views", nullable = false)
 	public Integer getViews() {
 		return views;
 	}
-	
+
 	public void setViews(Integer views) {
 		this.views = views;
 	}
