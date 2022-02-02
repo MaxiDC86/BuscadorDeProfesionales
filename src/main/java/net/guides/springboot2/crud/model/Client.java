@@ -21,7 +21,7 @@ public class Client {
 	private String area; // Kinesiologo, odontologo etc
 	private String type; // especialidad
 	private String attention; // personalizada y particular
-	private long views; // visitas registradas
+	private long views = 0; // visitas registradas
 
 	public Client() {
 
