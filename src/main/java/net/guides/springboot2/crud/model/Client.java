@@ -128,7 +128,7 @@ public class Client {
 		this.attention = attention;
 	}
 
-	@Column(name = "views", nullable = false)
+	@Column(name = "views", columnDefinition="INTEGER", nullable = false)
 	public Integer getViews() {
 		return views;
 	}

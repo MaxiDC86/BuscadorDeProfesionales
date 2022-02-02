@@ -26,7 +26,6 @@ public class Controlador {
 	public static String selectionShowType;
 	public static Client clientDetails;
 
-
 	@Autowired
 	private ClientRepository clientRepository;
 
