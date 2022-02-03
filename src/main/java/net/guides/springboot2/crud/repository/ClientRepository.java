@@ -3,11 +3,12 @@ package net.guides.springboot2.crud.repository;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 import net.guides.springboot2.crud.model.Client;
 
 @Repository
-public interface ClientRepository extends JpaRepository<Client, Long> {
+public interface ClientRepository extends JpaRepository<Client, Long>, JpaSpecificationExecutor<Client>  {
 
 	Client findById(long id);
 
@@ -20,5 +21,8 @@ public interface ClientRepository extends JpaRepository<Client, Long> {
 	List<Client> findByZoneAndCityAndAreaAllIgnoreCase(String zone, String city, String area);
 
 	List<Client> findByAreaAndTypeAndZoneAndCityAllIgnoreCase(String area, String type, String zone, String city);
+	
+	
+	
 
 }

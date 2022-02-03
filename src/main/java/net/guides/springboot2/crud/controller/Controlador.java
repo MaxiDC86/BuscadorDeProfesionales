@@ -17,7 +17,7 @@ import net.guides.springboot2.crud.repository.ClientRepository;
 @Controller
 @RequestMapping
 public class Controlador {
-	public static ArrayList<Client> selectedZoneAndCityAndArea;
+	public static ArrayList<Client> selectedCity;
 	public static ArrayList<Client> selected;
 	public static ArrayList<Client> distintAreas;
 	public static String selectionShowZone;
@@ -41,6 +41,8 @@ public class Controlador {
 	@RequestMapping("/procesaBusqueda")
 	public String procesaBusqueda(@ModelAttribute("selection") Selection selection,Model model) {
 
+
+		
 		if (selection.getSpecial1() != null) {
 
 			selected = (ArrayList<Client>) clientRepository
@@ -91,6 +93,17 @@ public class Controlador {
      clientRepository.save(clientDetails);
 		return "details";
 	}
+	
+	//-----TEST-------------------------
+	@RequestMapping("/test")
+	public String test() {
+		
+		//specification test
+		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity("Avellaneda");
+		
+		return "test";
+	}
+	
 	
 	// ---------CONTACTO----------------------
 	@RequestMapping("/contactoformulario")

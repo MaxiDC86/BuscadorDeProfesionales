@@ -3,10 +3,12 @@ package net.guides.springboot2.service;
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import net.guides.springboot2.crud.model.Client;
 import net.guides.springboot2.crud.repository.ClientRepository;
+import static org.springframework.data.jpa.domain.Specification.where;
 
 @Service
 public class ClientService {
@@ -20,12 +22,12 @@ public class ClientService {
 		return clientRepository.findById(id);
 	}
 
-	public ArrayList<Client> findAllByZone(String zone) {
-		return (ArrayList<Client>) clientRepository.findAllByZone(zone);
-	}
+//	public ArrayList<Client> findAllByZone(String zone) {
+//		return (ArrayList<Client>) clientRepository.findAllByZone(zone);
+//	}
 
 	public ArrayList<Client> findAllByCity(String city) {
-		return (ArrayList<Client>) clientRepository.findAllByCity(city);
+		return (ArrayList<Client>) clientRepository.findAll(where(isEqual("city",city)));
 	}
 
 	public ArrayList<Client> findByZoneAndCity(String zone, String city) {
@@ -41,4 +43,14 @@ public class ClientService {
 		return (ArrayList<Client>) clientRepository.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(area, type, zone,
 				city);
 	}
+
+	private Specification<Client> isLike(String column, String value) {
+		return (root, query, criteriaBuilder) -> criteriaBuilder.like(root.get(column), value);
+	}
+
+	private <T> Specification<Client> isEqual(String column, T value) {
+		return (root, query, criteriaBuilder) -> criteriaBuilder.equal(root.get(column), value);
+	}
+	
+
 }
