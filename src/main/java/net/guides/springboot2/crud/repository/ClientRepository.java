@@ -23,8 +23,8 @@ public interface ClientRepository extends JpaRepository<Client, Long>, JpaSpecif
 
 	List<Client> findByAreaAndTypeAndZoneAndCityAllIgnoreCase(String area, String type, String zone, String city);
 	
-	@Query("select distinct c.area from clients c")
-	List<Client> findDistintArea();
+//	@Query("select distinct c.area from clients c")
+//	List<Client> findDistintArea();
 	
 	
 	
