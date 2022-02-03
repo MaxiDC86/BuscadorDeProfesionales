@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import net.guides.springboot2.crud.model.Client;
 
@@ -21,6 +22,9 @@ public interface ClientRepository extends JpaRepository<Client, Long>, JpaSpecif
 	List<Client> findByZoneAndCityAndAreaAllIgnoreCase(String zone, String city, String area);
 
 	List<Client> findByAreaAndTypeAndZoneAndCityAllIgnoreCase(String area, String type, String zone, String city);
+	
+	@Query("select distinct area from clients")
+	List<String> findDistintArea();
 	
 	
 	

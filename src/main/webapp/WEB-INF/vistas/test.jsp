@@ -67,6 +67,17 @@
 			out.print(Controlador.selectionShowCity);
 			%>
 		</h6>
+		<p>
+		<%
+		
+		for(String s: Controlador.distintAreas){
+			
+			out.println(s);
+		}
+		
+		%>
+		
+		</p>
 
 		<div class="cards">
 			<%

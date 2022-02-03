@@ -19,7 +19,7 @@ import net.guides.springboot2.crud.repository.ClientRepository;
 public class Controlador {
 	public static ArrayList<Client> selectedCity;
 	public static ArrayList<Client> selected;
-	public static ArrayList<Client> distintAreas;
+	public static ArrayList<String> distintAreas;
 	public static String selectionShowZone;
 	public static String selectionShowCity;
 	public static String selectionShowArea;
@@ -100,7 +100,7 @@ public class Controlador {
 		
 		//specification test
 		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity("Avellaneda");
-		
+		distintAreas = (ArrayList<String>) clientRepository.findDistintArea();
 		return "test";
 	}
 	
