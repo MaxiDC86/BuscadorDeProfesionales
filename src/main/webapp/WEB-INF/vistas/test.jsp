@@ -70,9 +70,9 @@
 		<p>
 		<%
 		
-		for(String s: Controlador.distintAreas){
+		for(Client s: Controlador.distintAreas){
 			
-			out.println(s);
+			out.println(s.getArea());
 		}
 		
 		%>
