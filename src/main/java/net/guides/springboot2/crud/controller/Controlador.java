@@ -46,7 +46,7 @@ public class Controlador {
 			BindingResult resultadoValidacion) {
 		
 		if (resultadoValidacion.hasFieldErrors()) {
-			return "resultado";
+			return "bienvenida";
 		}
 
 		if (selection.getSpecial1() != null) {
