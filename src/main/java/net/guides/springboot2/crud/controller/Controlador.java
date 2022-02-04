@@ -2,9 +2,12 @@ package net.guides.springboot2.crud.controller;
 
 import java.util.*;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -39,72 +42,72 @@ public class Controlador {
 
 	// ---PROCESANDO LA BUSQUEDA-----
 	@RequestMapping("/procesaBusqueda")
-	public String procesaBusqueda(@ModelAttribute("selection") Selection selection,Model model) {
-
-
+	public String procesaBusqueda(@Valid @ModelAttribute("selection") Selection selection, Model model,
+			BindingResult resultadoValidacion) {
 		
+		if (resultadoValidacion.hasFieldErrors()) {
+			return "resultado";
+		}
+
 		if (selection.getSpecial1() != null) {
 
-			selected = (ArrayList<Client>) clientRepository
-					.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(selection.getArea(), selection.getSpecial1(),
-							selection.getZone(), selection.getCity1());
+			selected = (ArrayList<Client>) clientRepository.findByAreaAndTypeAndZoneAndCityAllIgnoreCase(
+					selection.getArea(), selection.getSpecial1(), selection.getZone(), selection.getCity1());
 		} else {
 
 			if (selection.getZone().equals("norte")) {
-				selected = (ArrayList<Client>) clientRepository
-						.findByZoneAndCityAndAreaAllIgnoreCase(selection.getZone(), selection.getCity1(), selection.getArea());
+				selected = (ArrayList<Client>) clientRepository.findByZoneAndCityAndAreaAllIgnoreCase(
+						selection.getZone(), selection.getCity1(), selection.getArea());
 				selectionShowCity = selection.getCity1();
 			}
 			if (selection.getZone().equals("sur")) {
-				selected = (ArrayList<Client>) clientRepository
-						.findByZoneAndCityAndAreaAllIgnoreCase(selection.getZone(), selection.getCity2(), selection.getArea());
+				selected = (ArrayList<Client>) clientRepository.findByZoneAndCityAndAreaAllIgnoreCase(
+						selection.getZone(), selection.getCity2(), selection.getArea());
 				selectionShowCity = selection.getCity2();
 			}
 			if (selection.getZone().equals("oeste")) {
-				selected = (ArrayList<Client>) clientRepository
-						.findByZoneAndCityAndAreaAllIgnoreCase(selection.getZone(), selection.getCity3(), selection.getArea());
+				selected = (ArrayList<Client>) clientRepository.findByZoneAndCityAndAreaAllIgnoreCase(
+						selection.getZone(), selection.getCity3(), selection.getArea());
 				selectionShowCity = selection.getCity3();
 			}
 
 		}
 		selectionShowZone = selection.getZone();
-		selectionShowCity = (selection.getCity1()== null) ? "Todos" :selection.getCity1() ;
+		selectionShowCity = (selection.getCity1() == null) ? "Todos" : selection.getCity1();
 		selectionShowArea = selection.getArea();
 		selectionShowType = (selection.getSpecial1() == null) ? "Todos" : selection.getSpecial1();
-		
+
 		ClientDetails client_id = new ClientDetails();
 		model.addAttribute("client_id", client_id);
-		
+
 		return "resultado";
 	}
 
 	// ----------DETALLES DE BUSQUEDA-----------------
 	@RequestMapping("/details")
 	public String details(@ModelAttribute("client_id") ClientDetails client_id) {
-		
-     clientDetails  = clientRepository.findById(client_id.getLongId()).get();
-     
-     if(clientDetails.getViews()!=null) {
-    	 clientDetails.setViews(clientDetails.getViews()+1); //Se suma una visita al cliente.
-     }
-     else {
-    	 clientDetails.setViews(0);
-     }
-     clientRepository.save(clientDetails);
+
+		clientDetails = clientRepository.findById(client_id.getLongId()).get();
+
+		if (clientDetails.getViews() != null) {
+			clientDetails.setViews(clientDetails.getViews() + 1); // Se suma una visita al cliente.
+		} else {
+			clientDetails.setViews(0);
+		}
+		clientRepository.save(clientDetails);
 		return "details";
 	}
-	
-	//-----TEST-------------------------
+
+	// -----TEST-------------------------
 	@RequestMapping("/test")
 	public String test() {
-		
-		//specification test
+
+		// specification test
 		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity("Avellaneda");
-		//distintAreas = (ArrayList<Client>) clientRepository.findDistintArea();
+		// distintAreas = (ArrayList<Client>) clientRepository.findDistintArea();
 		return "test";
 	}
-	
-	
+
 	// ---------CONTACTO----------------------
 	@RequestMapping("/contactoformulario")
 	public String contactoFormulario(Model model) {

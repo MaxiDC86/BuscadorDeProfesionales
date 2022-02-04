@@ -67,18 +67,6 @@
 			out.print(Controlador.selectionShowCity);
 			%>
 		</h6>
-		<p>
-		<%
-		
-		for(Client s: Controlador.distintAreas){
-			
-			out.println(s.getArea());
-		}
-		
-		%>
-		
-		</p>
-
 		<div class="cards">
 			<%
 			for (Client emp : Controlador.selectedCity) {

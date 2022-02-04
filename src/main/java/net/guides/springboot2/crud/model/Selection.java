@@ -1,9 +1,12 @@
 package net.guides.springboot2.crud.model;
 
+import javax.validation.constraints.NotNull;
+
 public class Selection {
 
 	private String zone;
 	private String city;
+	@NotNull(message = "<--Elegir una opción")
 	private String area;
 	private String special;
 
