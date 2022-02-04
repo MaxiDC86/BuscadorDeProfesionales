@@ -6,7 +6,7 @@ public class Selection {
 
 	private String zone;
 	private String city;
-	@NotNull(message = "<--Elegir una opción")
+	@NotNull
 	private String area;
 	private String special;
 
