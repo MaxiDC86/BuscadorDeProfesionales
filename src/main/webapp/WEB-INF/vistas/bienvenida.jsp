@@ -56,11 +56,9 @@
 				<!--AREA------------------------------------------------------------------>
 				<label class="control-label">Profesional </label>
 				<form:select class="form-select form-select-lg mb-3" path="area">
-					<%
-					for(String s: Controlador.clientTestDistinct)
-						out.println("<option value='"+s+"'>"+s+"</option>");
-					
-					%>
+					<option disabled selected value>-- selecionar --</option>
+					<option value="Kinesiologia">Kinesiología</option>
+					<option value="Odontologia">Odontología</option>
 				</form:select>
 				<!--Especialidad------------------------------------------------------------------>
 				<div id="specialMenu1" style="display: none;">
