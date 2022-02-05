@@ -46,6 +46,7 @@
 					<li class="active"><a href="#">Home</a></li>
 					<li><a href="/contactoformulario">Contacto</a></li>
 					<li><a href="/nosotros">Nosotros</a></li>
+					<li><a href="/newsletter">Newsletter</a></li>
 				</ul>
 			</div>
 		</div>

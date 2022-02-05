@@ -133,5 +133,12 @@ public class Controlador {
 	public String nosotros() {
 		return "nosotros";
 	}
+	
+	//----------NEWSLETTER------------
+	@RequestMapping("/newsletter")
+	public String newsletter() {
+		
+		return "newsletter";
+	}
 
 }
