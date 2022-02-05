@@ -58,7 +58,7 @@
 				<form:select class="form-select form-select-lg mb-3" path="area">
 					<%
 					for(String s: Controlador.clientTestDistinct)
-						out.println("<option value='"+s+"'>)"+s+"</option>");
+						out.println("<option value='"+s+"'>"+s+"</option>");
 					
 					%>
 				</form:select>
