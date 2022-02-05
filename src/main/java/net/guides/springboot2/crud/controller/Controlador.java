@@ -2,6 +2,12 @@ package net.guides.springboot2.crud.controller;
 
 import java.util.*;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +35,12 @@ public class Controlador {
 	public static String selectionShowType;
 	public static Client clientDetails;
 
+	/////
+	   private static EntityManagerFactory entityManagerFactory =
+	            Persistence.createEntityManagerFactory("example-unit");
+	  public static List<String> resultList;
+	//////   
+	
 	@Autowired
 	private ClientRepository clientRepository;
 
@@ -105,6 +117,21 @@ public class Controlador {
 		// specification test
 		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity("Avellaneda");
 		// distintAreas = (ArrayList<Client>) clientRepository.findDistintArea();
+		
+
+	    
+	
+	    	
+	    	EntityManager em = entityManagerFactory.createEntityManager();
+	    	CriteriaQuery<String> query = em.getCriteriaBuilder()
+	    			.createQuery(String.class);
+	    	Root<Client> client = query.from(Client.class);
+	    	query.select(client.get(Client.city))
+	    	.distinct(true);
+	    	TypedQuery<String> tq = em.createQuery(query);
+	    	resultList = tq.getResultList();
+	    
+		
 		return "test";
 	}
 

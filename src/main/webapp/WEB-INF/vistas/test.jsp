@@ -84,6 +84,9 @@
 				out.println("<div>  <button type='submit' value='Enviar'>Detalles</button></div>");
 				out.println("</form></div>");
 			}
+			for (String s: Controlador.resultList){
+				out.println(s);
+			}
 			%>
 
 		</div>
