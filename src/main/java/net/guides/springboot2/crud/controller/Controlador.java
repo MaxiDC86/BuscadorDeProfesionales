@@ -108,7 +108,7 @@ public class Controlador {
 		// specification test
 		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity("Avellaneda");
 		// distintAreas = (ArrayList<Client>) clientRepository.findDistintArea();
-		//clientTest = (ArrayList<Client>) clientRepository.findByName("a");
+		clientTest = (ArrayList<Client>) clientRepository.findAll("a");
 		
 		return "test";
 	}
