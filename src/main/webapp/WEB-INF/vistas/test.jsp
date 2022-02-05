@@ -84,9 +84,6 @@
 				out.println("<div>  <button type='submit' value='Enviar'>Detalles</button></div>");
 				out.println("</form></div>");
 			}
-			for (Client s: Controlador.clientTest){
-				out.println(s.getFirstName());
-			}
 			%>
 
 		</div>
