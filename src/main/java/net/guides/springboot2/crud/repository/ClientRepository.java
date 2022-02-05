@@ -23,7 +23,14 @@ public interface ClientRepository extends JpaRepository<Client, Long>, JpaSpecif
 
 	List<Client> findByAreaAndTypeAndZoneAndCityAllIgnoreCase(String area, String type, String zone, String city);
 	
+	
+	//-----TEST----------------
 	@Query("SELECT c FROM Client c WHERE c.firstName LIKE %?1%")
 	public List<Client> findAll(String name);
+	
+	
+	@Query("SELECT DISTINCT area FROM Client")
+	public List<String> findDistinct();
+	
 	
 }
