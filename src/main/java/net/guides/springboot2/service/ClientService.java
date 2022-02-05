@@ -27,6 +27,8 @@ public class ClientService {
 //		return clientRepository.findAll();
 //	}
 
+	
+	
 //	public ArrayList<Client> findAllByZone(String zone) {
 //		return (ArrayList<Client>) clientRepository.findAllByZone(zone);
 //	}

@@ -23,7 +23,7 @@ public interface ClientRepository extends JpaRepository<Client, Long>, JpaSpecif
 
 	List<Client> findByAreaAndTypeAndZoneAndCityAllIgnoreCase(String area, String type, String zone, String city);
 	
-//	@Query("SELECT c FROM clients c WHERE c.name LIKE %?1%")
-//	public List<Client> findByName(String name);
+	@Query("SELECT c FROM clients c WHERE c.name LIKE %?1%")
+	public List<Client> findAll(String name);
 	
 }
