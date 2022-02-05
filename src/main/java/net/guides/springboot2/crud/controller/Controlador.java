@@ -34,12 +34,9 @@ public class Controlador {
 	public static String selectionShowArea;
 	public static String selectionShowType;
 	public static Client clientDetails;
+	public static ArrayList<Client> clientTest;
 
-	/////
-	   private static EntityManagerFactory entityManagerFactory =
-	            Persistence.createEntityManagerFactory("example-unit");
-	  public static List<String> resultList;
-	//////   
+
 	
 	@Autowired
 	private ClientRepository clientRepository;
@@ -117,20 +114,7 @@ public class Controlador {
 		// specification test
 		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity("Avellaneda");
 		// distintAreas = (ArrayList<Client>) clientRepository.findDistintArea();
-		
-
-	    
-	
-	    	
-	    	EntityManager em = entityManagerFactory.createEntityManager();
-	    	CriteriaQuery<String> query = em.getCriteriaBuilder()
-	    			.createQuery(String.class);
-	    	Root<Client> client = query.from(Client.class);
-	    	query.select(client.get(Client.city))
-	    	.distinct(true);
-	    	TypedQuery<String> tq = em.createQuery(query);
-	    	resultList = tq.getResultList();
-	    
+		clientTest = (ArrayList<Client>) clientRepository.findByName("a");
 		
 		return "test";
 	}

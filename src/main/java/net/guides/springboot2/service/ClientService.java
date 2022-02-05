@@ -21,6 +21,11 @@ public class ClientService {
 	public Client findById(long id) {
 		return clientRepository.findById(id);
 	}
+	
+	// -----------TEST----------------
+	public List<Client> findByName(String name){
+		return clientRepository.findAll();
+	}
 
 //	public ArrayList<Client> findAllByZone(String zone) {
 //		return (ArrayList<Client>) clientRepository.findAllByZone(zone);
