@@ -26,6 +26,9 @@ public class ClientService {
 	public List<Client> listAll(String name){
 		return clientRepository.findAll(name);
 	}
+	public List<String> listDistinct(){
+		return clientRepository.findDistinct();
+	}
 
 	
 	
