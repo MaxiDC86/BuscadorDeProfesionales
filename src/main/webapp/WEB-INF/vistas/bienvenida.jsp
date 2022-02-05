@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page import="net.guides.springboot2.crud.controller.*"%>
 <%@ page import="net.guides.springboot2.crud.model.*"%>
+<%@ page import="java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,9 +57,12 @@
 				<!--AREA------------------------------------------------------------------>
 				<label class="control-label">Profesional </label>
 				<form:select class="form-select form-select-lg mb-3" path="area">
-					<option disabled selected value>-- selecionar --</option>
-					<option value="Kinesiologia">Kinesiología</option>
-					<option value="Odontologia">Odontología</option>
+					<%
+					for (String s : Controlador.clientTestDistinct) {
+
+						out.println("<option value='" + s + "'>" + s + "</option>");
+					}
+					%>
 				</form:select>
 				<!--Especialidad------------------------------------------------------------------>
 				<div id="specialMenu1" style="display: none;">
