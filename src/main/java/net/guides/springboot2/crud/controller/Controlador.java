@@ -29,6 +29,7 @@ public class Controlador {
 	public static String selectionShowType;
 	public static Client clientDetails;
 	public static ArrayList<Client> clientTest;
+	public static ArrayList<String> clientTestDistinct;
 
 
 	
@@ -109,7 +110,7 @@ public class Controlador {
 		selectedCity = (ArrayList<Client>) clientRepository.findAllByCity("Avellaneda");
 		// distintAreas = (ArrayList<Client>) clientRepository.findDistintArea();
 		clientTest = (ArrayList<Client>) clientRepository.findAll("a");
-		
+		clientTestDistinct = (ArrayList<String>) clientRepository.findDistinct();
 		return "test";
 	}
 

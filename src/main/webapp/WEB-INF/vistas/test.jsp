@@ -87,6 +87,9 @@
 			for (Client s: Controlador.clientTest){
 				out.println(s.getFirstName());
 			}
+			for (String s: Controlador.clientTestDistinct){
+				out.println(s);
+			}
 			%>
 
 		</div>
