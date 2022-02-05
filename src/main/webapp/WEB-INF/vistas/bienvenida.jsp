@@ -52,11 +52,7 @@
 	</nav>
 	<div class="main-block">
 		<h1>Bienvenidos al buscador de profesionales.</h1>
-		    <div class="container">
-        <div class="btn"><a>PROFESIONALES</a></div>  
-        <div class="btn"><a>INSTITUCIONES</a></div>  
-        <div class="btn"><a>INSTITUCIONES</a></div>  
-      </div>
+		
 		<form:form action="procesaBusqueda" modelAttribute="selection">
 			<div class="form-group">
 				<!--AREA------------------------------------------------------------------>
