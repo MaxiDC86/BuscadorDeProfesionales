@@ -23,9 +23,9 @@ public class ClientService {
 	}
 	
 	// -----------TEST----------------
-	public List<Client> findByName(String name){
-		return clientRepository.findAll();
-	}
+//	public List<Client> findByName(String name){
+//		return clientRepository.findAll();
+//	}
 
 //	public ArrayList<Client> findAllByZone(String zone) {
 //		return (ArrayList<Client>) clientRepository.findAllByZone(zone);

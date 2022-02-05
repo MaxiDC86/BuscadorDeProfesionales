@@ -17,7 +17,7 @@ public class Client {
 	private String emailId;
 	private String telephone;
 	private String zone;
-	public static String city;
+	private String city;
 	private String area; // Kinesiologo, odontologo etc
 	private String type; // especialidad
 	private String attention; // personalizada y particular
