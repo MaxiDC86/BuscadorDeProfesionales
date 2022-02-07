@@ -44,29 +44,43 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="http://salud-cerca.site">Home</a></li>
+					<li ><a href="http://salud-cerca.site">Home</a></li>
 					<li><a href="/contactoformulario">Contacto</a></li>
-					<li><a href="#">Nosotros</a></li>
+					<li><a href="/nosotros">Nosotros</a></li>
+					<li class="active"><a href="#">Newsletter</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="main-block">
-		<h1>Detalles de busqueda.</h1>
-		<%
-		out.println("Dr. "+Controlador.clientDetails.getLastName()+" "+Controlador.clientDetails.getFirstName());
-		out.println("<br>");
-		out.println("Telefono: <br>"+Controlador.clientDetails.getTelephone());
-		out.println("<br>");
-		out.println("Email: <br>"+Controlador.clientDetails.getEmailId());
-		out.println("<br>");
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="well well-sm">
+					<form:form class="form-horizontal" action="addEmailNewsletter"
+						modelAttribute="newsletterForm">
+						<fieldset>
+							<legend class="text-center">No te pierdas ninguna noticia!</legend>
+							<!-- Email input-->
+							<div class="form-group">
+								<label class="col-md-3 control-label" for="email">Tú
+									E-mail</label>
+								<div class="col-md-9">
+									<form:input  path="email" type="text"
+										placeholder="Your email" class="form-control"></form:input>
+								</div>
+							</div>
 
-		%>
-		<br> <br>
-		<form method="get" action="/">
-			<button type="submit">Volver a buscar</button>
-		</form>
-
+							<!-- Form actions -->
+							<div class="form-group">
+								<div class="col-md-12 text-right">
+									<button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+								</div>
+							</div>
+						</fieldset>
+					</form:form>
+				</div>
+			</div>
+		</div>
 	</div>
 	</script>
 	<!-- JavaScript -->

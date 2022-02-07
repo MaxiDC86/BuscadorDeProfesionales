@@ -47,6 +47,7 @@
 					<li class="active"><a href="http://salud-cerca.site">Home</a></li>
 					<li><a href="/contactoformulario">Contacto</a></li>
 					<li><a href="#">Nosotros</a></li>
+					<li><a href="/newsletter">Newsletter</a></li>
 				</ul>
 			</div>
 		</div>

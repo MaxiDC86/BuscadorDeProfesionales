@@ -22,7 +22,7 @@ import net.guides.springboot2.crud.model.Client;
 import net.guides.springboot2.crud.repository.ClientRepository;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v2")
 public class ClientController {
 	
 	@Autowired
@@ -33,7 +33,7 @@ public class ClientController {
 		return clientRepository.findAll();
 	}
 
-	@GetMapping("/clientss/{id}")
+	@GetMapping("/clients/get/{id}")
 	public ResponseEntity<Client> getClientById(@PathVariable(value = "id") Long clientId)
 			throws ResourceNotFoundException {
 		Client client = clientRepository.findById(clientId)
@@ -41,12 +41,12 @@ public class ClientController {
 		return ResponseEntity.ok().body(client);
 	}
 
-	@PostMapping("/clients")
+	@PostMapping("/clients/post/")
 	public Client createClient(@Valid @RequestBody Client client) {
 		return clientRepository.save(client);
 	}
 
-	@PutMapping("/clients/{id}")
+	@PutMapping("/clients/put/{id}")
 	public ResponseEntity<Client> updateClient(@PathVariable(value = "id") Long clientId,
 			@Valid @RequestBody Client clientDetails) throws ResourceNotFoundException {
 		Client client = clientRepository.findById(clientId)
@@ -65,7 +65,7 @@ public class ClientController {
 		return ResponseEntity.ok(updatedClient);
 	}
 
-	@DeleteMapping("/clients/{id}")
+	@DeleteMapping("/clients/delete/{id}")
 	public Map<String, Boolean> deleteClient(@PathVariable(value = "id") Long clientId)
 			throws ResourceNotFoundException {
 		Client client = clientRepository.findById(clientId)
