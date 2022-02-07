@@ -18,8 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.guides.springboot2.crud.exception.ResourceNotFoundException;
-import net.guides.springboot2.crud.model.Client;
-import net.guides.springboot2.crud.repository.ClientRepository;
+import net.guides.springboot2.crud.exception.TokenNotValidException;
+import net.guides.springboot2.crud.model.*;
+import net.guides.springboot2.crud.repository.*;
 
 @RestController
 @RequestMapping("/api/v2")
@@ -27,6 +28,9 @@ public class ClientController {
 
 	@Autowired
 	private ClientRepository clientRepository;
+	
+	@Autowired
+	private TokenRepository tokenRepository;
 
 	@GetMapping("/clients")
 	public List<Client> getAllEmployees() {
@@ -67,13 +71,31 @@ public class ClientController {
 
 	@DeleteMapping("/clients/delete/{id}/{token}")
 	public Map<String, Boolean> deleteClient(@PathVariable(value = "id") Long clientId,
-			@PathVariable(value = "token") String token) throws ResourceNotFoundException {
+			@PathVariable(value = "token") Long token) throws ResourceNotFoundException, TokenNotValidException {
+		
 		Client client = clientRepository.findById(clientId)
 				.orElseThrow(() -> new ResourceNotFoundException("Client not found for this id :: " + clientId));
-		if (token.equals("valid"))
-			clientRepository.delete(client);
+		
+		Token tokenValue = tokenRepository.findById(token)
+				.orElseThrow(() -> new TokenNotValidException("Token Not Valid"));
+				
+		
 		Map<String, Boolean> response = new HashMap<>();
+		clientRepository.delete(client);
 		response.put("deleted", Boolean.TRUE);
+
 		return response;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
