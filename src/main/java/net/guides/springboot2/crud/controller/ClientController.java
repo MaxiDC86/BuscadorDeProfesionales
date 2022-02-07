@@ -24,7 +24,7 @@ import net.guides.springboot2.crud.repository.ClientRepository;
 @RestController
 @RequestMapping("/api/v2")
 public class ClientController {
-	
+
 	@Autowired
 	private ClientRepository clientRepository;
 
@@ -41,7 +41,7 @@ public class ClientController {
 		return ResponseEntity.ok().body(client);
 	}
 
-	@PostMapping("/clients/post/")
+	@PostMapping("/clients/post")
 	public Client createClient(@Valid @RequestBody Client client) {
 		return clientRepository.save(client);
 	}
@@ -65,13 +65,13 @@ public class ClientController {
 		return ResponseEntity.ok(updatedClient);
 	}
 
-	@DeleteMapping("/clients/delete/{id}")
-	public Map<String, Boolean> deleteClient(@PathVariable(value = "id") Long clientId)
-			throws ResourceNotFoundException {
+	@DeleteMapping("/clients/delete/{id}/{token}")
+	public Map<String, Boolean> deleteClient(@PathVariable(value = "id") Long clientId,
+			@PathVariable(value = "token") String token) throws ResourceNotFoundException {
 		Client client = clientRepository.findById(clientId)
 				.orElseThrow(() -> new ResourceNotFoundException("Client not found for this id :: " + clientId));
-
-		clientRepository.delete(client);
+		if (token.equals("valid"))
+			clientRepository.delete(client);
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return response;
