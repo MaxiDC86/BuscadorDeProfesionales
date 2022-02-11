@@ -41,6 +41,7 @@ public class Controlador {
 	public String bienvenida(Model model) {
 		Selection selection = new Selection();
 		model.addAttribute("selection", selection);
+		clientTestDistinct = (ArrayList<String>) clientRepository.findDistinct();
 		return "bienvenida";
 	}
 

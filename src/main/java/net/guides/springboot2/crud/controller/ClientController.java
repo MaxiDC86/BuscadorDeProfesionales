@@ -28,7 +28,7 @@ public class ClientController {
 
 	@Autowired
 	private ClientRepository clientRepository;
-	
+
 	@Autowired
 	private TokenRepository tokenRepository;
 
@@ -52,9 +52,14 @@ public class ClientController {
 
 	@PutMapping("/clients/put/{id}")
 	public ResponseEntity<Client> updateClient(@PathVariable(value = "id") Long clientId,
-			@Valid @RequestBody Client clientDetails) throws ResourceNotFoundException {
+			@Valid @RequestBody Client clientDetails, @PathVariable(value = "token") Long token)
+			throws ResourceNotFoundException, TokenNotValidException {
+		
 		Client client = clientRepository.findById(clientId)
 				.orElseThrow(() -> new ResourceNotFoundException("Client not found for this id :: " + clientId));
+		Token tokenValue = tokenRepository.findById(token)
+				.orElseThrow(() -> new TokenNotValidException("Token Not Valid"));
+
 		client.setViews(clientDetails.getViews());
 		client.setAttention(clientDetails.getAttention());
 		client.setType(clientDetails.getType());
@@ -72,14 +77,13 @@ public class ClientController {
 	@DeleteMapping("/clients/delete/{id}/{token}")
 	public Map<String, Boolean> deleteClient(@PathVariable(value = "id") Long clientId,
 			@PathVariable(value = "token") Long token) throws ResourceNotFoundException, TokenNotValidException {
-		
+
 		Client client = clientRepository.findById(clientId)
 				.orElseThrow(() -> new ResourceNotFoundException("Client not found for this id :: " + clientId));
-		
+
 		Token tokenValue = tokenRepository.findById(token)
 				.orElseThrow(() -> new TokenNotValidException("Token Not Valid"));
-				
-		
+
 		Map<String, Boolean> response = new HashMap<>();
 		clientRepository.delete(client);
 		response.put("deleted", Boolean.TRUE);
@@ -87,15 +91,3 @@ public class ClientController {
 		return response;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-

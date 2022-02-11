@@ -19,7 +19,8 @@
         "city": "Castelar",
         "area": "Kinesiologia",
         "type": "Traumatologia, Deporte",
-        "attention":"personalizada y particular"
+        "attention":"personalizada y particular",
+        "views":1
 }
 ```
 Spring Boot, PostgreSQL, JPA, Hibernate RESTful CRUD API Tutorial - https://youtu.be/eWbGV3LLwVQ
