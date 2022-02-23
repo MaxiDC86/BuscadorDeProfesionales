@@ -17,6 +17,7 @@ import net.guides.springboot2.crud.model.EmailNewsletter;
 import net.guides.springboot2.crud.model.Formulario;
 import net.guides.springboot2.crud.model.Selection;
 import net.guides.springboot2.crud.repository.ClientRepository;
+import net.guides.springboot2.crud.repository.NewsletterEmailRepository;
 
 @Controller
 @RequestMapping
@@ -36,6 +37,8 @@ public class Controlador {
 	
 	@Autowired
 	private ClientRepository clientRepository;
+	@Autowired
+	private NewsletterEmailRepository newsletterRepository;
 
 	// ------WELCOME PAGE---------------
 	@RequestMapping
@@ -147,6 +150,8 @@ public class Controlador {
 	}
 	@RequestMapping("/addEmailNewsletter")
 	public String addEmailNewsletter(@ModelAttribute("newsletterForm") EmailNewsletter newsletterForm) {
+		
+		newsletterRepository.save(newsletterForm);
 		
 		return "newsletter";
 	}
