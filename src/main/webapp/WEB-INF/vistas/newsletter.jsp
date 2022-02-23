@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page import="java.util.*"%>
-<%@ page import="net.guides.springboot2.crud.controller.*"%>
-<%@ page import="net.guides.springboot2.crud.model.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -26,10 +23,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<!-- Google Ads  -->
-<script async
-	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4530209817571456"
-	crossorigin="anonymous"></script>
+
 </head>
 <body>
 	<nav class="navbar navbar-inverse">

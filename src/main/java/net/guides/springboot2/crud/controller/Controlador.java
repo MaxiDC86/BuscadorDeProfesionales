@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import net.guides.springboot2.crud.model.Client;
 import net.guides.springboot2.crud.model.ClientDetails;
+import net.guides.springboot2.crud.model.EmailNewsletter;
 import net.guides.springboot2.crud.model.Formulario;
 import net.guides.springboot2.crud.model.Selection;
 import net.guides.springboot2.crud.repository.ClientRepository;
@@ -137,7 +138,15 @@ public class Controlador {
 	
 	//----------NEWSLETTER------------
 	@RequestMapping("/newsletter")
-	public String newsletter() {
+	public String newsletter(Model model) {
+		
+		EmailNewsletter newsletterForm = new EmailNewsletter();
+		model.addAttribute("newsletterForm", newsletterForm);
+		
+		return "newsletter";
+	}
+	@RequestMapping("/addEmailNewsletter")
+	public String addEmailNewsletter(@ModelAttribute("newsletterForm") EmailNewsletter newsletterForm) {
 		
 		return "newsletter";
 	}
